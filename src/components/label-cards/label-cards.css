@@ -1,0 +1,40 @@
+/* CLONE_SPEC_B §5 — `_labelCards_ya4ut` (sticker/track), `_labelCard_1gue8` (card)
+   + `#HOME ._home__labelCards{margin-bottom:20rem}`. Sticker base styles: tagline/sectionMotion.css (.ui-sticker). */
+.lcs { margin-bottom: 20rem; line-height: normal; }
+.lcs .line { white-space: nowrap; }
+
+/* APP-FULL track — superFont @color[lgh1] */
+.lcs .lcs__track { display: flex; justify-content: center; align-items: center; padding-block: 20rem; box-sizing: border-box; color: var(--lgh1); }
+
+/* @block @family[fkscreamer] @size[252] (mobile 112) @weight[700] @height[75%] (mobile 80%) @align[center] @transform[uppercase] */
+.lcs .lcs__title { word-break: break-word; font-size: 11.2rem; font-weight: 700; line-height: .8; text-align: center; text-transform: uppercase; }
+.lcs.is-whole .lcs__title { font-size: 25.2rem; line-height: .75; }
+.lcs .lcs__title > strong { display: block; font-weight: inherit; }
+
+/* card: superGlass @blur[90] @background[lgh] */
+.lcs .lc { display: flex; flex-direction: column; align-items: center; gap: .8rem; padding-block: 7.8rem 4rem; box-sizing: border-box; }
+.lcs .lc > .lc__A1 { display: flex; }
+/* @block @family[fkscreamer] @size[40] @weight[700] @height[90%] @align[center] @transform[uppercase] */
+.lcs .lc .lc__title { word-break: break-word; font-size: 4rem; font-weight: 700; line-height: .9; text-align: center; text-transform: uppercase; }
+.lcs .lc .lc__image { width: 20rem; height: 20rem; max-width: none; object-position: center; object-fit: contain; }
+
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) {
+  .lcs .lcs__track { flex-direction: column; gap: 1.6rem; background-color: var(--drk1); }
+  .lcs .lcs__track .lcs__title { max-width: 93rem; margin-inline: auto; margin-bottom: 4rem; }
+  .lcs .lcs__track .lcs__list { overflow: hidden; width: 100%; box-sizing: border-box; }
+  .lcs .lcs__track .lcs__list .lc { grid-column: span 1; }
+  .lcs .lc { justify-content: space-between; padding-inline: 1.6rem; border-radius: 2.4rem; }
+  .lcs .lc .lc__image { width: 13.2rem; height: 13.2rem; }
+}
+@media screen and (min-width: 768px) and (min-height: 435px) {
+  .lcs .lcs__track .lc { position: absolute; left: 100%; }
+  .lcs .lc { aspect-ratio: 448/498; width: 44.8rem; padding-inline: 7.5rem; border-radius: 3.2rem; }
+  .lcs .lc > .lc__A1 { flex: 1; align-items: flex-end; }
+}
+
+/* Parity with the original global CSS (no global border-box; superFont families are single names) —
+   Tailwind preflight / .ff-* add border-box and fallback families that change shrink-to-fit widths. */
+:where(.lcs) :not(lbs-x), :where(.lcs) :not(lbs-x)::before, :where(.lcs) :not(lbs-x)::after { box-sizing: content-box; }
+:where(.lcs) .superGrid { box-sizing: border-box; }
+.lcs .ff-inter { font-family: vInter; }
+.lcs .ff-screamer { font-family: FKScreamer; }

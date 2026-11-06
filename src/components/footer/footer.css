@@ -1,0 +1,115 @@
+/* CLONE_SPEC_B §8 — ported from the scoped CSS in reference/original.html (#FOOTER `_footer_1guyh`, `_tooltip_74wir`,
+   `_nav_upmb5`, `_langSwitcher_n0qh1`, `_seoModalTrigger_3qttb`) and the `superGlass @glow` rules of style.B5ikKiSh.css. */
+
+#FOOTER { position: relative; z-index: 5; display: block; min-height: 100vh; min-height: 100svh; padding-block: 20rem 3.2rem; color: #fff; }
+
+#FOOTER .footer__title {
+  display: block; margin-inline: auto; margin-bottom: 3.2rem; word-break: break-word;
+  font-size: 16.4rem; font-weight: 700; line-height: .75; text-align: center; text-transform: uppercase;
+}
+#FOOTER .footer__title strong { color: #120042; }
+#FOOTER .footer__cta { margin-inline: auto; margin-bottom: 12.5rem; }
+
+/* ---- glass panel `superGrid @columns[12] @margin[48] @gi[16] superGlass @glow @blur[24] @background[lgh]` ---- */
+#FOOTER > .footer__A1 {
+  --glassBlur: 24px;
+  position: relative; overflow: hidden; box-sizing: border-box;
+  grid-template-rows: repeat(3, auto); padding-block: 4.8rem; border-radius: 3.2rem;
+}
+#FOOTER > .footer__A1::before, #FOOTER > .footer__A1::after {
+  content: ""; position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;
+}
+#FOOTER > .footer__A1::before {
+  -webkit-backdrop-filter: blur(var(--glassBlur)); backdrop-filter: blur(var(--glassBlur));
+  background: radial-gradient(circle at center, hsl(220, 90%, 60%, calc(var(--glassIntensity) * .13)) 0, rgba(165, 165, 243, .07) 11%, rgba(224, 213, 246, .03) 19%, transparent 37%) var(--glassBackgroundRX) var(--glassBackgroundRY) / 200% 200% no-repeat;
+}
+#FOOTER > .footer__A1::after {
+  -webkit-backdrop-filter: blur(calc(var(--glassGlowBlur) * var(--glassIntensity))); backdrop-filter: blur(calc(var(--glassGlowBlur) * var(--glassIntensity)));
+  -webkit-mask: radial-gradient(circle at center, #000 0, rgba(0, 0, 0, .7) 19%, transparent 43%) var(--glassMaskRX) var(--glassMaskRY) / 200% 200% no-repeat;
+  mask: radial-gradient(circle at center, #000 0, rgba(0, 0, 0, .7) 19%, transparent 43%) var(--glassMaskRX) var(--glassMaskRY) / 200% 200% no-repeat;
+}
+/* `.superGlass:not(svg).@background[lgh].@glow:before/:after { background-color:#ffffff0d }` (higher specificity than the shorthand) */
+#FOOTER > .footer__A1.footer__A1::before, #FOOTER > .footer__A1.footer__A1::after { background-color: #ffffff0d; }
+
+#FOOTER .footer__B1 { grid-column: 1 / 13; grid-row: 1; flex-shrink: 0; display: flex; gap: 3.2rem; }
+#FOOTER .footer__C1 { flex: 2; display: flex; flex-direction: column; gap: 2.4rem; }
+#FOOTER .footer__explore { flex: 1; }
+#FOOTER .footer__C2 { flex: 1; display: flex; gap: 3.2rem; }
+#FOOTER .footer__logo { width: fit-content; color: inherit; }
+#FOOTER .footer__logo-svg { display: inline; vertical-align: baseline; width: 12.4rem; height: 4.8rem; color: #fff; }
+#FOOTER .footer__address { font-family: vInter; font-synthesis: none; font-size: 1.5rem; font-weight: 400; font-style: normal; line-height: 1.4; }
+
+/* lang switcher (@light) */
+#FOOTER .langSwitcher { display: flex; flex-wrap: wrap; }
+#FOOTER .langSwitcher__option {
+  display: flex; align-items: center; height: 2rem; padding-block: 0; padding-inline: .8rem; color: #fff;
+  font-family: vInter; font-synthesis: none; font-size: max(1.1rem, 11px); font-weight: 700; line-height: 1.5rem; text-transform: uppercase;
+}
+#FOOTER .langSwitcher__option.\@current { background-color: #fff; color: #120042; border-radius: 4rem; }
+#FOOTER .langSwitcher__option:not(.\@current) { opacity: .5; background: none; }
+
+/* UINav */
+#FOOTER .footerNav__title {
+  display: block; opacity: .5; margin-bottom: max(1.2rem, 12px);
+  font-family: vInter; font-synthesis: none; font-size: max(1.2rem, 12px); font-weight: 600; line-height: 1.5rem; text-transform: uppercase;
+}
+#FOOTER .footerNav__route { display: block; width: fit-content; color: inherit; font-family: vInter; font-synthesis: none; font-weight: 500; }
+#FOOTER .footerNav__route--explore { font-size: 2.4rem; letter-spacing: -.02em; line-height: 1.3; }
+#FOOTER .footerNav__route--expertise { font-size: 1.5rem; line-height: 1.4; }
+#FOOTER .footerNav__route strong { font-weight: inherit; }
+#FOOTER .footerNav__route-title {
+  display: inline-block; transition-property: transform, color; transition-duration: 1.5s; transition-delay: .03s;
+  transition-timing-function: cubic-bezier(.13, .93, .13, .93);
+}
+#FOOTER .footerNav__route:hover .footerNav__route-title { transform: matrix(1, 0, 0, 1, 10, 0); }
+
+/* labels + tooltips */
+#FOOTER .footer__labels { grid-column: 1 / 13; grid-row: 4; display: flex; flex-wrap: wrap; gap: 2.4rem; margin-block: 1.6rem 3.2rem; }
+#FOOTER .footer__labels.\@highlight .footer__labels-label:not(.\@target) { opacity: .3; }
+#FOOTER .tooltip { display: flex; flex-direction: column-reverse; width: fit-content; }
+#FOOTER .footer__labels-label { transition: opacity .2s ease-out; }
+#FOOTER .tooltip .tooltip__slot:focus + .tooltip__bubble, #FOOTER .tooltip:hover .tooltip__bubble { opacity: 1; }
+#FOOTER .label__slot { width: 4.8rem; height: 4.8rem; display: inline-block; }
+#FOOTER .label__icon { width: 100%; height: 100%; max-width: none; object-position: center; object-fit: contain; }
+#FOOTER .tooltip__bubble { position: relative; width: 100%; height: 3.2rem; opacity: 0; margin-bottom: 1.5rem; transition: opacity .2s ease-out; }
+#FOOTER .tooltip__bubble-title {
+  --glassBlur: 24px;
+  position: absolute; top: 0; left: 0; height: 100%; display: flex; align-items: center; padding-inline: 16px; box-sizing: border-box;
+  border-radius: 48px; white-space: nowrap; color: #fff;
+  font-family: vInter; font-synthesis: none; font-size: max(1.2rem, 12px); font-weight: 500; line-height: 1.4;
+}
+/* `superGlass @background[lgh]` on an <svg> → fill only */
+#FOOTER .tooltip__bubble-arrow { position: absolute; top: 100%; left: 50%; transform: translate3d(-50%, 0, 0); width: 1.3rem; height: auto; fill: #ffffff1a; }
+
+/* bottom row */
+#FOOTER .footer__B2 { grid-column: 1 / 5; grid-row: 5; display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; }
+#FOOTER .copyright { font-family: vInter; font-synthesis: none; font-size: 1.5rem; font-weight: 500; line-height: 1.4; }
+#FOOTER .seoModalTrigger { opacity: .5; background: none; color: #fff; }
+#FOOTER .footer__B3 { grid-column: 5 / 13; grid-row: 5; display: flex; justify-content: space-between; }
+#FOOTER .footer__socials { display: flex; gap: 1.6rem; }
+#FOOTER .footer__social { color: inherit; }
+#FOOTER .footer__legals { display: flex; gap: 2.4rem; }
+#FOOTER .footer__legal { color: inherit; font-family: vInter; font-synthesis: none; font-size: 1.5rem; font-weight: 500; line-height: 1.4; }
+
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) {
+  #FOOTER { background-color: #6630ff; }
+  #FOOTER .footer__title { font-size: 11.2rem; line-height: .8; }
+  #FOOTER .footer__title strong { font-weight: 700; } /* measured on the live mobile page (desktop computes `bolder` = 900) */
+  #FOOTER .footer__title, #FOOTER > .footer__A1 { max-width: 93rem; }
+  #FOOTER > .footer__A1 { grid-template-rows: repeat(6, auto); row-gap: 3.2rem; margin-inline: auto; }
+  #FOOTER .footer__B1, #FOOTER .footer__C2, #FOOTER .footer__B3 { flex-direction: column; }
+  #FOOTER .footer__B2, #FOOTER .footer__B3 { grid-column: 1 / 13; }
+  #FOOTER .footer__B2 { grid-row: 6; }
+  #FOOTER .footer__B3 { align-items: center; gap: 3.2rem; }
+  #FOOTER .footer__expertises-list { column-count: 2; }
+  #FOOTER .footerNav__route--expertise { font-size: 2rem; }
+  #FOOTER .footer__address { font-size: 2rem; }
+}
+@media screen and (min-width: 768px) and (min-height: 435px) {
+  #FOOTER .footer__title { width: 97.5rem; max-width: 100%; }
+  #FOOTER .footer__labels a, #FOOTER .footer__legals a, #FOOTER .footer__C2 a { white-space: nowrap; }
+}
+
+/* Global registrations from style.B5ikKiSh.css that index.css does not ship (needed by the @glow ::after blur). */
+@property --glassGlowBlur { syntax: "<length>"; inherits: true; initial-value: 50px; }
+@property --glassIntensity { syntax: "<number>"; inherits: true; initial-value: 0; }

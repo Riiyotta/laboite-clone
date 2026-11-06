@@ -1,0 +1,34 @@
+/* CLONE_SPEC_B §3 — `_spotlightItem_1bkwk` + `#HOME ._home__spotlightItem{margin-bottom:20rem}` */
+.spot { display: flex; margin-bottom: 20rem; line-height: normal; }
+.spot.is-column { flex-direction: column; }
+.spot .line { white-space: nowrap; }
+
+/* [SPOTLIGHT_ITEM-A1] superFont @align[center] */
+.spot > .spot__A1 { display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1; max-width: 50%; min-height: 70.1rem; text-align: center; }
+.spot:not(.is-column) > .spot__A1 { padding: 8rem; box-sizing: border-box; }
+.spot.is-column > .spot__A1 { max-width: 100%; min-height: 0; margin-bottom: 5.6rem; }
+
+/* app-icon @size[5] superFont @color[trt3] */
+.spot .spot__icon { display: flex; justify-content: center; align-items: center; pointer-events: none; margin-bottom: 3.2rem; color: var(--trt3); }
+.spot .spot__icon > * { width: auto; height: 4.8rem; }
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) { .spot .spot__icon { align-items: flex-start; } }
+
+/* @family[fkscreamer] @size[112] @weight[700] @height[80%] @transform[uppercase] */
+.spot .spot__title { width: 100%; margin-bottom: 2.4rem; word-break: break-word; font-size: 11.2rem; font-weight: 700; line-height: .8; text-transform: uppercase; }
+.spot .spot__title > strong { font-weight: inherit; }
+
+/* @family[inter] @size[15] @weight[500] @height[140%] */
+.spot .spot__content { padding-inline: 2.4rem; box-sizing: border-box; font-size: 1.5rem; font-weight: 500; line-height: 1.4; }
+
+.spot .spot__cta { margin-top: 4rem; }
+
+.spot .spot__image { flex: 1; max-width: 50%; min-height: 70.1rem; align-self: center; height: 100%; object-position: center; object-fit: cover; border-radius: 1.6rem; }
+.spot.is-column .spot__image { width: 100%; max-width: 100%; min-height: 0; }
+@media screen and (max-height: 434.9px) { .spot .spot__image { min-height: 0; } }
+
+/* Parity with the original global CSS (no global border-box; superFont families are single names) —
+   Tailwind preflight / .ff-* add border-box and fallback families that change shrink-to-fit widths. */
+:where(.spot) :not(lbs-x), :where(.spot) :not(lbs-x)::before, :where(.spot) :not(lbs-x)::after { box-sizing: content-box; }
+:where(.spot) .superGrid { box-sizing: border-box; }
+.spot .ff-inter { font-family: vInter; }
+.spot .ff-screamer { font-family: FKScreamer; }

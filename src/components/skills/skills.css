@@ -1,0 +1,36 @@
+/* §7 Skills sticker — `_skills_18hah_46` */
+.skill__labels, .skills .skills__track .skills__track-skill, .ui-sticker.skills:not(.is-whole) { display: flex; }
+.skill__labels-label, .skill__title, .skills:not(.is-whole) { box-sizing: border-box; }
+.skills.is-whole { margin-bottom: 50vh; }
+.skills.is-whole .skills__track .skills__track-skill { grid-column: 2; }
+.skills.is-whole .skills__track .skills__track-skill .skill__title { padding-right: 3.2rem; }
+.ui-sticker.skills:not(.is-whole) { justify-content: center; align-items: center; margin-inline: -2rem; padding-block: 15.2rem; background-color: #29daff; }
+.skills:not(.is-whole) .skills__track { width: 100%; max-width: 93rem; }
+.skills:not(.is-whole) .skills__track > .skills__A1 { display: none; }
+.skills:not(.is-whole) .skills__track-skill { grid-column: span 2; }
+.skills:not(.is-whole) .skills__track-skill:nth-child(2n) { align-items: flex-end; text-align: right; }
+.skills:not(.is-whole) .skills__track-skill .skill__title { max-width: 80%; font-size: 4rem; }
+.skills .skills__track > .skills__A1, .skills.is-whole .skills__track .skills__track-skill { grid-row: 1; }
+.skills .skills__track > .skills__A1 { grid-column: 1; }
+.skills .skills__track .skills__track-skill { flex-direction: column; gap: 3.2rem; align-self: center; }
+.skill__labels { flex-wrap: wrap; gap: .8rem; }
+.skill__labels .skill__labels-label { padding: .8rem 3.2rem; border-radius: 1.6rem; }
+.skill__labels .skill__labels-label .label__icon { filter: brightness(.8) sepia(1) invert(1) hue-rotate(45deg); }
+
+.skill__title { font-size: 5.2rem; font-weight: 600; letter-spacing: -.04em; line-height: 1.04; }
+
+/* UIActionCTA — `_cta_dne1y_46` */
+.ui-cta { display: flex; width: fit-content; background: none; }
+.ui-cta .ui-cta__button { min-width: 0; }
+.ui-cta .ui-cta__button-content { overflow: hidden; max-width: 100%; text-overflow: ellipsis; white-space: nowrap; }
+.ui-cta .btn, .ui-cta .btn * { transition: color .25s ease-out; }
+/* Button `@hover @left` variant (90°-rotated fill, entering from the left) */
+.btn.hover-left::before { content: ""; position: absolute; top: 0; left: 0; z-index: -1; width: calc(100% + 1px); height: calc(100% + 1px); border-radius: 2.4rem; pointer-events: none;
+  background-image: radial-gradient(ellipse 12.5% 50% at 37.5% 50%, #6630ff 100%, transparent 0), linear-gradient(90deg, transparent 37.5%, #6630ff 0);
+  background-position: var(--button-hover-y, 0) 50%; background-size: 400% 100%; background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, red 75%, transparent 0), radial-gradient(ellipse 12.5% 50% at 75% 50%, transparent 100%, red 0);
+  mask-image: linear-gradient(90deg, red 75%, transparent 0), radial-gradient(ellipse 12.5% 50% at 75% 50%, transparent 100%, red 0);
+  -webkit-mask-position: var(--button-hover-y, 0) 50%; mask-position: var(--button-hover-y, 0) 50%;
+  -webkit-mask-size: 400% 100%; mask-size: 400% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in, xor; mask-composite: intersect;
+  transform: translate3d(-.5px, -.5px, 0) rotate(180deg); }

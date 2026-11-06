@@ -1,0 +1,65 @@
+/* CLONE_SPEC_B §4 — `_resourceCards_1ahqb` (section), `_resourceCards_g3l72` (grid), `_resourceCard_s418f` (card),
+   `_whitePaper_1tkgo` (mockup) + `#HOME ._home__resourceCards{margin-bottom:20rem}` */
+.rcs { margin-bottom: 20rem; line-height: normal; }
+.rcs .line { white-space: nowrap; }
+
+.rcs .rcs__header { display: flex; flex-direction: column; align-items: center; gap: 1.6rem; width: 52.4rem; max-width: 100%; margin-inline: auto; margin-bottom: 5.6rem; }
+/* @family[fkscreamer] @size[112] @weight[700] @height[80%] @align[center] @transform[uppercase] */
+.rcs .rcs__header-title { word-break: break-word; font-size: 11.2rem; font-weight: 700; line-height: .8; text-align: center; text-transform: uppercase; }
+.rcs .rcs__header-title > strong { font-weight: inherit; }
+
+/* card — superFont @color[lgh1] */
+.rcs .rc { grid-column: span 1; display: flex; flex-direction: column; align-items: center; min-width: 0; aspect-ratio: 448/556; padding-top: 3.2rem; box-sizing: border-box; color: var(--lgh1); }
+.rcs .rc.is-article.bg-drk, .rcs .rc.is-client { background-color: var(--drk1); }
+.rcs .rc.is-article.bg-prm { background-color: var(--prm1); }
+.rcs .rc .rc__title, .rcs .rc:is(.is-client, .is-whitePaper) { overflow: hidden; }
+.rcs .rc.is-client { position: relative; z-index: 1; }
+.rcs .rc.is-client .rc__image, .rcs .rc.is-client::before { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.rcs .rc.is-client::before { content: ""; z-index: -1; background: linear-gradient(0deg, #00000073, #00000073); }
+.rcs .rc.is-client .rc__image { z-index: -2; max-width: none; object-position: center; object-fit: cover; }
+.rcs .rc.is-whitePaper { background-color: #12004212; }
+
+.rcs .rc .rc__category, .rcs .rc .rc__publishedAt { flex-shrink: 0; }
+/* time: @family[inter] @size[15] @weight[500] @height[140%] */
+.rcs .rc .rc__publishedAt { font-family: vInter; font-synthesis: none; font-size: 1.5rem; font-weight: 500; line-height: 1.4; }
+.rcs .rc.is-whitePaper .rc__publishedAt { margin-bottom: 4rem; }
+.rcs .rc:not(.is-whitePaper) .rc__publishedAt { margin-bottom: 1.6rem; }
+
+/* title: @family[fkscreamer] @size[64] (mobile 40) @weight[700] @height[85%] @align[center] @transform[uppercase] */
+.rcs .rc .rc__title, .rcs .rc .rc__whitePaper { flex: 1; width: 100%; }
+.rcs .rc .rc__title { display: -webkit-box; -webkit-box-orient: vertical; max-width: 100%; line-clamp: 7; -webkit-line-clamp: 7; text-overflow: ellipsis;
+  font-size: 4rem; font-weight: 700; line-height: .85; text-align: center; text-transform: uppercase; }
+.rcs.is-whole .rc .rc__title { font-size: 6.4rem; }
+
+/* white paper cover title: @family[fkscreamer] @size[52] (mobile 32) @weight[700] @height[90%] @transform[uppercase] */
+.rcs .rc .rc__whitePaper-title { font-size: 3.2rem; font-weight: 700; line-height: .9; text-transform: uppercase; }
+.rcs.is-whole .rc .rc__whitePaper-title { font-size: 5.2rem; }
+
+@media screen and (max-height: 434.9px) { .rcs .rc { aspect-ratio: 448/382; } }
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) {
+  .rcs .rc { border-radius: 1.6rem; }
+  .rcs .rc:is(.is-article, .is-client) { padding-inline: 1.6rem; padding-bottom: 1.6rem; }
+  .rcs .rc.is-whitePaper { padding-inline: 1.6rem; }
+  .rcs .rc .rc__category { margin-bottom: 1.6rem; }
+}
+@media screen and (min-width: 768px) and (min-height: 435px) {
+  .rcs .rc { border-radius: 3.2rem; }
+  .rcs .rc:is(.is-article, .is-client) { padding-inline: 3.2rem; padding-bottom: 3.2rem; }
+  .rcs .rc.is-whitePaper { padding-inline: 2.8rem; }
+  .rcs .rc .rc__category { margin-bottom: 3.2rem; }
+}
+
+/* app-white-paper */
+.wp, .wp > .wp__A1, .wp > .wp__A1 > .wp__B1 { display: block; }
+.wp, .wp > .wp__A1 { min-height: 0; }
+.wp > .wp__A1 { position: relative; z-index: 1; width: 100%; transform: rotate(3.13deg); overflow: visible; aspect-ratio: 390.93/418.47; filter: drop-shadow(10.346px 20.692px 31.038px rgba(0, 0, 0, .12)); }
+.wp > .wp__A1::before, .wp > .wp__A1 > .wp__B1 { width: 93.29%; border-radius: 2.13%; }
+.wp > .wp__A1::before { content: ""; position: absolute; top: 5.65%; left: 4.56%; z-index: -1; transform: rotate(2.2deg); aspect-ratio: 364.7/445.61; background-color: #fff; }
+.wp > .wp__A1 > .wp__B1 { position: relative; z-index: 1; overflow: hidden; aspect-ratio: 364.7/476.52; padding: 7.95%; box-sizing: border-box; background: #6630ff url(/assets/images/whitePaper/2.png) 50%/cover no-repeat; }
+
+/* Parity with the original global CSS (no global border-box; superFont families are single names) —
+   Tailwind preflight / .ff-* add border-box and fallback families that change shrink-to-fit widths. */
+:where(.rcs) :not(lbs-x), :where(.rcs) :not(lbs-x)::before, :where(.rcs) :not(lbs-x)::after { box-sizing: content-box; }
+:where(.rcs) .superGrid { box-sizing: border-box; }
+.rcs .ff-inter { font-family: vInter; }
+.rcs .ff-screamer { font-family: FKScreamer; }

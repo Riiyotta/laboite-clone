@@ -1,0 +1,102 @@
+/* Hero header DOM + widgets + SEO modal — ported from the scoped CSS in reference/original.html (spec §3, §8, §9). */
+
+/* ---------- header._header_jx0rq ---------- */
+.heroHeader { line-height: normal; }
+.heroHeader.\@whole { height: 700vh; height: 700lvh; pointer-events: none; color: #120042; }
+.heroHeader .hero__title { font-family: FKScreamer; font-synthesis: none; font-size: 16.4rem; font-weight: 700; line-height: .75; text-transform: uppercase; }
+.heroHeader .hero__title-block.\@right { text-align: right; }
+.heroHeader .hero__title-strong { color: #120042; font-weight: 700; }
+.heroHeader.\@whole .hero__title { position: absolute; opacity: 0; }
+.heroHeader .hero__subtitle { font-family: vInter; font-synthesis: none; font-size: 5.2rem; font-weight: 600; letter-spacing: -.04em; line-height: 1.04; text-align: center; }
+.heroHeader.\@whole .hero__subtitle { position: fixed; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 65rem; max-width: 100%; }
+
+/* mobile (:not(.@whole)) */
+.heroHeader:not(.\@whole) { position: relative; min-height: 100vh; min-height: 100lvh; margin-inline: -2rem; padding-block: 20rem; background-color: #6630ff; color: #fff; }
+.heroHeader:not(.\@whole) .hero__title { line-height: .8; }
+.heroHeader:not(.\@whole) .hero__subtitle { font-size: 4rem; }
+.heroHeader:not(.\@whole) .hero__subtitle, .heroHeader:not(.\@whole) .hero__title { max-width: 93rem; margin-inline: auto; }
+.heroHeader:not(.\@whole) .hero__title { word-break: break-word; }
+.heroHeader:not(.\@whole) .hero__title, .heroHeader:not(.\@whole) .hero__title .hero__title-block, .heroHeader:not(.\@whole) .hero__title .hero__title-block .hero__title-strong { display: block; }
+.heroHeader:not(.\@whole) .hero__title, .heroHeader:not(.\@whole) .hero__title .hero__title-block:first-child { margin-bottom: 10.3rem; }
+.heroHeader:not(.\@whole) .hero__title .hero__title-block { max-width: min(55rem, 100%); }
+.heroHeader:not(.\@whole) .hero__title .hero__title-block:last-child { margin-left: auto; }
+
+/* ---------- transformer (UIWrapperTransformer) ---------- */
+.heroHeader .transformer { position: relative; overflow: visible; display: block; }
+.heroHeader .transformer > .transformer__A1 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform-origin: top left; }
+
+/* ---------- app-widgets ---------- */
+.heroHeader .widgets { padding: 2.4rem; box-sizing: border-box; top: 0; left: 0; }
+.heroHeader .widgets.\@whole {
+  position: fixed; display: flex; width: 100vw; height: 100vh; height: 100dvh; align-items: flex-end;
+  -webkit-backdrop-filter: blur(0); backdrop-filter: blur(0);
+  -webkit-mask-image: radial-gradient(ellipse 70% 20% at 50% 60%, transparent 100%, red 0), linear-gradient(180deg, red 60%, transparent 0);
+  mask-image: radial-gradient(ellipse 70% 20% at 50% 60%, transparent 100%, red 0), linear-gradient(180deg, red 60%, transparent 0);
+  -webkit-mask-position: 50% var(--progress, 0); mask-position: 50% var(--progress, 0);
+  -webkit-mask-size: 100% 250%; mask-size: 100% 250%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in, xor; mask-composite: intersect;
+  justify-content: space-between;
+}
+.heroHeader .widgets.\@whole.\@hide { display: none !important; }
+.heroHeader .widgets.\@whole.\@up { z-index: 6; transition-property: transform, mask-position, background-color, -webkit-mask-position; }
+.heroHeader .widgets.\@whole.\@up:not(.up-0) { transform: scale(1) !important; -webkit-mask-position: 50% 0 !important; mask-position: 50% 0 !important; }
+.heroHeader .widgets.\@whole.\@up::after { transform: translate3d(0, 100%, 0); }
+.heroHeader .widgets.\@whole::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: auto; transform: translate3d(0, calc(100% - var(--progress, 0%)), 0); }
+.heroHeader .widgets:not(.\@whole) { position: absolute; display: block; width: 100%; height: calc(100% + var(--transformer-height, 0px) + 2.4rem);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--transformer-height, 0px) - 2.4rem), 0 calc(100% - var(--transformer-height, 0px) - 2.4rem)); }
+.heroHeader .widgets:not(.\@whole).\@up { transition-property: background-color; }
+.heroHeader .widgets:not(.\@whole) > .widgets__A1 { position: sticky; top: calc(100svh - var(--transformer-height, 0px) - 2.4rem); }
+.heroHeader .widgets.\@up { pointer-events: auto; transition-duration: .7s; transition-timing-function: ease-out; }
+.heroHeader .widgets.\@up:not(.up-0) { background-color: #12004280; }
+.heroHeader .widgets > .widgets__A1 { display: flex; align-items: center; gap: 1.2rem; }
+.heroHeader .widgets > .widgets__A1.\@hide { visibility: hidden; }
+.heroHeader .widgets .widgets__transformer { z-index: 1; }
+.heroHeader .widgets .widgets__transformer .widgets__transformer-container { display: flex; justify-content: center; align-items: center; }
+.heroHeader .widgets .widgets__transformer .widgets__transformer-container > .widgets__A2 { position: relative; display: block; width: 100%; height: 100%; max-width: max-content; }
+.heroHeader .widgets .widgets__transformer .widgets__transformer-container .container__media {
+  display: block; width: 100%; height: 100%; max-width: max-content; border-radius: 1.2rem; object-position: center; object-fit: contain; background-color: #ffffff1a; cursor: pointer; pointer-events: auto; }
+.heroHeader .widgets .container__back { position: absolute; top: 2.4rem; right: 2.4rem; }
+.heroHeader .widgets :is(.container__back, .widgets__go):not(.\@hide) { pointer-events: auto; }
+.heroHeader .widgets .widgets__go, .heroHeader .widgets .container__back { transition: opacity .27s ease-out; }
+.heroHeader .widgets .widgets__go.\@hide, .heroHeader .widgets .container__back.\@hide { opacity: 0; }
+
+/* Scroll badge */
+.heroHeader .scrollBadge { display: block; flex-shrink: 0; transform: translate3d(0, 2rem, 0); width: 11.1rem; height: auto; color: #ffffff80; animation: lbsScrollRotate 2s cubic-bezier(.36,.84,.72,.28) infinite; }
+@keyframes lbsScrollRotate { to { transform: translate3d(0, 2rem, 0) rotate(1turn); } }
+
+/* ---------- SEO modal (spec §8) ---------- */
+.seoModal { width: 100vw; height: 100vh; height: 100dvh; isolation: isolate; overflow: hidden auto; max-width: 100%; max-height: 100%;
+  background-color: #120042c4; -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); overscroll-behavior: none; transition: opacity .17s ease-in; line-height: normal; }
+.seoModal.\@stillReadable, .seoModal:not(.\@show) { position: fixed; }
+.seoModal.\@stillReadable { top: 0; left: 0; display: block; }
+.seoModal.\@stillReadable.\@show { z-index: 6; }
+.seoModal.\@show { pointer-events: auto; }
+.seoModal:not(.\@show) { z-index: -3; visibility: hidden; opacity: 0; pointer-events: none; }
+.seoModal > .modal__A1 { --gridColumns: 12; --gridGapInline: 1.6rem; position: relative; height: max-content; }
+.seoModal > .modal__A1.\@margin-mobile { --gridMargin: 2rem; }
+.seoModal .modal__close { position: absolute; top: 3.2rem; right: 3.2rem; z-index: 5; }
+.seoModal .modal__close.\@off { pointer-events: none; }
+.seoModal .seoModal__content { grid-column: 3/11; padding-block: 20rem; box-sizing: border-box; color: #fff; font-family: vInter; font-size: 1.6rem; font-weight: 400; line-height: 1.6; }
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) { .seoModal .seoModal__content { grid-column: 1/13; max-width: 93rem; margin-inline: auto; } }
+
+/* rich text (_content_1uvg3) */
+.seoContent { font-synthesis: style !important; }
+.seoContent h2 { font-family: FKScreamer, "sans-serif", arial; font-size: 6rem; font-weight: 700; line-height: 1; margin-block: 2.4rem; text-transform: uppercase; }
+.seoContent h3 { font-size: 3rem; font-weight: 500; line-height: 110%; margin-block: 2rem; }
+.seoContent h4 { font-size: 2.4rem; font-weight: 500; letter-spacing: .02em; line-height: 130%; margin-block: 1.6rem; }
+.seoContent p { margin-bottom: 4rem !important; }
+.seoContent p + p { margin-top: -2rem !important; }
+.seoContent p + :is(ul, ol) { margin-top: -3.2rem !important; }
+.seoContent blockquote, .seoContent ol, .seoContent ul { box-sizing: border-box; }
+.seoContent ol, .seoContent ul { margin-bottom: 2.4rem !important; padding-left: 2.4rem; }
+.seoContent ol { list-style: decimal; }
+.seoContent ul { list-style: disc; }
+.seoContent blockquote > :is(p, ul, ol, img, video, iframe, blockquote), .seoContent li > :is(p, ul, ol, img, video, iframe, blockquote) { margin-block: 0 !important; }
+.seoContent li { margin-block: .4rem; list-style: inherit; list-style-position: outside; }
+.seoContent a { color: #6630ff; font-weight: 500; text-decoration: underline; }
+.seoContent strong a { font-weight: inherit; }
+.seoContent .image, .seoContent blockquote, .seoContent iframe, .seoContent img, .seoContent video { margin-block: 7.2rem !important; }
+.seoContent iframe, .seoContent img, .seoContent video { display: block; width: 100%; height: auto; border-radius: 1.6rem; }
+.seoContent img, .seoContent video { background-color: #12004212; }
+.seoContent img { object-position: center; object-fit: cover; }
+.seoContent blockquote { display: flex; flex-direction: column; gap: 1.6rem; padding: .4rem 3.2rem; border-left: .4rem solid #29daff; }

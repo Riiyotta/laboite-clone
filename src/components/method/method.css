@@ -1,0 +1,38 @@
+/* §6 Method — `_method_1bww9_46` */
+.method { grid-template-rows: 1fr auto auto auto 1fr; margin-bottom: 11rem; }
+.method .method__marquee .method__marquee-title, .method .method__metrics, .method.is-whole { box-sizing: border-box; }
+.method.is-whole { padding-top: 20rem; }
+.method.is-whole .method__tagline { grid-column: 1 / 7; }
+.method.is-whole > .method__A1 { grid-column: 8 / 13; align-self: flex-end; }
+.method:not(.is-whole) .method__tagline, .method:not(.is-whole) > .method__A1 { grid-column: 1 / 13; justify-self: center; width: 100%; max-width: 93rem; }
+.method .method__marquee .method__marquee-title, .method .method__metrics, .method .method__metrics .method__metrics-metric { display: flex; }
+.method .method__marquee { grid-column: 1 / 13; grid-row: 2; }
+.method .method__marquee .method__marquee-title { align-items: flex-start; padding-right: 4rem; }
+.method .method__marquee .method__marquee-title .word:not(:last-child)::after { content: " "; white-space: pre; }
+.method .method__tagline { grid-row: 3; }
+.method > .method__A1 { grid-row: 4; display: block; }
+.method .method__metrics { flex-direction: column; margin-top: 1.6rem; padding-top: 1.6rem; border-top: max(.1rem, 1px) solid rgba(18, 0, 66, .07); }
+.method .method__metrics, .method .method__metrics .method__metrics-metric { gap: .8rem; }
+.title__icon { overflow: hidden; margin-right: 4rem; }
+
+.method__marquee-title { color: #6630ff; font-size: 25.2rem; font-weight: 700; line-height: .75; text-transform: uppercase; }
+.method:not(.is-whole) .method__marquee-title { font-size: 16.4rem; line-height: .8; }
+.method__marquee-title .title__icon { color: #70f74a; }
+.method__tagline { font-size: 5.2rem; font-weight: 600; letter-spacing: -.04em; line-height: 1.04; }
+.method:not(.is-whole) .method__tagline { font-size: 4rem; }
+.method__content { font-size: 2.4rem; font-weight: 500; letter-spacing: -.02em; line-height: 1.3; }
+.method__metrics { font-size: 1.5rem; font-weight: 500; line-height: 1.4; }
+
+/* UIWrapperMarquee — `_marquee_1o3b3_46` */
+.ui-marquee { justify-content: center; width: 100%; }
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) {
+  .ui-marquee { justify-content: flex-start; margin-inline: -2rem; }
+}
+.ui-marquee, .ui-marquee__clipper, .ui-marquee__track { display: flex; }
+.ui-marquee, .ui-marquee__clipper { align-items: center; }
+.ui-marquee__clipper { position: relative; width: 100vw; flex-shrink: 0; overflow: hidden; }
+.ui-marquee__clipper, .ui-marquee__track, .ui-marquee__driver { flex-shrink: 0; }
+.ui-marquee__track { backface-visibility: hidden; }
+.ui-marquee__track.is-animated { will-change: transform; }
+.ui-marquee__track, .ui-marquee__driver { width: fit-content; }
+.ui-marquee__driver { white-space: nowrap; }

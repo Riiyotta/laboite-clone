@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "$comment": "Documents the React clone in this folder. Only the French homepage of https://laboiteaslides.fr/ is cloned; every other href (expertises, réalisations, contact, legal…) points at the original site's routes and is NOT built here. Section order measured at 1440x900 (CLONE_SPEC_A.md / CLONE_SPEC_B.md); y-offsets in descriptions are scroll px at that viewport.",
+    "source": "https://laboiteaslides.fr/ (FR homepage) → clone at /src (React + Vite + Tailwind v3, three r181, GSAP, Lenis)",
+    "status": "measured-from-live-site; bottom-half sections still in build",
+    "totalRoutes": 1,
+    "totalTemplates": 1
+  },
+  "categories": {
+    "CHROME": "Site-wide fixed or overlay UI that is not part of the scrolling story: header bar, loader, menu overlay, modal, footer.",
+    "BACKDROP": "The fixed full-screen WebGL canvas behind the page that draws backgrounds, glass triangles, 3D titles and the VR scene.",
+    "HERO": "The opening scroll-driven statement of the page.",
+    "STORY": "Pinned (sticky) scroll-scrubbed narrative blocks whose content animates with scroll progress.",
+    "PROOF": "Evidence blocks: case studies, credentials, metrics, testimonials.",
+    "OFFER": "Blocks describing what the agency sells.",
+    "CONTENT": "Editorial and help content: resources, FAQ."
+  },
+  "sections": {
+    "backdrop.webgl-scene": {
+      "category": "BACKDROP",
+      "description": "Fixed canvas#SYNTHRA (z-index -1): gradient background shader with 10 domed colour layers, RGB-shift post pass, 22 glass triangles (intro checkerboard, frame, fence, pinwheel), clipped 3D FKScreamer titles, camera keyframes, VR headset GLB and 80-tile thumbnail sphere. Also computes the header light/dark state.",
+      "scope": "Present on the one homepage route, behind every other section; on mobile only a static white-to-grey gradient is drawn.",
+      "implementedBy": "scene/Scene.jsx (engine.js, home.js, background.js, triangles.js, title.js)"
+    },
+    "chrome.header": {
+      "category": "CHROME",
+      "description": "Fixed 12rem header bar: logo link, centred 'Menu/Fermer' glass trigger with clip-path text swap, 'Demander un devis' CTA; switches between light and dark designs from the backdrop colour.",
+      "scope": "Fixed at the top of the one homepage route for its full length.",
+      "implementedBy": "Header.jsx"
+    },
+    "chrome.loader": {
+      "category": "CHROME",
+      "description": "Purple three-layer-mask loader panel with a two-triangle spinner; lifts on load (triggers the 3D intro) and closes behind the menu when it opens.",
+      "scope": "Shown once on first load of the homepage route and reused as the purple frame behind the menu overlay.",
+      "implementedBy": "header/Loader.jsx"
+    },
+    "chrome.menu-overlay": {
+      "category": "CHROME",
+      "description": "White rounded panel opened from the header trigger with a 3D swing: navigation links, FR/EN switch, 'Conférences interactives' expertise widget, white-paper and client-case resource widgets.",
+      "scope": "Overlay available from the header on the one homepage route.",
+      "implementedBy": "header/Menu.jsx"
+    },
+    "chrome.seo-modal": {
+      "category": "CHROME",
+      "description": "Hidden dialog holding long-form SEO rich text, opened from a footer link.",
+      "scope": "Mounted once on the homepage route, closed by default.",
+      "implementedBy": "hero/SeoModal.jsx"
+    },
+    "chrome.footer": {
+      "category": "CHROME",
+      "description": "footer#FOOTER: 'PRÊT À TRANSFORMER VOTRE IMPACT?' glass panel with cursor-following glow and label tooltips, FR/EN switch, office cities, navigation and legal links.",
+      "scope": "Closes the one homepage route, rendered outside main#MAIN.",
+      "implementedBy": "Footer.jsx"
+    },
+    "hero.statement": {
+      "category": "HERO",
+      "description": "700lvh header: visually-hidden SEO title ('Les meilleures idées font l'avenir / Quand elles sont bien présentées' — visible version is 3D in the backdrop), fixed subtitle 'La boite à slides® : seule agence au monde certifiée ISO 9001…' that fades in mid-scroll, and the bottom-left video widget with Scroll badge. Position at 1440x900: y 0 → 6300.",
+      "scope": "First section of the one homepage route.",
+      "implementedBy": "Hero.jsx"
+    },
+    "story.tagline": {
+      "category": "STORY",
+      "description": "500lvh pinned block: large 'Notre agence PowerPoint amplifie le retentissement…' statement sliding in line by line on the left, small paragraph bottom-right, over the green backdrop and triangle 'fence'. Position at 1440x900: y 6300 → 10800.",
+      "scope": "Second section of the homepage route.",
+      "implementedBy": "Tagline.jsx"
+    },
+    "proof.works": {
+      "category": "PROOF",
+      "description": "'UN SEUL OUTIL, DES POSSIBILITÉS INFINIES' title plus 8 case-study cards (Safran, Adidas, Marriott, Lipton, Kronenbourg, Nissan, Viridien, Upciti) with staggered reveal and cursor-following image hover; the card grid forces the header to light. Position at 1440x900: y 10800 → 13822.",
+      "scope": "Homepage route only.",
+      "implementedBy": "Works.jsx"
+    },
+    "proof.method": {
+      "category": "PROOF",
+      "description": "30s looping marquee of credentials ('DEPUIS 2002 ● ISO 9001 ● 5/5 NOTE GOOGLE AVIS ● +8 000 PROJETS ● 85% DE RÉACHAT ● MOS…') with character reveal, tagline/paragraph with parallax and a mask-revealed metrics list. Position at 1440x900: y 13918 → 15164.",
+      "scope": "Homepage route only.",
+      "implementedBy": "Method.jsx"
+    },
+    "offer.skills": {
+      "category": "OFFER",
+      "description": "540lvh pinned block of 3 stacked skill items each sliding in and fading out, with a 'Voir nos réalisations' split button, over the cyan backdrop and triangle pinwheel. Position at 1440x900: y 15260 → 20120.",
+      "scope": "Homepage route only.",
+      "implementedBy": "Skills.jsx"
+    },
+    "offer.expertises": {
+      "category": "OFFER",
+      "description": "'NOS EXPERTISES' list of large labels (Présentations, Communication 360, Navigation app like, Séminaire VR, Solutions IA) at low opacity that light up and pop a photo at the right viewport edge on hover. Position at 1440x900: y ≈ 20570.",
+      "scope": "Homepage route only.",
+      "implementedBy": "Expertises.jsx"
+    },
+    "story.vr": {
+      "category": "STORY",
+      "description": "600lvh pinned 'DÉPASSEZ TOUTES LES LIMITES DE POWERPOINT' block: VR headset flies through the camera, near-black backdrop cut, sphere of project thumbnails the camera ends inside, curved white wipe out. Position at 1440x900: y ≈ 21173 → 26573.",
+      "scope": "Homepage route only.",
+      "implementedBy": "Vr.jsx"
+    },
+    "offer.spotlight": {
+      "category": "OFFER",
+      "description": "'TOUJOURS CARRÉS. JAMAIS FORMATÉS.' statement with a parallaxing image (+300 → −300px). Position at 1440x900: y ≈ 26573.",
+      "scope": "Homepage route only.",
+      "implementedBy": "Spotlight.jsx"
+    },
+    "content.resources": {
+      "category": "CONTENT",
+      "description": "'NOS DERNIÈRES RESSOURCES' row of article, client-case and white-paper cards (white paper shown as a rotated mockup) that pop in once and reverse on scroll back. Position at 1440x900: y ≈ 27376.",
+      "scope": "Homepage route only.",
+      "implementedBy": "ResourceCards.jsx"
+    },
+    "proof.labels": {
+      "category": "PROOF",
+      "description": "500lvh pinned 'ENGAGÉS POUR LA QUALITÉ' block: three glass label cards (5 étoiles Google Avis, Certifié ISO 9001:2015 Bureau Veritas, Microsoft Office Specialist) flying right-to-left on a curved path. Position at 1440x900: y ≈ 28290 → 32790.",
+      "scope": "Homepage route only.",
+      "implementedBy": "LabelCards.jsx"
+    },
+    "proof.reviews": {
+      "category": "PROOF",
+      "description": "'ILS NOUS FONT CONFIANCE' draggable slider of 7 client testimonials with momentum, edge resistance and prev/next buttons. Position at 1440x900: y ≈ 32966.",
+      "scope": "Homepage route only.",
+      "implementedBy": "ReviewCards.jsx"
+    },
+    "content.faq": {
+      "category": "CONTENT",
+      "description": "'DES QUESTIONS? ON VOUS RÉPOND' accordion (several questions can be open at once, as on the live site) of 16 questions (6 shown, +6 per 'Voir plus de questions') with cursor-bending string dividers and a scroll mask reveal. Position at 1440x900: y ≈ 33820.",
+      "scope": "Homepage route only, last section before the footer.",
+      "implementedBy": "Faq.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage (FR)",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "backdrop.webgl-scene",
+        "chrome.loader",
+        "chrome.header",
+        "chrome.menu-overlay",
+        "hero.statement",
+        "chrome.seo-modal",
+        "story.tagline",
+        "proof.works",
+        "proof.method",
+        "offer.skills",
+        "offer.expertises",
+        "story.vr",
+        "offer.spotlight",
+        "content.resources",
+        "proof.labels",
+        "proof.reviews",
+        "content.faq",
+        "chrome.footer"
+      ]
+    }
+  ]
+}

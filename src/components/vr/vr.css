@@ -1,0 +1,23 @@
+/* §2 VR sticker — `_vr_wukvy_46` (desktop `.@whole` = .is-whole, mobile `@fit` = .is-fit) */
+[data-section="vr"] .line { white-space: nowrap; }
+
+.vr .vr__track, .vr.is-fit { box-sizing: border-box; }
+.vr .vr__track { display: flex; width: 100%; padding-top: 15.2rem; }
+.vr .vr__track > .vr__A1 { width: 100%; }
+.vr .vr__track-title { word-break: break-word; font-size: 11.2rem; font-weight: 700; line-height: .8; text-align: center; text-transform: uppercase; }
+.vr .vr__track-title strong { color: var(--prm1); font-weight: inherit; }
+.vr .vr__track-content { margin-bottom: 3.2rem; font-weight: 600; letter-spacing: -.04em; line-height: 1.04; }
+
+/* desktop */
+.vr.is-whole .vr__track { justify-content: center; }
+.vr.is-whole .vr__track > .vr__A1 { position: absolute; top: 50%; left: 50%; transform: translate3d(0, -50%, 0); display: block; }
+.vr.is-whole .vr__track-title, .vr.is-whole .vr__track-content { max-width: 100%; }
+.vr.is-whole .vr__track-title { width: 65rem; }
+.vr.is-whole .vr__track-content { width: 60.9rem; color: var(--gry3); font-size: 5.2rem; }
+
+/* mobile (§2.6) — no pin, no WebGL */
+.vr.is-fit { display: flex; justify-content: center; align-items: center; margin: 0 -2rem 20rem; background-color: #120042; }
+.vr.is-fit .vr__track, .vr.is-fit .vr__track > .vr__A1 { display: flex; flex-direction: column; align-items: center; }
+.vr.is-fit .vr__track { max-width: 93rem; padding-bottom: 15.2rem; }
+.vr.is-fit .vr__track-title { margin-bottom: 3.2rem; color: var(--lgh1); }
+.vr.is-fit .vr__track-content { color: var(--lgh1); font-size: 4rem; font-weight: 500; text-align: center; }

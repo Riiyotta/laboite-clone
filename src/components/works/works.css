@@ -1,0 +1,42 @@
+/* §5 Works — `_works_15dfr_46` */
+.works { margin-bottom: 10.9rem; }
+.works.is-whole { padding-top: 60vh; box-sizing: border-box; }
+.works.is-whole .works__title { grid-column: 7 / 12; }
+.works .works__works,
+.works:not(.is-whole) .works__title { grid-column: 1 / 13; }
+.works:not(.is-whole) .works__title { max-width: 93rem; margin-inline: auto; }
+.works .works__title { word-break: break-word; font-size: 11.2rem; font-weight: 700; line-height: .8; text-transform: uppercase; }
+.works .works__title > strong { font-weight: inherit; }
+
+/* `_workCardsPanoramic_jxysk_46` */
+.workCardsPanoramic__link { grid-column: span 1; }
+
+/* `_workCard_11ye5_46` */
+.workCard { flex-wrap: nowrap; align-items: flex-end; gap: 1.6rem; z-index: 1; aspect-ratio: 569/542; min-width: 0; min-height: 0; padding: 3.2rem; box-sizing: border-box; }
+.workCard, .workCard .workCard__image, .workCard .workCard__title:nth-child(2), .workCard::before,
+.workCard > .workCard__A2, .workCard > .workCard__A2::after, .workCard > .workCard__A2::before { width: 100%; }
+.workCard, .workCard > .workCard__A1 { position: relative; }
+.workCard, .workCard .workCard__title .line, .workCard > .workCard__A1 { overflow: hidden; }
+.workCard, .workCard .workCard__image, .workCard > .workCard__A2, .workCard > .workCard__A2::after, .workCard > .workCard__A2::before { height: 100%; }
+.workCard, .workCard .workCard__categories { display: flex; }
+.workCard, .workCard .workCard__image { border-radius: 3.2rem; }
+.workCard::before, .workCard > * { pointer-events: none; }
+.workCard .workCard__title:nth-child(2), .workCard::before, .workCard > .workCard__A2, .workCard > .workCard__A2::after, .workCard > .workCard__A2::before { position: absolute; left: 0; }
+.workCard::before, .workCard > .workCard__A2::after, .workCard > .workCard__A2::before { content: ""; z-index: -1; }
+.workCard::before { bottom: 0; height: 20rem; background: linear-gradient(0deg, rgba(0, 0, 0, .7) 0, transparent); }
+.workCard > .workCard__A1, .workCard > .workCard__A2 { display: block; }
+.workCard > .workCard__A1 { flex-shrink: 0; max-width: 60%; }
+.workCard .workCard__title:nth-child(2), .workCard > .workCard__A2, .workCard > .workCard__A2::after, .workCard > .workCard__A2::before { top: 0; }
+.workCard > .workCard__A2 { z-index: -2; }
+.workCard > .workCard__A2::before { transform: matrix(calc(1 + var(--scale)), 0, 0, calc(1 + var(--scale)), calc(var(--x) * -2), calc(var(--y) * -2)); background-image: var(--bgImage); background-position: 50%; background-size: cover; }
+.workCard > .workCard__A2::after { -webkit-backdrop-filter: blur(var(--blur)); backdrop-filter: blur(var(--blur)); }
+.workCard .workCard__categories { flex-wrap: wrap; gap: .8rem 1.6rem; }
+.workCard .workCard__image { transform: matrix(calc(1 - var(--scale)), 0, 0, calc(1 - var(--scale)), var(--x), var(--y)); object-position: center; object-fit: cover; }
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) {
+  .workCard .workCard__title:nth-child(2) { display: none; }
+}
+
+.workCard__title { color: #fff; font-size: 4rem; font-weight: 700; line-height: .9; text-transform: uppercase; }
+
+/* app-tag (`_tag_1er0k_46` @color[lgh1]) */
+.ui-tag { width: fit-content; height: 4rem; display: flex; align-items: center; gap: .8rem; padding-inline: 1.6rem; box-sizing: border-box; border: max(.1rem, 1px) solid #fff3; border-radius: 1.6rem; white-space: nowrap; color: #fff; font-size: 1.5rem; font-weight: 500; line-height: 1.4; }

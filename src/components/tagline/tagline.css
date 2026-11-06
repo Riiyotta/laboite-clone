@@ -1,0 +1,16 @@
+/* §4 Tagline sticker — `_tagline_x672m_46` */
+.tagline__track { overflow: visible !important; padding-top: 15.2rem; box-sizing: border-box; }
+.tagline.is-whole .tagline__track { padding-bottom: 5.6rem; }
+.tagline.is-whole .tagline__title { grid-column: 1 / 7; }
+.tagline.is-whole .tagline__content { grid-column: 9 / 12; align-self: flex-end; }
+
+.tagline__title { font-size: 5.2rem; font-weight: 600; letter-spacing: -.04em; line-height: 1.04; }
+.tagline__content { font-size: 1.5rem; font-weight: 500; line-height: 1.4; }
+
+/* §9 mobile (`:not(.@whole)`) */
+.tagline:not(.is-whole) { margin: 0 -2rem 20rem; padding-bottom: 15.2rem; background-color: #62f740; }
+.tagline:not(.is-whole) .tagline__track { grid-template-rows: 1fr auto auto 1fr; max-width: 93rem; margin-inline: auto; }
+.tagline:not(.is-whole) .tagline__title,
+.tagline:not(.is-whole) .tagline__content { grid-column: 1 / 13; }
+.tagline:not(.is-whole) .tagline__title { grid-row: 2; font-size: 4rem; }
+.tagline:not(.is-whole) .tagline__content { grid-row: 3; }

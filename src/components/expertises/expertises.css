@@ -1,0 +1,39 @@
+/* CLONE_SPEC_B §1 — `_expertises_jvwcv` (scoped CSS from reference/original.html) */
+.lbsFull { flex-shrink: 0; display: block; width: 100vw; }
+
+.exp { box-sizing: border-box; line-height: normal; }
+.exp:not(.is-whole) { padding-block: 20rem; }
+
+/* kicker: superFont @family[inter] @size[12] @weight[600] @height[15] @align[center] @transform[uppercase] */
+.exp .exp__title { margin-bottom: 4rem; font-size: max(1.2rem, 12px); font-weight: 600; line-height: 1.5rem; text-align: center; text-transform: uppercase; }
+
+/* router: superFont @size[164] (desktop) / @size[96] (mobile) */
+.exp .exp__router { display: flex; flex-direction: column; align-items: center; gap: .4rem; font-size: 9.6rem; }
+.exp.is-whole .exp__router { font-size: 16.4rem; }
+.exp .exp__route { display: flex; justify-content: center; color: inherit; }
+/* label: @family[fkscreamer] @weight[700] @height[75%] (mobile 80%) @align[center] @transform[uppercase] */
+.exp .exp__label { font-weight: 700; line-height: .8; text-align: center; text-transform: uppercase; }
+.exp.is-whole .exp__label { line-height: .75; }
+
+/* desktop (@whole) */
+.exp.is-whole .exp__route { position: relative; width: 100%; overflow: visible; }
+.exp.is-whole .exp__route .exp__label { opacity: .07; }
+.exp.is-whole .exp__route:hover .exp__label { opacity: 1; transition: opacity .2s ease; }
+.exp.is-whole .exp__route .exp__image {
+  position: absolute; top: 50%; left: calc(50vw + min(888px, 50vw)); z-index: -1;
+  width: 37.7rem; height: 25.3rem; max-width: none;
+  transform: translate3d(-100%, -50%, 0) rotate(calc(var(--r, 0rad) * 2)) scale(1.2); opacity: 0;
+  object-position: center; object-fit: cover; border-radius: 1.6rem;
+  transition: transform 2s cubic-bezier(.06, .93, .07, .93), opacity .03s;
+}
+.exp.is-whole .exp__route:hover .exp__image {
+  transform: translate3d(calc(-100% + var(--vx)), calc(-50% + var(--vx)), 0) rotate(var(--r, 0rad)) scale(1); opacity: 1;
+}
+.exp:not(.is-whole) .exp__route .exp__image { display: none; }
+
+/* Parity with the original global CSS (no global border-box; superFont families are single names) —
+   Tailwind preflight / .ff-* add border-box and fallback families that change shrink-to-fit widths. */
+:where(.exp) :not(lbs-x), :where(.exp) :not(lbs-x)::before, :where(.exp) :not(lbs-x)::after { box-sizing: content-box; }
+:where(.exp) .superGrid { box-sizing: border-box; }
+.exp .ff-inter { font-family: vInter; }
+.exp .ff-screamer { font-family: FKScreamer; }

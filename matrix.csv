@@ -1,0 +1,20 @@
+section,category,templates,routes,Homepage (FR)
+backdrop.webgl-scene,BACKDROP,1,1,x
+chrome.header,CHROME,1,1,x
+chrome.loader,CHROME,1,1,x
+chrome.menu-overlay,CHROME,1,1,x
+chrome.seo-modal,CHROME,1,1,x
+chrome.footer,CHROME,1,1,x
+hero.statement,HERO,1,1,x
+story.tagline,STORY,1,1,x
+proof.works,PROOF,1,1,x
+proof.method,PROOF,1,1,x
+offer.skills,OFFER,1,1,x
+offer.expertises,OFFER,1,1,x
+story.vr,STORY,1,1,x
+offer.spotlight,OFFER,1,1,x
+content.resources,CONTENT,1,1,x
+proof.labels,PROOF,1,1,x
+proof.reviews,PROOF,1,1,x
+content.faq,CONTENT,1,1,x
+ROUTE COUNT,,,1,1

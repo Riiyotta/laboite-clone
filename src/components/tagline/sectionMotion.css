@@ -1,0 +1,23 @@
+/* Shared bits for Tagline / Works / Method / Skills (decoded from style.B5ikKiSh.css) */
+
+/* SplitText lines never wrap (global `.line{white-space:nowrap}` in the original) */
+:is([data-section="tagline"], [data-section="works"], [data-section="method"], [data-section="skills"]) .line { white-space: nowrap; }
+
+/* `superPreAccents @noFix @step[.1em]`: padding only, no negative margin */
+.superPreAccents.noFix { padding-block: .1em; margin-block: 0; }
+
+/* app-icon (`_icon_bb9du_48`) */
+.ui-icon { display: flex; justify-content: center; align-items: center; pointer-events: none; }
+.ui-icon.s1 > * { width: auto; height: 1.6rem; }
+.ui-icon.s2 > * { width: auto; height: 2rem; }
+.ui-icon.s6 > * { width: auto; height: 6.4rem; }
+.ui-icon.s7 > * { width: auto; height: 13.2rem; }
+.ui-icon.s8 > * { width: auto; height: 20rem; }
+@media screen and (max-height: 434.9px), screen and (max-width: 767.9px) {
+  .ui-icon { align-items: flex-start; }
+}
+
+/* Sticker (`_sticker_1b402_46`) */
+.ui-sticker { position: relative; pointer-events: none; display: block; }
+.ui-sticker:not(.is-fit) > .ui-sticker__track { position: sticky; top: 0; height: 100vh; height: 100lvh; overflow: hidden; }
+.ui-sticker > .ui-sticker__track > * { pointer-events: auto; }
