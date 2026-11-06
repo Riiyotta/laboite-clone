@@ -22,7 +22,7 @@ if not os.path.isdir(os.path.join(ROOT, "src")):
 sys.path.insert(0, HERE)
 import policy_hash  # noqa: E402
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 _cache = {}
 
 
@@ -549,7 +549,7 @@ section("hero.statement", "Hero statement (scroll-scrubbed opener)", "HERO",
         stage=True, constraints={"onePerPage": True, "mustBeFirstInFlow": True}, surfaces=["backdrop.prm", "backdrop.lgh"],
         roles=["hero.loop-video", "icon.ui"], gen_roles=["media.generated-video", "media.placeholder", "icon.generic"],
         evidence=[cite(SA, "## 3. Hero `header._header_jx0rq` (y 0 → 6 300)"), cite(SA, "### 3.6 Scroll story")], source_id="Hero.jsx header.heroHeader",
-        notes="Measured 6300px at 1440x900 (700lvh); above the 3000px HERO cap, so it is a whitelisted exception pending human approval (extraction/measured-values.json wrapperGate.whitelist).")
+        notes="Measured 6300px at 1440x900 (700lvh); above the 3000px HERO cap, so it is a whitelisted exception; its approval status and owner decision are in extraction/measured-values.json (wrapperGate.whitelist).")
 
 section("chrome.seo-modal", "SEO modal", "CHROME",
         "Hidden 'still readable' dialog holding the long-form SEO text (h2 title + h3-bounded parts), toggled from the footer info button.",
@@ -1112,6 +1112,19 @@ parity = {"harness": ["extraction/parity/capture.mjs", "extraction/parity/compar
                           "cause": "Diagnosed from the live/clone/diff images: identical DOM layer (title, statement, CTA, header) but the WebGL sphere of 61 client thumbnails assigns textures/positions in a different order on the two sides (the texture-to-tile mapping and per-plane randomness are runtime-dependent), so most of the black frame is covered by different thumbnails. Not a layout or typography defect; cannot be fixed from the design-repo (src/ is read-only for this task) and must not be masked.",
                           "status": "pending human approval", "approvedBy": None}],
           "notes": "Sections between 0.80 and 0.90 (proof.method, proof.labels, chrome.footer) differ by time/random-driven WebGL (triangle bob, background wave, label-card random offsets); they pass the gate in both runs."}
+HD = json.load(open(os.path.join(REPO, "extraction", "human-decisions.json"), encoding="utf-8"))
+def decision_for(item):
+    for d in HD["decisions"]:
+        if item in d["items"]:
+            return d
+    return None
+def approval_fields(item):
+    d = decision_for(item)
+    if not d:
+        return {"status": "pending human approval", "approvedBy": None}
+    return {"status": "approved", "approvedBy": d["decidedBy"], "approvedAt": d["decidedAt"], "decisionId": d["id"], "decisionVerbatim": d["verbatim"]}
+for _e in parity["exceptions"]:
+    _e.update(approval_fields("parity.exceptions:" + _e["section"]))
 measured = {
     "$description": "Citation and measurement ledger. External evidence (the clone's src/, CLONE_SPEC_*.md, ia.json) is referenced here, never in registry.manifest.json entryPoints. verify_all.py re-checks every citation when the sibling source tree is present and degrades to a warning when it is not.",
     "version": VERSION,
@@ -1122,7 +1135,7 @@ measured = {
     "wrapperGate": {"thresholdsPinnedIn": "extraction/wrapper_gate.py", "whitelist": [{
         "route": "/", "section": "hero.statement", "rule": "HERO_MAX_HEIGHT", "measuredHeightPx": v1440["sections"]["hero.statement"]["heightPx"], "maxHeightPx": 6350,
         "justification": "The hero is a 700lvh scroll-scrubbed opener: its visible content (3D two-part title, fixed subtitle, video widget) is drawn by the fixed WebGL backdrop and driven by scroll progress, so the DOM wrapper height is scroll distance, not content. It is the page-opening composition only (no other content inside); the source's fit layout on mobile is 1425px.",
-        "reviewedBy": "Claude (AI agent) - agent attestation, not a human sign-off", "status": "pending human approval", "approvedBy": None}]},
+        "reviewedBy": "Claude (AI agent) - agent attestation, not a human sign-off", **approval_fields("wrapperGate.whitelist:hero.statement")}]},
     "styleHistogram1440": {"rawFile": "extraction/raw-style-histogram.json", "measuredAt": raw_s["measuredAt"], "color": raw_s["histogram"]["color"], "fontFamily": raw_s["histogram"]["fontFamily"], "fontSize": raw_s["histogram"]["fontSize"],
                            "fontWeight": raw_s["histogram"]["fontWeight"], "borderRadius": raw_s["histogram"]["borderRadius"], "backgroundColor": raw_s["histogram"]["backgroundColor"]},
     "parity": parity,
@@ -1151,7 +1164,8 @@ design_policy = {
     "localExtension": {"id": "laboiteaslides-home-local", "rules": ["Generated pages never reproduce the source brand, clients, people, ratings, certifications, copy, URLs or media (schema/semantic_validate.py GENERATED_MODE_*).",
                                                                     "The licensed display typeface is reference-only (tokens/llm/token-policy.json licensedTokens).",
                                                                     "Pinned scroll stages are budgeted (compatibility/graph.json SCROLL_STAGE_BUDGET) and every motion has a reduced-motion fallback."]},
-    "approval": {"status": "defined-pending-architecture-review", "architectureDecisionRecorded": False, "decidedBy": None, "decidedAt": None},
+    "approval": ({"status": "approved-by-owner", "architectureDecisionRecorded": True, "decidedBy": decision_for("policy/design-policy.json:approval")["decidedBy"], "decidedAt": decision_for("policy/design-policy.json:approval")["decidedAt"], "decisionId": decision_for("policy/design-policy.json:approval")["id"], "decisionVerbatim": decision_for("policy/design-policy.json:approval")["verbatim"]}
+                 if decision_for("policy/design-policy.json:approval") else {"status": "defined-pending-architecture-review", "architectureDecisionRecorded": False, "decidedBy": None, "decidedAt": None}),
 }
 dump("policy/design-policy.json", design_policy)
 
@@ -1171,7 +1185,7 @@ manifest = {
                     "note": "Recorded for provenance only; no token, section id, schema field or validator rule depends on it."},
     "category": "agency-marketing-site",
     "designPolicy": {"policyId": design_policy["policyId"], "policyVersion": design_policy["policyVersion"], "commonIrVersion": "0.5", "enforcementMode": "hard-and-soft", "domain": "agency-marketing",
-                     "contentHash": chash, "file": "policy/design-policy.json", "approval": "defined-pending-architecture-review"},
+                     "contentHash": chash, "file": "policy/design-policy.json", "approval": design_policy["approval"]["status"]},
     "defaultTheme": "light", "schemaValidatedThemes": ["light"],
     "routes": templates["routes"], "routesNotBuilt": "Every other href in the source points at the original site's routes; the clone serves only '/', so no template exists for them.",
     "counts": counts,
@@ -1183,9 +1197,12 @@ manifest = {
                     "designPolicy": "policy/design-policy.json", "measuredValues": "extraction/measured-values.json", "verifyAll": "extraction/verify_all.py", "wrapperGate": "extraction/wrapper_gate.py",
                     "proveDrift": "extraction/prove_drift.py", "policyHash": "extraction/policy_hash.py", "builder": "extraction/build_repo.py", "measureSections": "extraction/measure_sections.mjs",
                     "parityCapture": "extraction/parity/capture.mjs", "parityCompare": "extraction/parity/compare.py"},
-    "approval": {"productionApproved": False, "approvedBy": None, "pendingHumanApproval": ["wrapper gate whitelist: hero.statement 6300px (extraction/measured-values.json wrapperGate.whitelist)",
-                                                                                          "parity exception: story.vr below 0.80 (extraction/measured-values.json parity.exceptions)",
-                                                                                          "design-policy classification (policy/design-policy.json approval)"]},
+    "approval": {"productionApproved": False, "approvedBy": None, "humanDecisions": "extraction/human-decisions.json",
+                 "pendingHumanApproval": [t for k, t in [("wrapperGate.whitelist:hero.statement", "wrapper gate whitelist: hero.statement 6300px (extraction/measured-values.json wrapperGate.whitelist)"),
+                                                         ("parity.exceptions:story.vr", "parity exception: story.vr below 0.80 (extraction/measured-values.json parity.exceptions)"),
+                                                         ("policy/design-policy.json:approval", "design-policy classification (policy/design-policy.json approval)")] if not decision_for(k)],
+                 "approvedByOwner": [k for d in HD["decisions"] for k in d["items"]],
+                 "productionApprovalNote": "Production approval is a separate human sign-off and has not been given."},
 }
 dump("registry.manifest.json", manifest)
 print("measured-values, policy, manifest ok; policy hash", chash)

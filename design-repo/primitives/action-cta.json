@@ -1,7 +1,7 @@
 {
   "id": "primitive.action-cta",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UIActionCTA: round arrow button + pill label that sweep together on hover.",
   "props": {
     "design": [

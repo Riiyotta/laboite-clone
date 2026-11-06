@@ -1,6 +1,6 @@
 {
   "id": "offer.spotlight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Team statement with image",
   "description": "Triangle icon, display title with an emphasised second half, a short paragraph and a CTA on the left; a photo parallaxing +300 -> -300px on the right.",
   "source": {

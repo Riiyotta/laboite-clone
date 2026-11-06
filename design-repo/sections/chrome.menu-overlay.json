@@ -1,6 +1,6 @@
 {
   "id": "chrome.menu-overlay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Menu overlay",
   "description": "White rounded panel opened from the header trigger with a 3D swing: explore links, expertise links, FR/EN switch, office cities, socials and three promo widgets (expertise, white paper, client case).",
   "source": {

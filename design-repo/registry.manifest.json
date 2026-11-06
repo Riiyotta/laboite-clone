@@ -1,9 +1,9 @@
 {
   "repositoryId": "laboiteaslides-fr-home-design-repo",
-  "repositoryVersion": "1.0.0",
-  "pageSpecVersion": "1.0.0",
-  "allowlistVersion": "1.0.0",
-  "tokenCatalogVersion": "1.0.0",
+  "repositoryVersion": "1.0.1",
+  "pageSpecVersion": "1.0.1",
+  "allowlistVersion": "1.0.1",
+  "tokenCatalogVersion": "1.0.1",
   "versionFieldNote": "allowlistVersion and tokenCatalogVersion are machine-checked by extraction/verify_all.py (must equal the files' own version fields); pageSpecVersion is enforced as a const by schema/pagespec.schema.json; repositoryVersion is documentation-only and hand-maintained.",
   "status": "design-review-pending",
   "productionApproved": false,
@@ -27,9 +27,9 @@
     "commonIrVersion": "0.5",
     "enforcementMode": "hard-and-soft",
     "domain": "agency-marketing",
-    "contentHash": "sha256:564eb372801efbbee5868cc5f1a877b1847db48ea5f5c9ec94155818ddeb60f1",
+    "contentHash": "sha256:d66e35707eafe8cf51cceb2092e31a0589ee909c51f894ebae01dbbc08f037a6",
     "file": "policy/design-policy.json",
-    "approval": "defined-pending-architecture-review"
+    "approval": "approved-by-owner"
   },
   "defaultTheme": "light",
   "schemaValidatedThemes": [
@@ -88,10 +88,13 @@
   "approval": {
     "productionApproved": false,
     "approvedBy": null,
-    "pendingHumanApproval": [
-      "wrapper gate whitelist: hero.statement 6300px (extraction/measured-values.json wrapperGate.whitelist)",
-      "parity exception: story.vr below 0.80 (extraction/measured-values.json parity.exceptions)",
-      "design-policy classification (policy/design-policy.json approval)"
-    ]
+    "humanDecisions": "extraction/human-decisions.json",
+    "pendingHumanApproval": [],
+    "approvedByOwner": [
+      "wrapperGate.whitelist:hero.statement",
+      "parity.exceptions:story.vr",
+      "policy/design-policy.json:approval"
+    ],
+    "productionApprovalNote": "Production approval is a separate human sign-off and has not been given."
   }
 }

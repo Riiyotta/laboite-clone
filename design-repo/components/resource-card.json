@@ -1,7 +1,7 @@
 {
   "id": "component.resource-card",
   "kind": "component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resource card in three kinds: article (navy), client case (photo), white paper (sheet mockup).",
   "props": {
     "kind": [

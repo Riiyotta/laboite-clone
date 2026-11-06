@@ -1,6 +1,6 @@
 {
   "id": "content.resources",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Latest resources",
   "description": "Display title with an 'all resources' CTA, then a row of three resource cards (article on navy, client case over a photo, white paper as a rotated sheet mockup) that pop in once.",
   "source": {

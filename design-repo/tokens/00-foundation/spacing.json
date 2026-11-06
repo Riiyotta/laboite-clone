@@ -1,6 +1,6 @@
 {
   "$description": "Spacing steps: the superGrid gap/margin vocabulary (CLONE_SPEC_A §0.2) plus the two section gaps. Arbitrary spacing is rejected in PageSpecs (token-policy).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "space.0": {
       "type": "space",

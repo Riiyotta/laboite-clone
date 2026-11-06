@@ -1,6 +1,6 @@
 {
   "$description": "Foundation colours: the 12-colour palette declared in tailwind.config.js and :root (src/index.css), the two glass tints, and the WebGL background-shader gradient pairs (CLONE_SPEC_A §0.3). Rendered text uses only lgh1/prm1/drk1 at 1440 (extraction/measured-values.json styleHistogram1440).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "color.lgh1": {
       "type": "color",

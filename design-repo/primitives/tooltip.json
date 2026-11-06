@@ -1,7 +1,7 @@
 {
   "id": "primitive.tooltip",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hover/focus bubble above an icon (glass title + arrow).",
   "props": {
     "title": "string"

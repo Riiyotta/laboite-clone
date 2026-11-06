@@ -1,6 +1,6 @@
 {
   "id": "chrome.seo-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "SEO modal",
   "description": "Hidden 'still readable' dialog holding the long-form SEO text (h2 title + h3-bounded parts), toggled from the footer info button.",
   "source": {

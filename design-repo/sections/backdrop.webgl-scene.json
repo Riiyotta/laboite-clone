@@ -1,6 +1,6 @@
 {
   "id": "backdrop.webgl-scene",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "WebGL backdrop",
   "description": "Fixed full-viewport WebGL canvas behind the page: domed gradient background layers that wipe per section, 22 glass triangles, clipped 3D display titles in the hero, VR headset and thumbnail sphere, RGB-shift post pass. Computes the header light/dark state.",
   "source": {

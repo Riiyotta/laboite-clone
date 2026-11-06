@@ -1,7 +1,7 @@
 {
   "id": "primitive.media",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Image or video reference bound to a closed asset role.",
   "props": {
     "assetRole": "closed enum (assets/asset-roles.json)",

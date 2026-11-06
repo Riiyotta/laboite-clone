@@ -1,6 +1,6 @@
 {
   "id": "hero.statement",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Hero statement (scroll-scrubbed opener)",
   "description": "Page opener: two-part display title drawn in 3D by the backdrop (visually-hidden DOM copy), a fixed Inter statement that slides in line by line mid-scroll, and the bottom-left showreel video widget with a rotating Scroll badge. 700lvh scroll-scrubbed stage.",
   "source": {
@@ -135,5 +135,5 @@
       "needle": "### 3.6 Scroll story"
     }
   ],
-  "generationNotes": "Measured 6300px at 1440x900 (700lvh); above the 3000px HERO cap, so it is a whitelisted exception pending human approval (extraction/measured-values.json wrapperGate.whitelist)."
+  "generationNotes": "Measured 6300px at 1440x900 (700lvh); above the 3000px HERO cap, so it is a whitelisted exception; its approval status and owner decision are in extraction/measured-values.json (wrapperGate.whitelist)."
 }

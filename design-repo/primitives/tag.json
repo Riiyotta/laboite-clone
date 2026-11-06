@@ -1,7 +1,7 @@
 {
   "id": "primitive.tag",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Outlined pill tag (category / year / resource kind).",
   "props": {
     "label": "string",

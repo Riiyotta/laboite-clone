@@ -1,6 +1,6 @@
 {
   "id": "proof.reviews",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Testimonials slider",
   "description": "Display title with prev/next round buttons and a draggable glass-card slider of client testimonials (logo, name, role, quote).",
   "source": {

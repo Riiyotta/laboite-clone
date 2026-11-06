@@ -1,5 +1,5 @@
 {
-  "pageSpecVersion": "1.0.0",
+  "pageSpecVersion": "1.0.1",
   "mode": "generated",
   "template": "template.home",
   "route": "/",

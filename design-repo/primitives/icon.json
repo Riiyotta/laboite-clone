@@ -1,7 +1,7 @@
 {
   "id": "primitive.icon",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ui-icon box: inline SVG at a fixed height step.",
   "props": {
     "size": [

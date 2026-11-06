@@ -1,6 +1,6 @@
 {
   "$description": "Border radii (CSS declarations; rendered px at 1440 in measured-values styleHistogram1440.borderRadius).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "radius.sm": {
       "type": "radius",

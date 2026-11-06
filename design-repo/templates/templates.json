@@ -1,6 +1,6 @@
 {
   "$description": "One template per page shape. The clone serves exactly one route ('/'); every other href in the source (expertises, réalisations, ressources, contact, legal, ...) points at the original site's routes and is NOT built here, so no template is invented for them.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "templates": {
     "template.home": {
       "name": "Homepage (FR)",

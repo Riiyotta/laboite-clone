@@ -1,6 +1,6 @@
 {
   "id": "proof.method",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Credentials marquee and method",
   "description": "30s looping marquee of credentials with a triangle icon, then an Inter tagline and a lead paragraph with a checkmarked metrics list revealed by a scroll mask.",
   "source": {

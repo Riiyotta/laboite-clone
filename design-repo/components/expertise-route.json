@@ -1,7 +1,7 @@
 {
   "id": "component.expertise-route",
   "kind": "component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Giant display label link with a hover photo.",
   "props": {
     "label": "string",

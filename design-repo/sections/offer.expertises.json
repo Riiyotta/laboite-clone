@@ -1,6 +1,6 @@
 {
   "id": "offer.expertises",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Service index",
   "description": "Caption overline and a centred list of giant display labels (one per service) at low opacity that light up and pop a photo at the viewport edge on hover.",
   "source": {

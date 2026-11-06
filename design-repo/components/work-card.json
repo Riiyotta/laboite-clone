@@ -1,7 +1,7 @@
 {
   "id": "component.work-card",
   "kind": "component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Case-study card: photo, client title, category tag; hover image follows the cursor.",
   "props": {
     "client": "string",

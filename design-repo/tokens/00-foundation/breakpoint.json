@@ -1,6 +1,6 @@
 {
   "$description": "Formats. 'whole' (full WebGL + scroll timelines) = NOT mobile; on mobile no scroll timeline or 3D plugin is created.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "breakpoint.mobile": {
       "type": "breakpoint",

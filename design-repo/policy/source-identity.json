@@ -1,6 +1,6 @@
 {
   "$description": "Single registry of the source's identity and content (R2). Every pattern is taken from the real source (src/, CLONE_SPEC_*.md, schema/example.pagespec.json). Matching is done on normalised text (lower-case, accents stripped, punctuation folded) by schema/semantic_validate.py in mode=generated only.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "normalisation": "NFKD, strip accents, lower-case, fold any char outside [a-z0-9%+/'.:-] to a space",
   "sourceBrand": {
     "patterns": [

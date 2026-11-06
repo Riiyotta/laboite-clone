@@ -1,12 +1,12 @@
 {
   "$description": "Which common design policy governs this repo and why (R15). The classification is an agent proposal; only the human owner can ratify it.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "policyId": "n0-design-constraints-common",
   "policyVersion": "0.1.0",
   "commonIrVersion": "0.5",
   "enforcementMode": "hard-and-soft",
   "domain": "agency-marketing",
-  "contentHash": "sha256:564eb372801efbbee5868cc5f1a877b1847db48ea5f5c9ec94155818ddeb60f1",
+  "contentHash": "sha256:d66e35707eafe8cf51cceb2092e31a0589ee909c51f894ebae01dbbc08f037a6",
   "contentHashComputedBy": "extraction/policy_hash.py",
   "enforcedBy": [
     "tokens/llm/token-policy.json",
@@ -32,9 +32,11 @@
     ]
   },
   "approval": {
-    "status": "defined-pending-architecture-review",
-    "architectureDecisionRecorded": false,
-    "decidedBy": null,
-    "decidedAt": null
+    "status": "approved-by-owner",
+    "architectureDecisionRecorded": true,
+    "decidedBy": "Riya Ghosh (repository owner)",
+    "decidedAt": "2026-11-06",
+    "decisionId": "2026-11-06-owner-approval",
+    "decisionVerbatim": "approve"
   }
 }

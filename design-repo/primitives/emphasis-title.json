@@ -1,7 +1,7 @@
 {
   "id": "primitive.emphasis-title",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Display title whose trailing words are wrapped in <strong> and coloured with the accent.",
   "props": {
     "lead": "string",

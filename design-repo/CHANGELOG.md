@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1 — 2026-11-06 — owner approvals recorded
+
+- Added `extraction/human-decisions.json`: the owner (Riya Ghosh) approved the three pending items on 2026-11-06 with the verbatim decision "approve". Transcribed by Claude; not an agent approval.
+  - `hero.statement` wrapper-gate whitelist (6300 px): now `status: approved`.
+  - `story.vr` parity exception (0.6898 / 0.7074 against 0.80): now `status: approved`.
+  - Design-policy classification: `approved-by-owner`, `architectureDecisionRecorded: true`.
+- `productionApproved` stays `false`: the owner approved these three items, not production.
+- `verify_all.py` now accepts an approved state only when it matches a human owner record whose approver is not an agent. Pending states are still accepted.
+- `prove_drift.py` has 3 new cases: the decision record removed, an approver missing from the record, and an agent recorded as owner. 35/35 caught.
+
 ## 1.0.0 — 2026-11-06 — initial build (Situation A)
 
 Built against clone commit `f6c2801`. The FR homepage is the only route the clone serves.

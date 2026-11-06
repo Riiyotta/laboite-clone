@@ -1,6 +1,6 @@
 {
   "$description": "Closed vocabulary of motion patterns observed in the source, each with its reduced-motion fallback. The source itself implements NO prefers-reduced-motion handling (grep returns nothing); the fallbacks are design-repo requirements grounded in the source's own mobile/fit behaviour (CLONE_SPEC_A §0.1: on mobile no timeline or 3D plugin is created).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "reducedMotionFallbacks": {
     "fit-layout": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
     "static-gradient": "Do not create the WebGL scene; paint the static white-to-grey gradient the source uses on mobile.",

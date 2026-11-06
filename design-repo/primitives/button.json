@@ -1,7 +1,7 @@
 {
   "id": "primitive.button",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UIActionButton: pill or round, five designs, optional violet hover sweep.",
   "props": {
     "design": [

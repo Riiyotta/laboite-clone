@@ -1,7 +1,7 @@
 {
   "id": "primitive.lang-switcher",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FR / EN option chips.",
   "props": {
     "languages": [

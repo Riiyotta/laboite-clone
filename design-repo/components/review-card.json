@@ -1,7 +1,7 @@
 {
   "id": "component.review-card",
   "kind": "component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Glass testimonial card: logo, name, role, quote.",
   "props": {
     "person": "object",

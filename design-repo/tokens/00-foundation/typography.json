@@ -1,6 +1,6 @@
 {
   "$description": "Font families, sizes (rem on the fluid root: html font-size clamp(7px, .6097560976vw, 10.2777777778px) = 8.78049px at 1440), weights, line heights, letter spacing. Values are the CSS declarations of the clone (which decodes the original's superFont utilities, CLONE_SPEC_A §0.2).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "font.family.text": {
       "type": "fontFamily",

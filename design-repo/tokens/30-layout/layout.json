@@ -1,6 +1,6 @@
 {
   "$description": "Layout tokens: container (superDevice), 12-column grid, section gaps, pinned-stage heights (desktop/tablet 'whole' only).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "layout.container": {
       "type": "container",

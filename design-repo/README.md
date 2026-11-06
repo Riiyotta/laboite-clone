@@ -8,12 +8,12 @@ The source is the React clone in the parent folder: the French homepage of `http
 
 ## Status
 
-- `status: design-review-pending`, `productionApproved: false`.
-- Design policy `n0-design-constraints-common` 0.1.0 (category `agency-marketing-site`) is `defined-pending-architecture-review`. Only the human owner can ratify it.
-- **Pending human approval** (recorded as evidence, never self-approved):
+- `status: design-review-pending`, `productionApproved: false`. Production approval is a separate human sign-off and has not been given.
+- **Approved by the owner on 2026-11-06** (Riya Ghosh, verbatim decision: "approve"; recorded in `extraction/human-decisions.json`):
   1. The wrapper-gate whitelist for `hero.statement` (6300 px at 1440x900, a 700lvh scroll-scrubbed opener). See `extraction/measured-values.json` → `wrapperGate.whitelist`.
   2. The parity exception for `story.vr`, which scored 0.69 and 0.71 in two runs against a 0.80 gate. The live and clone WebGL thumbnail spheres place different thumbnails; the DOM layer is identical. See `extraction/measured-values.json` → `parity.exceptions`.
-  3. The design-policy classification in `policy/design-policy.json`.
+  3. The design-policy classification: `n0-design-constraints-common` 0.1.0, category `agency-marketing-site` (`policy/design-policy.json` → `approval`).
+- `verify_all.py` accepts an approved item only when a record in `extraction/human-decisions.json` covers it and names the same human approver. An agent never adds those records on its own.
 
 ## Counts (recomputed by the builder; `verify_all.py` checks them)
 

@@ -1,7 +1,7 @@
 {
   "id": "primitive.glass-surface",
   "kind": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "superGlass: backdrop-filter blur with a light or dark tint.",
   "props": {
     "tint": [

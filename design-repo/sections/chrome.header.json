@@ -1,6 +1,6 @@
 {
   "id": "chrome.header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Fixed header bar",
   "description": "Fixed 12rem bar: wordmark link (left), centred glass 'Menu/Fermer' trigger with clip-path text swap, quote-request CTA (right). Switches light/dark design from the backdrop under it.",
   "source": {

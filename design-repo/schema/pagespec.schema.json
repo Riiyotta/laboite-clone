@@ -19,7 +19,7 @@
   "properties": {
     "pageSpecVersion": {
       "type": "string",
-      "const": "1.0.0"
+      "const": "1.0.1"
     },
     "mode": {
       "type": "string",

@@ -1,6 +1,6 @@
 {
   "id": "chrome.loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Load curtain",
   "description": "Purple full-screen panel with a three-layer elliptical mask and a two-triangle spinner; lifts once the page has loaded and reappears as the frame behind the open menu.",
   "source": {

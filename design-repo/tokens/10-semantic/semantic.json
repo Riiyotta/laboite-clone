@@ -1,6 +1,6 @@
 {
   "$description": "Semantic roles resolved to foundation token ids (aliases) and composite type roles.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "text.primary": {
       "type": "alias",

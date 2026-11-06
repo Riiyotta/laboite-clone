@@ -1,6 +1,6 @@
 {
   "id": "chrome.footer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Footer panel",
   "description": "Glass panel inside footer#FOOTER with a cursor glow: wordmark, FR/EN switch, office cities, three nav groups, credential icons with tooltips, copyright + SEO-modal trigger, socials and legal links.",
   "source": {

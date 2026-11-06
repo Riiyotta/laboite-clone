@@ -1,6 +1,6 @@
 {
   "$description": "Closed list of what a generator may place and set. Parity with sections/, primitives/, components/ is checked by verify_all.py (no phantom entries, no orphans); settable fields are re-derived from schema/pagespec.schema.json.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "sections": {
     "backdrop.webgl-scene": {
       "settable": {

@@ -1,6 +1,6 @@
 {
   "$description": "Citation and measurement ledger. External evidence (the clone's src/, CLONE_SPEC_*.md, ia.json) is referenced here, never in registry.manifest.json entryPoints. verify_all.py re-checks every citation when the sibling source tree is present and degrades to a warning when it is not.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "sourceRoot": "the design-repo's parent folder (the clone); paths below are relative to it",
   "sourceCommit": "f6c2801",
   "sourcePins": {
@@ -193,8 +193,11 @@
         "maxHeightPx": 6350,
         "justification": "The hero is a 700lvh scroll-scrubbed opener: its visible content (3D two-part title, fixed subtitle, video widget) is drawn by the fixed WebGL backdrop and driven by scroll progress, so the DOM wrapper height is scroll distance, not content. It is the page-opening composition only (no other content inside); the source's fit layout on mobile is 1425px.",
         "reviewedBy": "Claude (AI agent) - agent attestation, not a human sign-off",
-        "status": "pending human approval",
-        "approvedBy": null
+        "status": "approved",
+        "approvedBy": "Riya Ghosh (repository owner)",
+        "approvedAt": "2026-11-06",
+        "decisionId": "2026-11-06-owner-approval",
+        "decisionVerbatim": "approve"
       }
     ]
   },
@@ -380,8 +383,11 @@
         ],
         "gate": 0.8,
         "cause": "Diagnosed from the live/clone/diff images: identical DOM layer (title, statement, CTA, header) but the WebGL sphere of 61 client thumbnails assigns textures/positions in a different order on the two sides (the texture-to-tile mapping and per-plane randomness are runtime-dependent), so most of the black frame is covered by different thumbnails. Not a layout or typography defect; cannot be fixed from the design-repo (src/ is read-only for this task) and must not be masked.",
-        "status": "pending human approval",
-        "approvedBy": null
+        "status": "approved",
+        "approvedBy": "Riya Ghosh (repository owner)",
+        "approvedAt": "2026-11-06",
+        "decisionId": "2026-11-06-owner-approval",
+        "decisionVerbatim": "approve"
       }
     ],
     "notes": "Sections between 0.80 and 0.90 (proof.method, proof.labels, chrome.footer) differ by time/random-driven WebGL (triangle bob, background wave, label-card random offsets); they pass the gate in both runs."

@@ -1,6 +1,6 @@
 {
   "id": "proof.works",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Case-study grid",
   "description": "Display title over a 2-column grid of 8 case-study cards (client, category tag, photo) with staggered pop-in and cursor-following hover image.",
   "source": {

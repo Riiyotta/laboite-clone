@@ -1,7 +1,7 @@
 {
   "id": "component.white-paper-mockup",
   "kind": "component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rotated cover sheet + white back sheet + drop shadow.",
   "props": {
     "title": "string"

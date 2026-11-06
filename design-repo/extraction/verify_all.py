@@ -257,8 +257,26 @@ rec("templates", not tp, f"{len(seen_routes)} route(s) mapped exactly once; {sum
 ph = mod("extraction/policy_hash.py", "policy_hash").compute(REPO)
 dp = load("policy/design-policy.json")
 ok = ph == manifest.get("designPolicy", {}).get("contentHash") == dp.get("contentHash")
-appr_ok = dp["approval"]["status"] == "defined-pending-architecture-review" and dp["approval"]["architectureDecisionRecorded"] is False and manifest.get("productionApproved") is False
-rec("policy-hash", ok and appr_ok, f"{ph} matches manifest + design-policy; approval pending, productionApproved false" if ok and appr_ok else f"recomputed {ph} vs manifest {manifest.get('designPolicy', {}).get('contentHash')} / policy {dp.get('contentHash')}; approval_ok={appr_ok}")
+AGENT_RE = re.compile(r"claude|agent|assistant|automated|\bai\b|gpt|llm", re.I)
+try:
+    HD = load("extraction/human-decisions.json")
+except Exception:
+    HD = {"decisions": []}
+def human_record(item, who):
+    """An approval counts only if a hand-authored owner decision covers this item and names the same human approver."""
+    for d in HD.get("decisions", []):
+        if item in d.get("items", []) and d.get("decidedBy") == who and who and not AGENT_RE.search(who) and d.get("verbatim") and d.get("decidedAt"):
+            return d
+    return None
+def approval_state_ok(item, e, pending_key="status", pending_val="pending human approval"):
+    if e.get(pending_key) == pending_val and e.get("approvedBy") is None:
+        return True
+    return e.get(pending_key) == "approved" and human_record(item, e.get("approvedBy")) is not None
+_a = dp["approval"]
+appr_ok = manifest.get("productionApproved") is False and (
+    (_a["status"] == "defined-pending-architecture-review" and _a["architectureDecisionRecorded"] is False)
+    or (_a["status"] == "approved-by-owner" and _a["architectureDecisionRecorded"] is True and human_record("policy/design-policy.json:approval", _a.get("decidedBy")) is not None))
+rec("policy-hash", ok and appr_ok, f"{ph} matches manifest + design-policy; approval pending or owner-recorded, productionApproved false" if ok and appr_ok else f"recomputed {ph} vs manifest {manifest.get('designPolicy', {}).get('contentHash')} / policy {dp.get('contentHash')}; approval_ok={appr_ok}")
 
 # ---------------------------------------------------------------- wrapper gate
 wg = mod("extraction/wrapper_gate.py", "wrapper_gate")
@@ -269,11 +287,11 @@ rec("gate", not g_err, f"wrapper gate 0 errors, {len(g_warn)} warnings ({'; '.jo
 pe = []
 par = measured.get("parity", {})
 for e in par.get("exceptions", []):
-    if e.get("status") != "pending human approval" or e.get("approvedBy") is not None or len(e.get("cause", "")) < 30:
-        pe.append(f"{e.get('section')}: exception must be pending human approval with approvedBy null and a cause")
+    if not approval_state_ok("parity.exceptions:" + str(e.get("section")), e) or len(e.get("cause", "")) < 30:
+        pe.append(f"{e.get('section')}: exception must be pending human approval (approvedBy null) or approved by a recorded human owner decision, with a cause")
 for e in measured.get("wrapperGate", {}).get("whitelist", []):
-    if e.get("status") != "pending human approval" or e.get("approvedBy") is not None:
-        pe.append(f"whitelist {e.get('section')}: must stay pending human approval (approvedBy null)")
+    if not approval_state_ok("wrapperGate.whitelist:" + str(e.get("section")), e):
+        pe.append(f"whitelist {e.get('section')}: must be pending human approval (approvedBy null) or approved by a recorded human owner decision")
 for r in par.get("runs", []):
     f = os.path.join(REPO, r["file"])
     if not os.path.exists(f):
@@ -285,7 +303,7 @@ for r in par.get("runs", []):
     below = set(res["sectionsBelowGate"]) - {e["section"] for e in par.get("exceptions", [])}
     if below:
         pe.append(f"{r['label']}: sections below gate without a recorded exception: {sorted(below)}")
-rec("parity", not pe, f"{len(par.get('runs', []))} runs recorded; {len(par.get('exceptions', []))} exception(s) pending human approval" if not pe else pe[:4])
+rec("parity", not pe, f"{len(par.get('runs', []))} runs recorded; {len(par.get('exceptions', []))} exception(s), each pending or approved by a recorded human decision" if not pe else pe[:4])
 
 # ---------------------------------------------------------------- paths / entryPoints
 ap = []

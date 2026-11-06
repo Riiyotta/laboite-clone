@@ -1,6 +1,6 @@
 {
   "$description": "ui-icon heights (width auto).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "iconSize.s1": {
       "type": "iconSize",

@@ -1,6 +1,6 @@
 {
   "$description": "Stacking order and glass blur (the site has no box-shadow elevation; depth comes from the WebGL backdrop behind #MAIN and backdrop-filter glass).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "zIndex.backdrop": {
       "type": "zIndex",

@@ -1,6 +1,6 @@
 {
   "$description": "What a PageSpec may set, with which tokens. Category names are the catalog's own categories (token-catalog.json counts.byCategory); verify_all checks they resolve.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "pageLevel": {
     "fonts.display": {
       "allowedCategories": [

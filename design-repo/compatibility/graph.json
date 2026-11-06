@@ -1,6 +1,6 @@
 {
   "$description": "Rhythm/position rules JSON Schema cannot express. Each rule is enforced by schema/semantic_validate.py under the same id; verify_all.py checks the two lists agree. Exceptions were read off templates/templates.json's real node order (in-flow sections only).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "categories": [
     "BACKDROP",
     "CHROME",

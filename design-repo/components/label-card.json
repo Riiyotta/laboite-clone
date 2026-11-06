@@ -1,7 +1,7 @@
 {
   "id": "component.label-card",
   "kind": "component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Glass credential card: title, badge image, year tag.",
   "props": {
     "title": "string",

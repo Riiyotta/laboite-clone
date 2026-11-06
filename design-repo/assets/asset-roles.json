@@ -1,6 +1,6 @@
 {
   "$description": "Closed asset-role vocabulary. availability is pinned in code too (PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py); editing this file alone cannot loosen it. The source is a real, live agency site: logos, people, client photos, certification marks and the display typeface must never appear in a generated page.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "availabilityValues": [
     "reference-only",
     "generation-safe",

@@ -1,6 +1,6 @@
 {
   "id": "content.faq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "FAQ accordion",
   "description": "Overline, centred two-tone display title, an accordion of questions (6 shown, +6 per 'more' click; several may be open) with cursor-bending string dividers.",
   "source": {

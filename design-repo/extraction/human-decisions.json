@@ -1,0 +1,20 @@
+{
+  "$description": "Hand-authored ledger of decisions made by the human owner. The only file allowed to turn a 'pending human approval' item into 'approved'. extraction/build_repo.py applies these records; extraction/verify_all.py accepts an approved item only when it matches a record here and the approver is not an agent. Agents must never add or edit records here on their own initiative: they transcribe the owner's words verbatim.",
+  "owner": "Riya Ghosh (repository owner)",
+  "decisions": [
+    {
+      "id": "2026-11-06-owner-approval",
+      "decidedBy": "Riya Ghosh (repository owner)",
+      "decidedAt": "2026-11-06",
+      "channel": "Claude Code session chat; the owner replied to the list of three pending items",
+      "verbatim": "approve",
+      "transcribedBy": "Claude (AI agent), transcription only",
+      "items": [
+        "wrapperGate.whitelist:hero.statement",
+        "parity.exceptions:story.vr",
+        "policy/design-policy.json:approval"
+      ],
+      "scope": "Approves only these three items. It is not a production approval: registry.manifest.json productionApproved stays false."
+    }
+  ]
+}

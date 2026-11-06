@@ -1,6 +1,6 @@
 {
   "$description": "Component-scoped tokens: the five button designs (UIActionButton), button shapes, tag.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "button.design.light": {
       "type": "buttonDesign",

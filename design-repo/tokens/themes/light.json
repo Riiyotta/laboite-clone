@@ -1,6 +1,6 @@
 {
   "$description": "The one theme the source renders (white page, navy text). Every semantic token resolved to a literal foundation value; surface tones map to the WebGL backdrop pairs.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "id": "light",
   "resolved": {
     "text.primary": "#120042",

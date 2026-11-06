@@ -1,6 +1,6 @@
 {
   "$description": "Motion primitives: eases, durations, staggers, scroll smoothing. Scroll-scrubbed tweens have no duration of their own (scrub: true maps them to scroll distance; see motion-patterns.json).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tokens": {
     "easing.custom-out": {
       "type": "easing",
