@@ -1,0 +1,412 @@
+{
+  "$description": "Closed asset-role vocabulary. availability is pinned in code too (PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py); editing this file alone cannot loosen it. The source is a real, live agency site: logos, people, client photos, certification marks and the display typeface must never appear in a generated page.",
+  "version": "1.0.0",
+  "availabilityValues": [
+    "reference-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "generationPolicyValues": [
+    "must-reuse-exact",
+    "may-generate-new",
+    "must-not-fabricate",
+    "placeholder-only"
+  ],
+  "roles": {
+    "brand.wordmark": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "The source's 'la boite à slides' wordmark SVG (header, footer).",
+      "evidence": [
+        {
+          "cite": "src/components/header/icons.jsx:4",
+          "needle": "<title>Logo - la Boite à Slides</title>"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "brand.user-supplied-mark"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page."
+    },
+    "hero.loop-video": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Hero widget showreel video (autoplay, muted loop).",
+      "evidence": [
+        {
+          "cite": "src/components/hero/Widgets.jsx:9",
+          "needle": "const VIDEO = '/sk/uploads/home_video_SD"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.generated-video",
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page.",
+      "sourceFiles": [
+        "public/sk/uploads/home_video_SD_79c96be094.mp4"
+      ]
+    },
+    "case.photo": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Client case-study photographs on the works cards.",
+      "evidence": [
+        {
+          "cite": "src/components/Works.jsx:12",
+          "needle": "const WORKS = ["
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.generated-image",
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page.",
+      "sourceFiles": [
+        "public/sk/uploads/*Safran*",
+        "public/sk/uploads/*Adidas*",
+        "public/sk/uploads/*Nissan*"
+      ]
+    },
+    "expertise.photo": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Photos popped on hover of the expertise labels.",
+      "evidence": [
+        {
+          "cite": "src/components/Expertises.jsx:9",
+          "needle": "const ROUTES = ["
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.generated-image",
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page."
+    },
+    "team.photo": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Spotlight photograph (alt 'logo la boite à slides'): agency branding/people.",
+      "evidence": [
+        {
+          "cite": "src/components/Spotlight.jsx:47",
+          "needle": "large_Labas_20f4ebe642.jpg"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.generated-image",
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page."
+    },
+    "resource.cover": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Resource and menu widget cover photos.",
+      "evidence": [
+        {
+          "cite": "src/components/ResourceCards.jsx:56",
+          "needle": "large_presentation_equipe_0eebf6541e.jpeg"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.generated-image",
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page."
+    },
+    "credential.badge": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Certification / rating badges (ISO 9001 Bureau Veritas, Microsoft Office Specialist, 5-star Google reviews).",
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:11",
+          "needle": "const LABELS = ["
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "credential.placeholder-badge",
+        "rating.placeholder-badge"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page. A generated page must not claim these certifications or ratings."
+    },
+    "client.logo": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Logos of the reviewers' companies on the testimonial cards.",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/data.js:5",
+          "needle": "thumbnail_logo_Caterpillar"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "logo.placeholder-client",
+        "person.fictional-avatar"
+      ],
+      "licensing": "Third-party trademarks shown with the source's client relationships; never reuse."
+    },
+    "icon.ui": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "The source's own inline SVG icons (menu points, plus, arrow, triangle mirror, checkmark badge, rotating Scroll badge).",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A_ASSETS.md:23",
+          "needle": "## Inline SVGs"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "icon.generic"
+      ]
+    },
+    "scene.headset-model": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "VR headset GLB drawn by the backdrop scene in the VR section.",
+      "evidence": [
+        {
+          "cite": "src/scene/engine.js:157",
+          "needle": "DECIMATE v2_compressed-compressed.glb"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page.",
+      "sourceFiles": [
+        "public/assets/models/DECIMATE v2_compressed-compressed.glb"
+      ]
+    },
+    "scene.sphere-thumbnail": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "61 client-work thumbnails textured on the VR sphere.",
+      "evidence": [
+        {
+          "cite": "src/scene/vr.js:10",
+          "needle": "the 61 `small_*` thumbnails"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.generated-image",
+        "media.placeholder"
+      ],
+      "licensing": "Belongs to La boîte à slides or its clients. Never reproduce, trace, restyle or AI-regenerate it in a generated page."
+    },
+    "scene.hdr-environment": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "HDR environment map lighting the glass triangles.",
+      "evidence": [
+        {
+          "cite": "src/scene/engine.js:89",
+          "needle": "studio_small_08_1k.hdr"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "media.placeholder"
+      ],
+      "licensing": "Licence of the HDR file is not recorded in the clone; treat as reference-only until confirmed."
+    },
+    "scene.title-font-outline": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Typeface JSON outline of the licensed display font used by the 3D hero title.",
+      "evidence": [
+        {
+          "cite": "src/scene/title.js:11",
+          "needle": "FK Screamer Legacy Upright_Regular.json"
+        }
+      ],
+      "generationSafeSubstitutes": [
+        "font.open-licence-outline"
+      ],
+      "licensing": "Derived from a commercial typeface; same restriction as font.family.display."
+    },
+    "brand.placeholder-mark": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Neutral placeholder mark (initials or geometric shape) for a generated page's brand.",
+      "evidence": [
+        {
+          "cite": "src/components/header/icons.jsx:5",
+          "needle": "export function Logo"
+        }
+      ]
+    },
+    "brand.user-supplied-mark": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "must-reuse-exact",
+      "description": "The requester's own logo, supplied by them (never fetched or fabricated).",
+      "evidence": [
+        {
+          "cite": "src/components/header/icons.jsx:5",
+          "needle": "export function Logo"
+        }
+      ]
+    },
+    "media.generated-image": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated or properly licensed image with no real people, client logos or source imagery.",
+      "evidence": [
+        {
+          "cite": "src/components/Works.jsx:12",
+          "needle": "const WORKS = ["
+        }
+      ]
+    },
+    "media.generated-video": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly produced or licensed short loop video.",
+      "evidence": [
+        {
+          "cite": "src/components/hero/Widgets.jsx:9",
+          "needle": "const VIDEO ="
+        }
+      ]
+    },
+    "media.placeholder": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "placeholder-only",
+      "description": "Flat placeholder (solid backdrop-tone fill with an aspect ratio) until real media is supplied.",
+      "evidence": [
+        {
+          "cite": "src/components/Works.jsx:12",
+          "needle": "const WORKS = ["
+        }
+      ]
+    },
+    "person.fictional-avatar": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Illustrative avatar for a fictional reviewer; never a photo of a real person.",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/data.js:2",
+          "needle": "export const REVIEWS"
+        }
+      ]
+    },
+    "logo.placeholder-client": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "placeholder-only",
+      "description": "Neutral client-logo placeholder (initials tile).",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/data.js:2",
+          "needle": "export const REVIEWS"
+        }
+      ]
+    },
+    "credential.placeholder-badge": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "placeholder-only",
+      "description": "Neutral badge placeholder for a credential the requester actually holds (stated by them).",
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:11",
+          "needle": "const LABELS = ["
+        }
+      ]
+    },
+    "rating.placeholder-badge": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "placeholder-only",
+      "description": "Neutral rating badge placeholder; no real platform mark or score.",
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:11",
+          "needle": "const LABELS = ["
+        }
+      ]
+    },
+    "icon.generic": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Generic UI icon drawn new or taken from an openly licensed set.",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A_ASSETS.md:23",
+          "needle": "## Inline SVGs"
+        }
+      ]
+    },
+    "social.network-icon": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "must-reuse-exact",
+      "description": "A social network's own published icon used per its brand guidelines, linking to the requester's profile.",
+      "evidence": [
+        {
+          "cite": "src/components/Footer.jsx:190",
+          "needle": "aria-label=\"linkedin\""
+        }
+      ]
+    },
+    "font.open-licence-outline": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Typeface outline generated from an openly licensed font (e.g. the page's Inter) for the 3D title.",
+      "evidence": [
+        {
+          "cite": "src/scene/title.js:11",
+          "needle": "new FontLoader()"
+        }
+      ]
+    },
+    "url.placeholder": {
+      "kind": "url",
+      "availability": "generation-safe",
+      "generationPolicy": "placeholder-only",
+      "description": "Links in generated pages: relative paths or reserved .example / .invalid / .test domains only.",
+      "evidence": [
+        {
+          "cite": "src/components/Footer.jsx:14",
+          "needle": "const EXPLORE = ["
+        }
+      ]
+    },
+    "copy.original": {
+      "kind": "copy",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Original copy written for the generated page; no source sentence, claim, statistic or testimonial.",
+      "evidence": [
+        {
+          "cite": "src/components/Tagline.jsx:8",
+          "needle": "const TITLE ="
+        }
+      ]
+    }
+  }
+}

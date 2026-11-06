@@ -1,0 +1,121 @@
+{
+  "id": "backdrop.webgl-scene",
+  "version": "1.0.0",
+  "title": "WebGL backdrop",
+  "description": "Fixed full-viewport WebGL canvas behind the page: domed gradient background layers that wipe per section, 22 glass triangles, clipped 3D display titles in the hero, VR headset and thumbnail sphere, RGB-shift post pass. Computes the header light/dark state.",
+  "source": {
+    "id": "Scene.jsx canvas#SYNTHRA",
+    "file": "src/scene/Scene.jsx",
+    "tag": "<canvas id=\"SYNTHRA\"",
+    "lines": "22",
+    "citation": "src/scene/Scene.jsx:22"
+  },
+  "semantic": {
+    "id": "backdrop.webgl-scene",
+    "category": "BACKDROP"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Runtime rendering layer (fixed canvas, pointer-events none) with no content of its own; its look is selected per section through node tokens.surfaceTone, so it is never retrieved as a standalone section.",
+  "positionKind": "fixed",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "mobileFallback",
+      "plugins"
+    ],
+    "properties": {
+      "plugins": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "string",
+          "enum": [
+            "gradient-layers",
+            "glass-triangles",
+            "title-3d",
+            "vr-sphere",
+            "rgb-shift"
+          ]
+        }
+      },
+      "mobileFallback": {
+        "type": "string",
+        "enum": [
+          "static-gradient"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "webgl-scroll-scene"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "time"
+    ],
+    "reducedMotionFallback": "static-gradient",
+    "reducedMotionFallbackText": "Do not create the WebGL scene; paint the static white-to-grey gradient the source uses on mobile.",
+    "evidence": [
+      {
+        "cite": "CLONE_SPEC_A.md:205",
+        "needle": "### 3.4 Scene recipe (three r181)"
+      },
+      {
+        "cite": "src/scene/engine.js:223",
+        "needle": "// ---- whole / mobile gating"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "full scene (all plugins)",
+    "tablet": "full scene (all plugins)",
+    "mobile": "no scene: static white-to-grey gradient only, no triangles/titles/VR",
+    "evidence": [
+      {
+        "cite": "src/scene/engine.js:224-230",
+        "needle": "function applyWhole(w)"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh",
+    "backdrop.prm",
+    "backdrop.scd",
+    "backdrop.trt",
+    "backdrop.drk",
+    "backdrop.blk"
+  ],
+  "assetRoles": [
+    "scene.hdr-environment",
+    "scene.headset-model",
+    "scene.sphere-thumbnail",
+    "scene.title-font-outline"
+  ],
+  "generatedAssetRoles": [
+    "font.open-licence-outline",
+    "media.generated-image",
+    "media.placeholder"
+  ],
+  "evidence": [
+    {
+      "cite": "src/scene/Scene.jsx:7",
+      "needle": "const style = { position: 'fixed'"
+    },
+    {
+      "cite": "CLONE_SPEC_B.md:46",
+      "needle": "### 0.2 Background shader layers"
+    }
+  ],
+  "generationNotes": "Generated pages keep the gradient-layer mechanism with the backdrop.* tones; the VR sphere must be fed generation-safe images and the 3D title must use an open-licence outline."
+}

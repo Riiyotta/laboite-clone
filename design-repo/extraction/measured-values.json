@@ -1,0 +1,530 @@
+{
+  "$description": "Citation and measurement ledger. External evidence (the clone's src/, CLONE_SPEC_*.md, ia.json) is referenced here, never in registry.manifest.json entryPoints. verify_all.py re-checks every citation when the sibling source tree is present and degrades to a warning when it is not.",
+  "version": "1.0.0",
+  "sourceRoot": "the design-repo's parent folder (the clone); paths below are relative to it",
+  "sourceCommit": "f6c2801",
+  "sourcePins": {
+    "CLONE_SPEC_A.md": "e49826c6b0f2f09bd82401cd8a9ecb87467e375e3a89ed1fe110376e7484aa30",
+    "CLONE_SPEC_A_ASSETS.md": "bdfadd405d88f0f573b7b0700625581d7f8f1991aad1a65953c760cb8e4f851c",
+    "CLONE_SPEC_B.md": "20af314a97e50ed3de510b5356ce31ab76404f318557d30ccf5178a8bb79a4c4",
+    "README.md": "499364241d7d6415f5b23c83fc6e1145f6d68732a98cc8993650b20a914efe5a",
+    "ia.json": "2c28a57c2fceeea0ae26d6dfce867374e110b4326e47d90bdecfd05de7b2725c",
+    "index.html": "35479c62a05ee77b96a2e2c77c49e68b3468dea194c31c749980791092d579f9",
+    "src/App.jsx": "fc911dd458ae72ea5cfb02359122989570e1b96ca6c481e72ab75af8fc5ed5f2",
+    "src/components/Expertises.jsx": "1ed9d959bed1377a846c6e558f8fd9262a0cad7c3fe4895faf88fbd1060371c7",
+    "src/components/Faq.jsx": "0f83d41e3bdab16f944881e4b67115df87599f557c98344bf0caba753c5cdebe",
+    "src/components/Footer.jsx": "96ef0ec47c4af19b33a192e1aa2644bce44c5122d71e843314fa378a220e15ac",
+    "src/components/Header.jsx": "cbdeadd36e4cef7f592bb12a8c1f44097428225b19aeee19c5f56a819d6a9d3f",
+    "src/components/Hero.jsx": "01dbf808158f7ab2cb6692c83f14c61c3c52f9f231a2077267ac7370eed220eb",
+    "src/components/LabelCards.jsx": "e6ab08b8c82b837cd3bdb3ac29dc4acc7e62578a8b27e0f568e5110fb071e60a",
+    "src/components/Method.jsx": "3435d3fe054731d79e522f667ab4126e5a76d2102243c5261ae5e2c4f0dd054f",
+    "src/components/ResourceCards.jsx": "cde2fc5bba829390b9a0feeadafc3b7c305f7d756f7da9ec893473c05c2b8455",
+    "src/components/ReviewCards.jsx": "41ccd6b4a078001f7a58c41fe5f4a6fb25fdce07fadba8c46a93b0961be0c8d6",
+    "src/components/Skills.jsx": "539209e9938b2c8a733bb0a3845bddf6abc13f0c6f042c371384989895cd9197",
+    "src/components/Spotlight.jsx": "2900c050861c602d42f64143d10eab2fe4c892beff8479313308de5f3df5c56f",
+    "src/components/Tagline.jsx": "6698a672e7800f48787a66f22989fd7069e7d3776e30c7c00fec03a9d2b4a518",
+    "src/components/Vr.jsx": "c4755e1a225cc028238f82fe9da48d65d8c1b7ef7b9522c267df6c135b2f3d17",
+    "src/components/Works.jsx": "c5032dc049f88b39b30e4d8e16a7a3a5fcb9385b8625345b7914230f5bfa6618",
+    "src/components/header/Loader.jsx": "c615319a20af2a25a04e57c0dc7a982e684e321fe1a4afd39eef01bb93f5c163",
+    "src/components/header/Menu.jsx": "c93ca2b3f82b6e4778e79c96a6bdbf64a88940cda86d29d7869c04ac9734d557",
+    "src/components/hero/SeoModal.jsx": "6693fcd4b8b211988363ba3d28c42ccf9e9b1aacfa5b109bd1bfd914bf1c3a14",
+    "src/index.css": "ee5c0679514adb7abf9aa6b969e72b5e7e70ffa1a46955dfaba4208aa5c98bfd",
+    "src/scene/Scene.jsx": "2974564305041282650541143e27036e547c48eb71ea2ea4f33598d0d624a309",
+    "tailwind.config.js": "4b0bae63045d5dc8a1eb9617779df534bf896eae9ab86ee36b795a49e80a6356"
+  },
+  "sectionHeights": {
+    "viewport": "1440x900",
+    "measuredAt": "2026-11-06T12:08:14.288Z",
+    "tool": "extraction/measure_sections.mjs (headless Chromium)",
+    "rawFile": "extraction/raw-section-heights.json",
+    "routes": {
+      "/": {
+        "documentHeightPx": 35940,
+        "sections": {
+          "backdrop.webgl-scene": {
+            "heightPx": 900,
+            "topPx": 0,
+            "positionKind": "fixed"
+          },
+          "chrome.loader": {
+            "heightPx": 900,
+            "topPx": 0,
+            "positionKind": "fixed"
+          },
+          "chrome.header": {
+            "heightPx": 105.4,
+            "topPx": 0,
+            "positionKind": "fixed"
+          },
+          "chrome.menu-overlay": {
+            "heightPx": 885.9,
+            "topPx": 7,
+            "positionKind": "fixed"
+          },
+          "hero.statement": {
+            "heightPx": 6300,
+            "topPx": 0,
+            "positionKind": "in-flow"
+          },
+          "chrome.seo-modal": {
+            "heightPx": 900,
+            "topPx": 0,
+            "positionKind": "fixed"
+          },
+          "story.tagline": {
+            "heightPx": 4500,
+            "topPx": 6300,
+            "positionKind": "in-flow"
+          },
+          "proof.works": {
+            "heightPx": 3022.4,
+            "topPx": 10800,
+            "positionKind": "in-flow"
+          },
+          "proof.method": {
+            "heightPx": 1245.7,
+            "topPx": 13918.1,
+            "positionKind": "in-flow"
+          },
+          "offer.skills": {
+            "heightPx": 4860,
+            "topPx": 15260.5,
+            "positionKind": "in-flow"
+          },
+          "offer.expertises": {
+            "heightPx": 602.3,
+            "topPx": 20570.5,
+            "positionKind": "in-flow"
+          },
+          "story.vr": {
+            "heightPx": 5400,
+            "topPx": 21172.7,
+            "positionKind": "in-flow"
+          },
+          "offer.spotlight": {
+            "heightPx": 627,
+            "topPx": 26572.7,
+            "positionKind": "in-flow"
+          },
+          "content.resources": {
+            "heightPx": 739.1,
+            "topPx": 27375.4,
+            "positionKind": "in-flow"
+          },
+          "proof.labels": {
+            "heightPx": 4500,
+            "topPx": 28290.1,
+            "positionKind": "in-flow"
+          },
+          "proof.reviews": {
+            "heightPx": 678.2,
+            "topPx": 32965.7,
+            "positionKind": "in-flow"
+          },
+          "content.faq": {
+            "heightPx": 728.2,
+            "topPx": 33819.5,
+            "positionKind": "in-flow"
+          },
+          "conversion.closing-cta": {
+            "heightPx": 593,
+            "topPx": 34898.9,
+            "positionKind": "in-flow"
+          },
+          "chrome.footer": {
+            "heightPx": 448.5,
+            "topPx": 35491.9,
+            "positionKind": "in-flow"
+          }
+        }
+      }
+    },
+    "otherViewports": {
+      "768x1024": {
+        "documentHeightPx": 37464,
+        "htmlFontSizePx": 7,
+        "inFlowHeightsPx": {
+          "hero.statement": 7168,
+          "story.tagline": 5120,
+          "proof.works": 2063.1,
+          "proof.method": 1239.6,
+          "offer.skills": 5529.6,
+          "offer.expertises": 480.2,
+          "story.vr": 6144,
+          "offer.spotlight": 490.7,
+          "content.resources": 458.7,
+          "proof.labels": 5120,
+          "proof.reviews": 540.6,
+          "content.faq": 580.5,
+          "conversion.closing-cta": 570.3,
+          "chrome.footer": 453.7
+        }
+      },
+      "390x844": {
+        "documentHeightPx": 14253,
+        "htmlFontSizePx": 7,
+        "inFlowHeightsPx": {
+          "hero.statement": 1425.3,
+          "story.tagline": 662.5,
+          "proof.works": 3087.7,
+          "proof.method": 734.4,
+          "offer.skills": 1128.4,
+          "offer.expertises": 598.4,
+          "story.vr": 635,
+          "offer.spotlight": 411.4,
+          "content.resources": 662.9,
+          "proof.labels": 1010.1,
+          "proof.reviews": 560.8,
+          "content.faq": 572.7,
+          "conversion.closing-cta": 477.2,
+          "chrome.footer": 1012.9
+        }
+      }
+    }
+  },
+  "wrapperGate": {
+    "thresholdsPinnedIn": "extraction/wrapper_gate.py",
+    "whitelist": [
+      {
+        "route": "/",
+        "section": "hero.statement",
+        "rule": "HERO_MAX_HEIGHT",
+        "measuredHeightPx": 6300,
+        "maxHeightPx": 6350,
+        "justification": "The hero is a 700lvh scroll-scrubbed opener: its visible content (3D two-part title, fixed subtitle, video widget) is drawn by the fixed WebGL backdrop and driven by scroll progress, so the DOM wrapper height is scroll distance, not content. It is the page-opening composition only (no other content inside); the source's fit layout on mobile is 1425px.",
+        "reviewedBy": "Claude (AI agent) - agent attestation, not a human sign-off",
+        "status": "pending human approval",
+        "approvedBy": null
+      }
+    ]
+  },
+  "styleHistogram1440": {
+    "rawFile": "extraction/raw-style-histogram.json",
+    "measuredAt": "2026-11-06T12:09:07.149Z",
+    "color": {
+      "rgb(255, 255, 255)": 186,
+      "rgb(102, 48, 255)": 186,
+      "rgb(18, 0, 66)": 146
+    },
+    "fontFamily": {
+      "vInter": 288,
+      "FKScreamer": 214,
+      "Arial": 16
+    },
+    "fontSize": {
+      "221.268px": 154,
+      "13.1707px": 102,
+      "14.0488px": 83,
+      "45.6585px": 49,
+      "98.3415px": 28,
+      "15.8049px": 23,
+      "12px": 17,
+      "144px": 14,
+      "35.122px": 12,
+      "21.0732px": 11,
+      "26.3415px": 10,
+      "28.0976px": 7,
+      "11px": 4,
+      "56.1951px": 3,
+      "52.6829px": 1
+    },
+    "fontWeight": {
+      "400": 82,
+      "500": 138,
+      "600": 55,
+      "700": 232,
+      "900": 11
+    },
+    "borderRadius": {
+      "21.0732px": 29,
+      "14.0488px": 28,
+      "28.0976px": 26,
+      "17.561px": 7,
+      "48px": 3,
+      "35.122px": 2,
+      "2.13%": 2
+    },
+    "backgroundColor": {
+      "rgba(18, 0, 66, 0.07)": 19,
+      "rgba(255, 255, 255, 0.1)": 17,
+      "rgb(255, 255, 255)": 14,
+      "rgb(18, 0, 66)": 4,
+      "rgb(102, 48, 255)": 3,
+      "rgb(8, 8, 8)": 1,
+      "rgba(18, 0, 66, 0.77)": 1
+    }
+  },
+  "parity": {
+    "harness": [
+      "extraction/parity/capture.mjs",
+      "extraction/parity/compare.py"
+    ],
+    "metric": {
+      "downsample": 4,
+      "tolerance": 24,
+      "gate": 0.8,
+      "unit": "fraction of pixels whose max channel diff <= tolerance"
+    },
+    "runs": [
+      {
+        "label": "run1",
+        "file": "extraction/parity/results-run1.json",
+        "average": 0.9283,
+        "sectionsBelowGate": [
+          "story.vr"
+        ],
+        "liveDocumentHeightPx": 35940,
+        "cloneDocumentHeightPx": 35940,
+        "consentOverlaysHidden": 0,
+        "capturedAt": "2026-11-06T12:21:13.186Z",
+        "gl": "gpu"
+      },
+      {
+        "label": "run2",
+        "file": "extraction/parity/results-run2.json",
+        "average": 0.9406,
+        "sectionsBelowGate": [
+          "story.vr"
+        ],
+        "liveDocumentHeightPx": 35940,
+        "cloneDocumentHeightPx": 35940,
+        "consentOverlaysHidden": 0,
+        "capturedAt": "2026-11-06T12:24:36.279Z",
+        "gl": "gpu"
+      }
+    ],
+    "perSection": {
+      "chrome.footer": {
+        "run1": 0.8795,
+        "run2": 0.9172,
+        "absDelta": 0.0377
+      },
+      "content.faq": {
+        "run1": 0.99,
+        "run2": 0.9905,
+        "absDelta": 0.0005
+      },
+      "content.resources": {
+        "run1": 0.9727,
+        "run2": 1.0,
+        "absDelta": 0.0273
+      },
+      "conversion.closing-cta": {
+        "run1": 0.9245,
+        "run2": 0.9416,
+        "absDelta": 0.0171
+      },
+      "hero.statement": {
+        "run1": 0.9912,
+        "run2": 0.9944,
+        "absDelta": 0.0032
+      },
+      "offer.expertises": {
+        "run1": 1.0,
+        "run2": 1.0,
+        "absDelta": 0.0
+      },
+      "offer.skills": {
+        "run1": 0.9153,
+        "run2": 0.9396,
+        "absDelta": 0.0243
+      },
+      "offer.spotlight": {
+        "run1": 0.9977,
+        "run2": 1.0,
+        "absDelta": 0.0023
+      },
+      "proof.labels": {
+        "run1": 0.8587,
+        "run2": 0.8643,
+        "absDelta": 0.0056
+      },
+      "proof.method": {
+        "run1": 0.8629,
+        "run2": 0.8824,
+        "absDelta": 0.0195
+      },
+      "proof.reviews": {
+        "run1": 0.9973,
+        "run2": 0.9977,
+        "absDelta": 0.0004
+      },
+      "proof.works": {
+        "run1": 0.994,
+        "run2": 0.9997,
+        "absDelta": 0.0057
+      },
+      "story.tagline": {
+        "run1": 0.9225,
+        "run2": 0.9337,
+        "absDelta": 0.0112
+      },
+      "story.vr": {
+        "run1": 0.6898,
+        "run2": 0.7074,
+        "absDelta": 0.0176
+      }
+    },
+    "reproducibility": {
+      "maxAbsDeltaBetweenRuns": 0.0377,
+      "tolerance": 0.05
+    },
+    "captureState": "1440x900, GPU ANGLE, Math.random seeded identically on both sides, videos paused at t=0, consent overlays never clicked (hidden only if present: 0 found), same scrollY offsets taken from the clone geometry (live layout verified identical: 35 940 px, every section top equal).",
+    "liveScreenshotsCommitted": false,
+    "exceptions": [
+      {
+        "section": "story.vr",
+        "scores": [
+          0.6898,
+          0.7074
+        ],
+        "gate": 0.8,
+        "cause": "Diagnosed from the live/clone/diff images: identical DOM layer (title, statement, CTA, header) but the WebGL sphere of 61 client thumbnails assigns textures/positions in a different order on the two sides (the texture-to-tile mapping and per-plane randomness are runtime-dependent), so most of the black frame is covered by different thumbnails. Not a layout or typography defect; cannot be fixed from the design-repo (src/ is read-only for this task) and must not be masked.",
+        "status": "pending human approval",
+        "approvedBy": null
+      }
+    ],
+    "notes": "Sections between 0.80 and 0.90 (proof.method, proof.labels, chrome.footer) differ by time/random-driven WebGL (triangle bob, background wave, label-card random offsets); they pass the gate in both runs."
+  },
+  "iaReconciliation": {
+    "iaFile": "ia.json",
+    "iaSections": 18,
+    "contracts": 19,
+    "differences": [
+      "footer#FOOTER (ia: chrome.footer) is split into conversion.closing-cta (title + Contactez-nous CTA, a conversion block) and chrome.footer (nav panel) for R6 category honesty; ia.json is left unchanged (outside this task's write scope)."
+    ],
+    "spotChecks": [
+      {
+        "iaSection": "backdrop.webgl-scene",
+        "implementedBy": "scene/Scene.jsx (engine.js, home.js, background.js, triangles.js, title.js)",
+        "implementedByExists": true
+      },
+      {
+        "iaSection": "chrome.header",
+        "implementedBy": "Header.jsx",
+        "implementedByExists": true
+      },
+      {
+        "iaSection": "chrome.loader",
+        "implementedBy": "header/Loader.jsx",
+        "implementedByExists": true
+      },
+      {
+        "iaSection": "chrome.menu-overlay",
+        "implementedBy": "header/Menu.jsx",
+        "implementedByExists": true
+      },
+      {
+        "iaSection": "chrome.seo-modal",
+        "implementedBy": "hero/SeoModal.jsx",
+        "implementedByExists": true
+      },
+      {
+        "iaSection": "chrome.footer",
+        "implementedBy": "Footer.jsx",
+        "implementedByExists": true
+      },
+      {
+        "iaSection": "hero.statement",
+        "implementedBy": "Hero.jsx",
+        "implementedByExists": true,
+        "iaYpx": 0.0,
+        "measuredTopPx": 0,
+        "agrees": true
+      },
+      {
+        "iaSection": "story.tagline",
+        "implementedBy": "Tagline.jsx",
+        "implementedByExists": true,
+        "iaYpx": 6300.0,
+        "measuredTopPx": 6300,
+        "agrees": true
+      },
+      {
+        "iaSection": "proof.works",
+        "implementedBy": "Works.jsx",
+        "implementedByExists": true,
+        "iaYpx": 10800.0,
+        "measuredTopPx": 10800,
+        "agrees": true
+      },
+      {
+        "iaSection": "proof.method",
+        "implementedBy": "Method.jsx",
+        "implementedByExists": true,
+        "iaYpx": 13918.0,
+        "measuredTopPx": 13918.1,
+        "agrees": true
+      },
+      {
+        "iaSection": "offer.skills",
+        "implementedBy": "Skills.jsx",
+        "implementedByExists": true,
+        "iaYpx": 15260.0,
+        "measuredTopPx": 15260.5,
+        "agrees": true
+      },
+      {
+        "iaSection": "offer.expertises",
+        "implementedBy": "Expertises.jsx",
+        "implementedByExists": true,
+        "iaYpx": 20570.0,
+        "measuredTopPx": 20570.5,
+        "agrees": true
+      },
+      {
+        "iaSection": "story.vr",
+        "implementedBy": "Vr.jsx",
+        "implementedByExists": true,
+        "iaYpx": 21173.0,
+        "measuredTopPx": 21172.7,
+        "agrees": true
+      },
+      {
+        "iaSection": "offer.spotlight",
+        "implementedBy": "Spotlight.jsx",
+        "implementedByExists": true,
+        "iaYpx": 26573.0,
+        "measuredTopPx": 26572.7,
+        "agrees": true
+      },
+      {
+        "iaSection": "content.resources",
+        "implementedBy": "ResourceCards.jsx",
+        "implementedByExists": true,
+        "iaYpx": 27376.0,
+        "measuredTopPx": 27375.4,
+        "agrees": true
+      },
+      {
+        "iaSection": "proof.labels",
+        "implementedBy": "LabelCards.jsx",
+        "implementedByExists": true,
+        "iaYpx": 28290.0,
+        "measuredTopPx": 28290.1,
+        "agrees": true
+      },
+      {
+        "iaSection": "proof.reviews",
+        "implementedBy": "ReviewCards.jsx",
+        "implementedByExists": true,
+        "iaYpx": 32966.0,
+        "measuredTopPx": 32965.7,
+        "agrees": true
+      },
+      {
+        "iaSection": "content.faq",
+        "implementedBy": "Faq.jsx",
+        "implementedByExists": true,
+        "iaYpx": 33820.0,
+        "measuredTopPx": 33819.5,
+        "agrees": true
+      }
+    ]
+  },
+  "groundworkNotes": [
+    "qa/fullsite/ and reference/ are gitignored in the clone and are never cited.",
+    "ia.json says 'bottom-half sections still in build'; every bottom-half section is present in src/App.jsx and measured here.",
+    "The source has no prefers-reduced-motion handling; reducedMotionFallback values are design-repo requirements grounded in the source's mobile 'fit' layouts."
+  ]
+}

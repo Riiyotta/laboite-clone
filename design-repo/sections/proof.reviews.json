@@ -1,0 +1,155 @@
+{
+  "id": "proof.reviews",
+  "version": "1.0.0",
+  "title": "Testimonials slider",
+  "description": "Display title with prev/next round buttons and a draggable glass-card slider of client testimonials (logo, name, role, quote).",
+  "source": {
+    "id": "ReviewCards.jsx section.reviewCards",
+    "file": "src/components/ReviewCards.jsx",
+    "tag": "data-section=\"review-cards\"",
+    "lines": "43-64",
+    "citation": "src/components/ReviewCards.jsx:43-64"
+  },
+  "semantic": {
+    "id": "proof.reviews",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "reviews",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "emphasis",
+          "lead"
+        ],
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          },
+          "emphasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2
+          }
+        }
+      },
+      "reviews": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "media",
+            "person",
+            "quote"
+          ],
+          "properties": {
+            "person": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "isFictional",
+                "name",
+                "role"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 3
+                },
+                "role": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 8
+                },
+                "isFictional": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 110
+            },
+            "media": {
+              "$ref": "#/definitions/media"
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "words-reveal",
+      "cards-pop",
+      "draggable-swiper",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "scroll-toggle",
+      "drag",
+      "click"
+    ],
+    "reducedMotionFallback": "native-scroll",
+    "reducedMotionFallbackText": "Keep the horizontal track as plain overflow scrolling without momentum or tweened steps.",
+    "evidence": [
+      {
+        "cite": "src/components/ReviewCards.jsx:36",
+        "needle": "wordsReveal(title.current"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:372",
+        "needle": "### 6.3 Behaviour"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "track bleeds to the right edge, buttons beside the title",
+    "tablet": "same",
+    "mobile": "inside the container, no reveal motion",
+    "evidence": [
+      {
+        "cite": "src/components/ReviewCards.jsx:44",
+        "needle": "className={`reviewCards home__reviewCards ${whole ? '' : 'superDevice'}`}"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "client.logo"
+  ],
+  "generatedAssetRoles": [
+    "logo.placeholder-client",
+    "person.fictional-avatar"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:331",
+      "needle": "## 6. Review cards"
+    }
+  ]
+}

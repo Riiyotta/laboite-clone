@@ -1,0 +1,44 @@
+{
+  "$description": "The one theme the source renders (white page, navy text). Every semantic token resolved to a literal foundation value; surface tones map to the WebGL backdrop pairs.",
+  "version": "1.0.0",
+  "id": "light",
+  "resolved": {
+    "text.primary": "#120042",
+    "text.inverse": "#ffffff",
+    "text.muted": "#5f5f5f",
+    "text.accent": "#6630ff",
+    "surface.page": "#ffffff",
+    "surface.glass-light": "#ffffff1a",
+    "surface.glass-dark": "#12004212"
+  },
+  "surfaceTones": {
+    "backdrop.lgh": {
+      "top": "#ffffff",
+      "bottom": "#ededed"
+    },
+    "backdrop.prm": {
+      "top": "#6630ff",
+      "bottom": "#612ef1"
+    },
+    "backdrop.scd": {
+      "top": "#62f740",
+      "bottom": "#61ed40"
+    },
+    "backdrop.trt": {
+      "top": "#29daff",
+      "bottom": "#27cef1"
+    },
+    "backdrop.drk": {
+      "top": "#120042",
+      "bottom": "#10003d"
+    },
+    "backdrop.gry": {
+      "top": "#cecece",
+      "bottom": "#cbcbcb"
+    },
+    "backdrop.blk": {
+      "top": "#080808",
+      "bottom": "#080808"
+    }
+  }
+}

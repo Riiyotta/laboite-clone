@@ -1,0 +1,24 @@
+{
+  "id": "component.nav-group",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Titled list of links (menu / footer).",
+  "props": {
+    "title": "string",
+    "links": "link[]"
+  },
+  "tokens": [
+    "fontSize.caption",
+    "fontSize.lead"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Footer.jsx:55",
+      "needle": "function Nav("
+    }
+  ],
+  "usedBySections": [
+    "chrome.footer",
+    "chrome.menu-overlay"
+  ]
+}

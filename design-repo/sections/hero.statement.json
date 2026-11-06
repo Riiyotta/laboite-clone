@@ -1,0 +1,139 @@
+{
+  "id": "hero.statement",
+  "version": "1.0.0",
+  "title": "Hero statement (scroll-scrubbed opener)",
+  "description": "Page opener: two-part display title drawn in 3D by the backdrop (visually-hidden DOM copy), a fixed Inter statement that slides in line by line mid-scroll, and the bottom-left showreel video widget with a rotating Scroll badge. 700lvh scroll-scrubbed stage.",
+  "source": {
+    "id": "Hero.jsx header.heroHeader",
+    "file": "src/components/Hero.jsx",
+    "tag": "data-section=\"hero\"",
+    "lines": "90-104",
+    "citation": "src/components/Hero.jsx:90-104"
+  },
+  "semantic": {
+    "id": "hero.statement",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": true,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "scrollBadge",
+      "subtitle",
+      "titleLines",
+      "video"
+    ],
+    "properties": {
+      "titleLines": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "emphasis",
+            "lead"
+          ],
+          "properties": {
+            "lead": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "emphasis": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 2
+            }
+          }
+        }
+      },
+      "subtitle": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 30
+      },
+      "video": {
+        "$ref": "#/definitions/media"
+      },
+      "scrollBadge": {
+        "type": "boolean"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirstInFlow": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "pinned-scroll-timeline",
+      "webgl-scroll-scene",
+      "lines-slide",
+      "fade",
+      "load-intro"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "load"
+    ],
+    "reducedMotionFallback": "fit-layout",
+    "reducedMotionFallbackText": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
+    "evidence": [
+      {
+        "cite": "src/components/Hero.jsx:47-48",
+        "needle": "st.add(split.lines"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:183",
+        "needle": "### 3.3 Hero timeline"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "700lvh stage, fixed subtitle, 3D title",
+    "tablet": "700lvh stage (lvh = viewport height)",
+    "mobile": "fit-content: title and subtitle as plain stacked text (subtitle 4rem), video widget inline, no scrub",
+    "evidence": [
+      {
+        "cite": "src/components/hero/hero.css:16",
+        "needle": ".heroHeader:not(.\\@whole) .hero__subtitle { font-size: 4rem"
+      },
+      {
+        "cite": "src/components/Hero.jsx:92",
+        "needle": "className={`heroHeader"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.prm",
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "hero.loop-video",
+    "icon.ui"
+  ],
+  "generatedAssetRoles": [
+    "icon.generic",
+    "media.generated-video",
+    "media.placeholder"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_A.md:153",
+      "needle": "## 3. Hero `header._header_jx0rq` (y 0 → 6 300)"
+    },
+    {
+      "cite": "CLONE_SPEC_A.md:276",
+      "needle": "### 3.6 Scroll story"
+    }
+  ],
+  "generationNotes": "Measured 6300px at 1440x900 (700lvh); above the 3000px HERO cap, so it is a whitelisted exception pending human approval (extraction/measured-values.json wrapperGate.whitelist)."
+}

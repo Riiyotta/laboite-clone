@@ -1,0 +1,141 @@
+{
+  "id": "offer.skills",
+  "version": "1.0.0",
+  "title": "Commitments stage",
+  "description": "540lvh pinned block of three stacked commitment statements that slide in and fade out in turn, with glass credential badges and a final portfolio CTA, over the cyan backdrop and triangle pinwheel.",
+  "source": {
+    "id": "Skills.jsx div.skills",
+    "file": "src/components/Skills.jsx",
+    "tag": "data-section=\"skills\"",
+    "lines": "84-113",
+    "citation": "src/components/Skills.jsx:84-113"
+  },
+  "semantic": {
+    "id": "offer.skills",
+    "category": "OFFER"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": true,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "items"
+    ],
+    "properties": {
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "badges",
+            "statement"
+          ],
+          "properties": {
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 32
+            },
+            "badges": {
+              "type": "array",
+              "minItems": 0,
+              "maxItems": 3,
+              "items": {
+                "$ref": "#/definitions/media"
+              }
+            },
+            "cta": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "href",
+                "label"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 4
+                },
+                "href": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^(/|#|https?://|mailto:)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "pinned-scroll-timeline",
+      "webgl-scroll-scene",
+      "lines-slide",
+      "fade",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "hover"
+    ],
+    "reducedMotionFallback": "fit-layout",
+    "reducedMotionFallbackText": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
+    "evidence": [
+      {
+        "cite": "src/components/Skills.jsx:69-78",
+        "needle": "const tl = sectionTimeline(root.current"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:415",
+        "needle": "### 7.2 Motion — timeline `SKILLS`"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "540lvh sticker, statements in the right half",
+    "tablet": "same",
+    "mobile": "fit-content list, statements 4rem at 80% width",
+    "evidence": [
+      {
+        "cite": "src/components/Skills.jsx:86",
+        "needle": "style={{ height: whole ? '540lvh'"
+      },
+      {
+        "cite": "src/components/skills/skills.css:12",
+        "needle": ".skills:not(.is-whole) .skills__track-skill .skill__title"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.trt",
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "credential.badge",
+    "icon.ui"
+  ],
+  "generatedAssetRoles": [
+    "credential.placeholder-badge",
+    "icon.generic",
+    "rating.placeholder-badge"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_A.md:399",
+      "needle": "## 7. Skills sticker"
+    }
+  ]
+}

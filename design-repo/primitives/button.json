@@ -1,0 +1,47 @@
+{
+  "id": "primitive.button",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "UIActionButton: pill or round, five designs, optional violet hover sweep.",
+  "props": {
+    "design": [
+      "light",
+      "dark",
+      "primary",
+      "lightGlass",
+      "darkGlass"
+    ],
+    "round": "boolean",
+    "hover": [
+      "bottom",
+      "left",
+      "right",
+      "none"
+    ],
+    "label": "string"
+  },
+  "tokens": [
+    "button.shape.pill",
+    "button.shape.round",
+    "button.design.light",
+    "button.design.dark",
+    "button.design.primary",
+    "button.design.lightGlass",
+    "button.design.darkGlass"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/header/Button.jsx:8",
+      "needle": "const DESIGN = {"
+    },
+    {
+      "cite": "src/index.css:28",
+      "needle": ".btn { position: relative"
+    }
+  ],
+  "usedBySections": [
+    "chrome.header",
+    "chrome.seo-modal",
+    "proof.reviews"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "story.tagline",
+  "version": "1.0.0",
+  "title": "Positioning statement",
+  "description": "500lvh pinned block: large Inter statement slides in line by line on the left, a short paragraph bottom-right, over the green backdrop and the triangle 'fence'.",
+  "source": {
+    "id": "Tagline.jsx section.tagline",
+    "file": "src/components/Tagline.jsx",
+    "tag": "data-section=\"tagline\"",
+    "lines": "30-41",
+    "citation": "src/components/Tagline.jsx:30-41"
+  },
+  "semantic": {
+    "id": "story.tagline",
+    "category": "STORY"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": true,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "body",
+      "statement"
+    ],
+    "properties": {
+      "statement": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 32
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 42
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "pinned-scroll-timeline",
+      "webgl-scroll-scene",
+      "lines-slide",
+      "parallax",
+      "fade"
+    ],
+    "triggers": [
+      "scroll-scrub"
+    ],
+    "reducedMotionFallback": "fit-layout",
+    "reducedMotionFallbackText": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
+    "evidence": [
+      {
+        "cite": "src/components/Tagline.jsx:20-23",
+        "needle": "linesSlide(tl, title.current"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:301",
+        "needle": "### 4.2 Timeline (`TAGLINE`)"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "500lvh sticker, statement cols 1-8, body bottom-right",
+    "tablet": "same",
+    "mobile": "fit-content, title 4rem then body, grid gap 10.3rem",
+    "evidence": [
+      {
+        "cite": "src/components/Tagline.jsx:32",
+        "needle": "style={{ height: whole ? '500lvh'"
+      },
+      {
+        "cite": "src/components/tagline/tagline.css:13",
+        "needle": ".tagline:not(.is-whole) .tagline__title"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.scd",
+    "backdrop.lgh"
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_A.md:284",
+      "needle": "## 4. Tagline sticker"
+    }
+  ]
+}

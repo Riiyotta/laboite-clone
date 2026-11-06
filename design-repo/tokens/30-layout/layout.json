@@ -1,0 +1,105 @@
+{
+  "$description": "Layout tokens: container (superDevice), 12-column grid, section gaps, pinned-stage heights (desktop/tablet 'whole' only).",
+  "version": "1.0.0",
+  "tokens": {
+    "layout.container": {
+      "type": "container",
+      "value": {
+        "width": "83vw",
+        "maxWidth": "1480px",
+        "paddingInline": "space.3-2",
+        "mobileWidth": "100vw",
+        "mobilePaddingInline": "space.2"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:17",
+          "needle": ".superDevice { width: 83vw"
+        }
+      ]
+    },
+    "layout.grid": {
+      "type": "grid",
+      "value": {
+        "columns": 12,
+        "gapInline": "space.1-6"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:19",
+          "needle": ".superGrid { display: grid"
+        }
+      ]
+    },
+    "layout.section-gap": {
+      "type": "alias",
+      "value": "space.20",
+      "evidence": [
+        {
+          "cite": "src/components/resource-cards/resource-cards.css:3",
+          "needle": ".rcs { margin-bottom: 20rem"
+        }
+      ]
+    },
+    "layout.main-bottom": {
+      "type": "alias",
+      "value": "space.40",
+      "evidence": [
+        {
+          "cite": "src/App.jsx:33",
+          "needle": "marginBottom: '40rem'"
+        }
+      ]
+    },
+    "layout.pinned-stage.hero": {
+      "type": "stageHeight",
+      "value": "700lvh",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:153",
+          "needle": "## 3. Hero `header._header_jx0rq` (y 0 → 6 300)"
+        }
+      ]
+    },
+    "layout.pinned-stage.tagline": {
+      "type": "stageHeight",
+      "value": "500lvh",
+      "evidence": [
+        {
+          "cite": "src/components/Tagline.jsx:32",
+          "needle": "height: whole ? '500lvh'"
+        }
+      ]
+    },
+    "layout.pinned-stage.skills": {
+      "type": "stageHeight",
+      "value": "540lvh",
+      "evidence": [
+        {
+          "cite": "src/components/Skills.jsx:86",
+          "needle": "height: whole ? '540lvh'"
+        }
+      ]
+    },
+    "layout.pinned-stage.vr": {
+      "type": "stageHeight",
+      "value": "600lvh",
+      "evidence": [
+        {
+          "cite": "src/components/Vr.jsx:47",
+          "needle": "height: whole ? '600lvh'"
+        }
+      ]
+    },
+    "layout.pinned-stage.labels": {
+      "type": "stageHeight",
+      "value": "500lvh",
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:20",
+          "needle": "const HEIGHT = FRAG_H"
+        }
+      ]
+    }
+  }
+}

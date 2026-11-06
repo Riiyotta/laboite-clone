@@ -1,0 +1,104 @@
+{
+  "$comment": "Where each section contract lives in the rendered DOM. `selector` targets the clone (its data-section hooks); `liveSelector` targets the live original's scoped-CSS class hashes (taken from CLONE_SPEC_A/B section headings, e.g. `_tagline_x672m`), used only by parity/capture.mjs to confirm the live layout. Used by measure_sections.mjs (heights) and parity/capture.mjs (live-vs-clone). 'range' entries measure from the top of `from` to the top of `to`, or to the bottom of `toBottomOf`. positionKind: fixed = takes no page height, in-flow = counts toward page height.",
+  "version": "1.0.0",
+  "sections": {
+    "backdrop.webgl-scene": {
+      "selector": "canvas#SYNTHRA",
+      "positionKind": "fixed"
+    },
+    "chrome.loader": {
+      "selector": "#HEADER .loader",
+      "positionKind": "fixed"
+    },
+    "chrome.header": {
+      "selector": "#HEADER .header__A1",
+      "positionKind": "fixed"
+    },
+    "chrome.menu-overlay": {
+      "selector": "#HEADER section.menu",
+      "positionKind": "fixed"
+    },
+    "hero.statement": {
+      "selector": "[data-section=hero]",
+      "positionKind": "in-flow",
+      "liveSelector": "header[class*=_header_jx0rq]"
+    },
+    "chrome.seo-modal": {
+      "selector": ".seoModal",
+      "positionKind": "fixed"
+    },
+    "story.tagline": {
+      "selector": "[data-section=tagline]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_tagline_x672m]"
+    },
+    "proof.works": {
+      "selector": "[data-section=works]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_works_15dfr]"
+    },
+    "proof.method": {
+      "selector": "[data-section=method]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_method_1bww9]"
+    },
+    "offer.skills": {
+      "selector": "[data-section=skills]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_skills_18hah]"
+    },
+    "offer.expertises": {
+      "selector": "[data-section=expertises]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_expertises_jvwcv]"
+    },
+    "story.vr": {
+      "selector": "[data-section=vr]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_vr_wukvy]"
+    },
+    "offer.spotlight": {
+      "selector": "[data-section=spotlight]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_spotlightItem_1bkwk]"
+    },
+    "content.resources": {
+      "selector": "[data-section=resource-cards]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_resourceCards_1ahqb]"
+    },
+    "proof.labels": {
+      "selector": "[data-section=label-cards]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_labelCards_ya4ut]"
+    },
+    "proof.reviews": {
+      "selector": "[data-section=review-cards]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_reviewCards_1gm5k]"
+    },
+    "content.faq": {
+      "selector": "[data-section=faq]",
+      "positionKind": "in-flow",
+      "liveSelector": "[class*=_faq_h699x]"
+    },
+    "conversion.closing-cta": {
+      "selector": "#FOOTER",
+      "range": {
+        "from": "#FOOTER",
+        "to": "#FOOTER .footer__A1"
+      },
+      "positionKind": "in-flow",
+      "liveSelector": "footer#FOOTER"
+    },
+    "chrome.footer": {
+      "selector": "#FOOTER .footer__A1",
+      "range": {
+        "from": "#FOOTER .footer__A1",
+        "toBottomOf": "#FOOTER"
+      },
+      "positionKind": "in-flow",
+      "liveSelector": "footer#FOOTER"
+    }
+  }
+}

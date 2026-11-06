@@ -1,0 +1,22 @@
+{
+  "id": "primitive.tooltip",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "Hover/focus bubble above an icon (glass title + arrow).",
+  "props": {
+    "title": "string"
+  },
+  "tokens": [
+    "radius.bubble",
+    "glassBlur.md"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Footer.jsx:161",
+      "needle": "className=\"tooltip__bubble\" role=\"tooltip\""
+    }
+  ],
+  "usedBySections": [
+    "chrome.footer"
+  ]
+}

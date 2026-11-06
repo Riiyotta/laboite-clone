@@ -1,0 +1,40 @@
+{
+  "$description": "Which common design policy governs this repo and why (R15). The classification is an agent proposal; only the human owner can ratify it.",
+  "version": "1.0.0",
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "domain": "agency-marketing",
+  "contentHash": "sha256:564eb372801efbbee5868cc5f1a877b1847db48ea5f5c9ec94155818ddeb60f1",
+  "contentHashComputedBy": "extraction/policy_hash.py",
+  "enforcedBy": [
+    "tokens/llm/token-policy.json",
+    "compatibility/graph.json",
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py"
+  ],
+  "classification": {
+    "category": "agency-marketing-site",
+    "evidence": [
+      "Single marketing homepage of a presentation-design agency: services index, case studies, credentials, testimonials, FAQ (sections/*.json).",
+      "Conversion is a quote request / contact link ('Demander un devis' -> /contact, 'Contactez-nous'), not a product sign-up or trial.",
+      "No pricing tiers, no account or dashboard, no product integrations anywhere in src/.",
+      "FAQ states projects are billed per day rate after a brief (src/components/faq/data.js)."
+    ]
+  },
+  "localExtension": {
+    "id": "laboiteaslides-home-local",
+    "rules": [
+      "Generated pages never reproduce the source brand, clients, people, ratings, certifications, copy, URLs or media (schema/semantic_validate.py GENERATED_MODE_*).",
+      "The licensed display typeface is reference-only (tokens/llm/token-policy.json licensedTokens).",
+      "Pinned scroll stages are budgeted (compatibility/graph.json SCROLL_STAGE_BUDGET) and every motion has a reduced-motion fallback."
+    ]
+  },
+  "approval": {
+    "status": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "decidedBy": null,
+    "decidedAt": null
+  }
+}

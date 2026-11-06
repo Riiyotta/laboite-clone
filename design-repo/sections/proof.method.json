@@ -1,0 +1,122 @@
+{
+  "id": "proof.method",
+  "version": "1.0.0",
+  "title": "Credentials marquee and method",
+  "description": "30s looping marquee of credentials with a triangle icon, then an Inter tagline and a lead paragraph with a checkmarked metrics list revealed by a scroll mask.",
+  "source": {
+    "id": "Method.jsx section.method",
+    "file": "src/components/Method.jsx",
+    "tag": "data-section=\"method\"",
+    "lines": "46-72",
+    "citation": "src/components/Method.jsx:46-72"
+  },
+  "semantic": {
+    "id": "proof.method",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "body",
+      "marquee",
+      "metrics",
+      "tagline"
+    ],
+    "properties": {
+      "marquee": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 8,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 5
+        }
+      },
+      "tagline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 22
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 40
+      },
+      "metrics": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 6,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 9
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "marquee-loop",
+      "chars-in",
+      "parallax",
+      "lines-slide",
+      "mask-reveal"
+    ],
+    "triggers": [
+      "time",
+      "scroll-scrub",
+      "scroll-toggle"
+    ],
+    "reducedMotionFallback": "static-first-frame",
+    "reducedMotionFallbackText": "Render one static frame of the loop / interaction and never animate it.",
+    "evidence": [
+      {
+        "cite": "src/components/Method.jsx:32-39",
+        "needle": "for (const t of titles.current)"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:383",
+        "needle": "### 6.2 Motion"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "marquee 25.2rem, tagline 5.2rem, body + metrics in a second column",
+    "tablet": "same",
+    "mobile": "marquee 16.4rem, tagline 4rem, single column max 93rem",
+    "evidence": [
+      {
+        "cite": "src/components/method/method.css:19",
+        "needle": ".method:not(.is-whole) .method__marquee-title"
+      },
+      {
+        "cite": "src/components/method/method.css:7",
+        "needle": ".method:not(.is-whole) .method__tagline, .method"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "icon.ui"
+  ],
+  "generatedAssetRoles": [
+    "icon.generic"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_A.md:359",
+      "needle": "## 6. Method"
+    }
+  ]
+}

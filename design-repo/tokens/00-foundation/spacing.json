@@ -1,0 +1,149 @@
+{
+  "$description": "Spacing steps: the superGrid gap/margin vocabulary (CLONE_SPEC_A §0.2) plus the two section gaps. Arbitrary spacing is rejected in PageSpecs (token-policy).",
+  "version": "1.0.0",
+  "tokens": {
+    "space.0": {
+      "type": "space",
+      "value": "0",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.0-8": {
+      "type": "space",
+      "value": ".8rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.1-6": {
+      "type": "space",
+      "value": "1.6rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.2": {
+      "type": "space",
+      "value": "2rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.2-4": {
+      "type": "space",
+      "value": "2.4rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.3-2": {
+      "type": "space",
+      "value": "3.2rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.4-2": {
+      "type": "space",
+      "value": "4.2rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.4-8": {
+      "type": "space",
+      "value": "4.8rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.5-6": {
+      "type": "space",
+      "value": "5.6rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.6-4": {
+      "type": "space",
+      "value": "6.4rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.10-3": {
+      "type": "space",
+      "value": "10.3rem",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:23",
+          "needle": "`superGrid` → `display:grid"
+        }
+      ],
+      "usage": "superGrid @gb/@gi/@margin step"
+    },
+    "space.20": {
+      "type": "space",
+      "value": "20rem",
+      "evidence": [
+        {
+          "cite": "src/components/spotlight/spotlight.css:2",
+          "needle": ".spot { display: flex; margin-bottom: 20rem"
+        }
+      ],
+      "usage": "gap between bottom-half sections (margin-bottom 20rem)"
+    },
+    "space.40": {
+      "type": "space",
+      "value": "40rem",
+      "evidence": [
+        {
+          "cite": "src/App.jsx:33",
+          "needle": "marginBottom: '40rem'"
+        }
+      ],
+      "usage": "#MAIN margin-bottom before the footer"
+    }
+  }
+}

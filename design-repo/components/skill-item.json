@@ -1,0 +1,23 @@
+{
+  "id": "component.skill-item",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Statement + glass badges + optional CTA, one per pinned fragment.",
+  "props": {
+    "statement": "string",
+    "badges": "primitive.media[]",
+    "cta": "primitive.action-cta"
+  },
+  "tokens": [
+    "type.statement"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Skills.jsx:95",
+      "needle": "className=\"skills__track-skill\""
+    }
+  ],
+  "usedBySections": [
+    "offer.skills"
+  ]
+}

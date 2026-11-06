@@ -1,0 +1,99 @@
+{
+  "$description": "Rhythm/position rules JSON Schema cannot express. Each rule is enforced by schema/semantic_validate.py under the same id; verify_all.py checks the two lists agree. Exceptions were read off templates/templates.json's real node order (in-flow sections only).",
+  "version": "1.0.0",
+  "categories": [
+    "BACKDROP",
+    "CHROME",
+    "CONTENT",
+    "CONVERSION",
+    "HERO",
+    "OFFER",
+    "PROOF",
+    "STORY"
+  ],
+  "inFlowOrder": [
+    "hero.statement",
+    "story.tagline",
+    "proof.works",
+    "proof.method",
+    "offer.skills",
+    "offer.expertises",
+    "story.vr",
+    "offer.spotlight",
+    "content.resources",
+    "proof.labels",
+    "proof.reviews",
+    "content.faq",
+    "conversion.closing-cta",
+    "chrome.footer"
+  ],
+  "rules": [
+    {
+      "id": "BACKDROP_FIRST",
+      "severity": "error",
+      "description": "backdrop.webgl-scene is the first node (the fixed canvas sits behind everything)."
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "description": "Exactly one HERO-category node per page.",
+      "exceptions": []
+    },
+    {
+      "id": "HERO_FIRST_IN_FLOW",
+      "severity": "error",
+      "description": "The HERO is the first in-flow node (fixed CHROME/BACKDROP nodes may precede it)."
+    },
+    {
+      "id": "FOOTER_LAST",
+      "severity": "error",
+      "description": "chrome.footer is the last node."
+    },
+    {
+      "id": "CLOSING_CTA_BEFORE_FOOTER",
+      "severity": "error",
+      "description": "conversion.closing-cta immediately precedes chrome.footer (they share footer#FOOTER)."
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "description": "Two consecutive in-flow nodes should not share a category, except the real pairs below.",
+      "exceptions": [
+        [
+          "proof.works",
+          "proof.method"
+        ],
+        [
+          "offer.skills",
+          "offer.expertises"
+        ],
+        [
+          "proof.labels",
+          "proof.reviews"
+        ]
+      ]
+    },
+    {
+      "id": "NO_CONSECUTIVE_SCROLL_STAGES",
+      "severity": "warn",
+      "description": "Two pinned scroll stages should not follow each other, except the real pair below.",
+      "exceptions": [
+        [
+          "hero.statement",
+          "story.tagline"
+        ]
+      ]
+    },
+    {
+      "id": "SCROLL_STAGE_BUDGET",
+      "severity": "warn",
+      "description": "At most 5 pinned scroll stages per page (the source has 5: hero, tagline, skills, VR, labels).",
+      "max": 5
+    },
+    {
+      "id": "THEME_COMBINATION",
+      "severity": "error",
+      "description": "A node's textTone/accentColor must be allowed for its surfaceTone (tokens/llm/token-policy.json themeCombinations)."
+    }
+  ]
+}

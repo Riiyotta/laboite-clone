@@ -1,0 +1,144 @@
+{
+  "id": "proof.labels",
+  "version": "1.0.0",
+  "title": "Quality credentials stage",
+  "description": "500lvh pinned block over the navy backdrop: a giant two-tone title and three glass credential cards (title, badge image, year tag) travelling right-to-left on a curved path.",
+  "source": {
+    "id": "LabelCards.jsx section.lcs",
+    "file": "src/components/LabelCards.jsx",
+    "tag": "data-section=\"label-cards\"",
+    "lines": "111-136",
+    "citation": "src/components/LabelCards.jsx:111-136"
+  },
+  "semantic": {
+    "id": "proof.labels",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": true,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "cards",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "emphasis",
+          "lead"
+        ],
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          },
+          "emphasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        }
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "isPlaceholder",
+            "media",
+            "tag",
+            "title"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6
+            },
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3
+            },
+            "media": {
+              "$ref": "#/definitions/media"
+            },
+            "isPlaceholder": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "pinned-scroll-timeline",
+      "sticker-curve-path",
+      "parallax",
+      "lines-slide",
+      "webgl-scroll-scene"
+    ],
+    "triggers": [
+      "scroll-scrub"
+    ],
+    "reducedMotionFallback": "fit-layout",
+    "reducedMotionFallbackText": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
+    "evidence": [
+      {
+        "cite": "src/components/LabelCards.jsx:41",
+        "needle": "// §5.3 Title: PARALLAX_Y 50"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:302",
+        "needle": "### 5.3 Motion"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "500lvh sticker, title 25.2rem, cards on a Bezier path",
+    "tablet": "same",
+    "mobile": "fit-content 2-column grid of cards, title 11.2rem",
+    "evidence": [
+      {
+        "cite": "src/components/LabelCards.jsx:120",
+        "needle": "className={whole ? 'lcs__list' : 'lcs__list superGrid'}"
+      },
+      {
+        "cite": "src/components/label-cards/label-cards.css:11",
+        "needle": ".lcs.is-whole .lcs__title"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.drk",
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "credential.badge"
+  ],
+  "generatedAssetRoles": [
+    "credential.placeholder-badge",
+    "rating.placeholder-badge"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:275",
+      "needle": "## 5. Label cards sticker"
+    }
+  ],
+  "generationNotes": "In generated mode every card is a placeholder (isPlaceholder: true) unless the requester supplies their own real credential."
+}

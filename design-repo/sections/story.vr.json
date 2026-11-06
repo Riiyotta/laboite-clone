@@ -1,0 +1,140 @@
+{
+  "id": "story.vr",
+  "version": "1.0.0",
+  "title": "Immersive showcase stage",
+  "description": "600lvh pinned stage: display title rises then clears, a VR headset flies through the camera, the backdrop cuts to black and a sphere of project thumbnails surrounds the camera while a short statement and CTA fade in; ends with a curved white wipe.",
+  "source": {
+    "id": "Vr.jsx section.vr",
+    "file": "src/components/Vr.jsx",
+    "tag": "data-section=\"vr\"",
+    "lines": "45-58",
+    "citation": "src/components/Vr.jsx:45-58"
+  },
+  "semantic": {
+    "id": "story.vr",
+    "category": "STORY"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": true,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "body",
+      "cta",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "emphasis",
+          "lead"
+        ],
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4
+          },
+          "emphasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4
+          }
+        }
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 20
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "href",
+          "label"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          },
+          "href": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^(/|#|https?://|mailto:)"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "pinned-scroll-timeline",
+      "webgl-scroll-scene",
+      "words-rise",
+      "fade",
+      "parallax",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "hover"
+    ],
+    "reducedMotionFallback": "fit-layout",
+    "reducedMotionFallbackText": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
+    "evidence": [
+      {
+        "cite": "src/components/Vr.jsx:31-38",
+        "needle": "wordsRise(tl, title"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:139",
+        "needle": "### 2.3 Timeline"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "600lvh stage, body 5.2rem grey on black",
+    "tablet": "same",
+    "mobile": "fit-content, body 4rem white centred, no 3D",
+    "evidence": [
+      {
+        "cite": "src/components/Vr.jsx:47",
+        "needle": "style={{ height: whole ? '600lvh'"
+      },
+      {
+        "cite": "src/components/vr/vr.css:23",
+        "needle": ".vr.is-fit .vr__track-content"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.blk",
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "scene.headset-model",
+    "scene.sphere-thumbnail"
+  ],
+  "generatedAssetRoles": [
+    "media.generated-image",
+    "media.placeholder"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:113",
+      "needle": "## 2. VR sticker"
+    }
+  ]
+}

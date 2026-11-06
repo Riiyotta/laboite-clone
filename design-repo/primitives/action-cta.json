@@ -1,0 +1,35 @@
+{
+  "id": "primitive.action-cta",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "UIActionCTA: round arrow button + pill label that sweep together on hover.",
+  "props": {
+    "design": [
+      "light",
+      "darkGlass",
+      "lightGlass"
+    ],
+    "label": "string",
+    "href": "string"
+  },
+  "tokens": [
+    "button.design.light",
+    "button.design.darkGlass",
+    "button.design.lightGlass"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/header/ActionCTA.jsx:6",
+      "needle": "export default function ActionCTA"
+    }
+  ],
+  "usedBySections": [
+    "chrome.menu-overlay",
+    "content.faq",
+    "content.resources",
+    "conversion.closing-cta",
+    "offer.skills",
+    "offer.spotlight",
+    "story.vr"
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "id": "chrome.footer",
+  "version": "1.0.0",
+  "title": "Footer panel",
+  "description": "Glass panel inside footer#FOOTER with a cursor glow: wordmark, FR/EN switch, office cities, three nav groups, credential icons with tooltips, copyright + SEO-modal trigger, socials and legal links.",
+  "source": {
+    "id": "Footer.jsx footer#FOOTER > .footer__A1",
+    "file": "src/components/Footer.jsx",
+    "tag": "footer__A1",
+    "lines": "111-209",
+    "citation": "src/components/Footer.jsx:111-209"
+  },
+  "semantic": {
+    "id": "chrome.footer",
+    "category": "CHROME"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "brandMark",
+      "languages",
+      "legalLinks",
+      "navGroups"
+    ],
+    "properties": {
+      "brandMark": {
+        "$ref": "#/definitions/media"
+      },
+      "languages": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "string",
+          "enum": [
+            "fr",
+            "en"
+          ]
+        }
+      },
+      "address": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12
+      },
+      "navGroups": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "links",
+            "title"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 2
+            },
+            "links": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 10,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "href",
+                  "label"
+                ],
+                "properties": {
+                  "strong": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxWords": 1
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxWords": 4
+                  },
+                  "href": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200,
+                    "pattern": "^(/|#|https?://|mailto:)"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "credentials": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "isPlaceholder",
+            "media",
+            "title"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6
+            },
+            "media": {
+              "$ref": "#/definitions/media"
+            },
+            "isPlaceholder": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "legalLinks": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "href",
+            "label"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^(/|#|https?://|mailto:)"
+            }
+          }
+        }
+      },
+      "socials": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "href",
+            "network"
+          ],
+          "properties": {
+            "network": {
+              "type": "string",
+              "enum": [
+                "linkedin",
+                "vimeo"
+              ]
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^(/|#|https?://|mailto:)"
+            }
+          }
+        }
+      },
+      "showCopyrightYear": {
+        "type": "boolean"
+      },
+      "seoModalTrigger": {
+        "type": "boolean"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "cursor-glow"
+    ],
+    "triggers": [
+      "hover"
+    ],
+    "reducedMotionFallback": "static-first-frame",
+    "reducedMotionFallbackText": "Render one static frame of the loop / interaction and never animate it.",
+    "evidence": [
+      {
+        "cite": "src/components/Footer.jsx:97",
+        "needle": "useGlower(panel, whole)"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:499",
+        "needle": "### 8.3 Hover"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "12-col glass panel, margin 4.8rem",
+    "tablet": "same",
+    "mobile": "stacked groups, expertise links 2rem",
+    "evidence": [
+      {
+        "cite": "src/components/footer/footer.css:105",
+        "needle": "#FOOTER .footerNav__route--expertise { font-size: 2rem"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.prm"
+  ],
+  "assetRoles": [
+    "brand.wordmark",
+    "credential.badge",
+    "icon.ui"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "brand.user-supplied-mark",
+    "credential.placeholder-badge",
+    "icon.generic",
+    "rating.placeholder-badge",
+    "social.network-icon"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:455",
+      "needle": "### 8.1 DOM"
+    }
+  ]
+}

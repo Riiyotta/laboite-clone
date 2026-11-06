@@ -1,0 +1,1294 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.home",
+  "route": "/",
+  "locale": "fr-FR",
+  "theme": "light",
+  "brand": {
+    "name": "La boîte à slides",
+    "isFictional": false
+  },
+  "fonts": {
+    "display": "font.family.display",
+    "text": "font.family.text"
+  },
+  "nodes": [
+    {
+      "id": "n01",
+      "section": "backdrop.webgl-scene",
+      "variant": "default",
+      "content": {
+        "plugins": [
+          "gradient-layers",
+          "glass-triangles",
+          "title-3d",
+          "vr-sphere",
+          "rgb-shift"
+        ],
+        "mobileFallback": "static-gradient"
+      },
+      "motion": {
+        "patterns": [
+          "webgl-scroll-scene"
+        ],
+        "reducedMotionFallback": "static-gradient"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n02",
+      "section": "chrome.loader",
+      "variant": "default",
+      "content": {
+        "spinner": "two-triangles"
+      },
+      "motion": {
+        "patterns": [
+          "loader-mask"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n03",
+      "section": "chrome.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "src": "inline-svg:Logo",
+          "alt": "Logo - la Boite à Slides"
+        },
+        "menuLabel": "Menu",
+        "closeLabel": "Fermer",
+        "cta": {
+          "label": "Demander un devis",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "load-intro",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "n04",
+      "section": "chrome.menu-overlay",
+      "variant": "default",
+      "content": {
+        "languages": [
+          "fr",
+          "en"
+        ],
+        "widgets": [
+          {
+            "kind": "expertise",
+            "title": "Conférences Interactives",
+            "ctaLabel": "Découvrir",
+            "href": "/expertises/conferences-interactives",
+            "media": {
+              "assetRole": "resource.cover",
+              "src": "/sk/uploads/large_Presentation_augmentee_1d02882a38.jpg",
+              "alt": "Presentation-augmentee.jpg"
+            }
+          },
+          {
+            "kind": "whitePaper",
+            "tag": "Livre blanc",
+            "title": "4 conseils pour capter l’attention en 1 minute",
+            "href": "/ressources/4-conseils-pour-capter-lattention-en-1-minute"
+          },
+          {
+            "kind": "clientCase",
+            "tag": "Cas client",
+            "title": "Arcitek - Présentation corporate",
+            "href": "/ressources/arcitek-presentation-corporate",
+            "media": {
+              "assetRole": "resource.cover",
+              "src": "/sk/uploads/large_Adobe_Stock_206118370_5ab61dcb89.jpg",
+              "alt": "AdobeStock_206118370.jpg"
+            }
+          }
+        ],
+        "explore": {
+          "title": "Explorer",
+          "links": [
+            {
+              "label": "Réalisations",
+              "href": "/realisations"
+            },
+            {
+              "label": "Nous connaître",
+              "href": "/nous-connaitre"
+            },
+            {
+              "label": "Notre méthode",
+              "href": "/la-methode-labas"
+            },
+            {
+              "label": "Ressources",
+              "href": "/ressources"
+            },
+            {
+              "label": "Contact",
+              "href": "/contact"
+            },
+            {
+              "label": "Offres d'emploi",
+              "href": "/nos-offres-d-emploi"
+            }
+          ]
+        },
+        "expertises": {
+          "title": "Expertises",
+          "links": [
+            {
+              "label": "Présentations",
+              "href": "/expertises/presentations-powerpoint"
+            },
+            {
+              "label": "Communication 360",
+              "href": "/expertises/communication-360"
+            },
+            {
+              "label": "Navigation App Like",
+              "href": "/expertises/navigation-interactive-powerpoint"
+            },
+            {
+              "label": "Animatiques",
+              "href": "/expertises/Animatiques-powerpoint"
+            },
+            {
+              "label": "Conférences Interactives",
+              "href": "/expertises/conferences-interactives"
+            },
+            {
+              "label": "Séminaire VR",
+              "href": "/expertises/seminaire-realite-virtuelle"
+            },
+            {
+              "label": "Solutions IA",
+              "href": "/expertises/solutions-ia-powerpoint"
+            },
+            {
+              "label": "Formations & Coaching",
+              "href": "/expertises/formations-powerpoint-coaching-labas-agence-powerpoint"
+            }
+          ]
+        },
+        "address": "Paris, Bordeaux, Verdun, Aix-en-Provence, Rennes, Strasbourg",
+        "socials": [
+          {
+            "network": "linkedin",
+            "href": "https://www.linkedin.com/company/laboiteaslides/"
+          },
+          {
+            "network": "vimeo",
+            "href": "https://vimeo.com/laboiteaslides?fl=pp&fe=sh"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "menu-swing-3d",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n05",
+      "section": "hero.statement",
+      "variant": "default",
+      "content": {
+        "titleLines": [
+          {
+            "lead": "Les meilleures idées font",
+            "emphasis": "l'avenir"
+          },
+          {
+            "lead": "Quand elles sont bien",
+            "emphasis": "présentées"
+          }
+        ],
+        "subtitle": "La boite à slides® : seule agence au monde certifiée ISO 9001 qui transforme Powerpoint en un puissant levier d'impact pour votre business",
+        "video": {
+          "assetRole": "hero.loop-video",
+          "src": "/sk/uploads/home_video_SD_79c96be094.mp4"
+        },
+        "scrollBadge": true
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "lines-slide",
+          "fade",
+          "load-intro"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm",
+        "textTone": "color.lgh1",
+        "accentColor": "color.drk1"
+      }
+    },
+    {
+      "id": "n06",
+      "section": "chrome.seo-modal",
+      "variant": "default",
+      "content": {
+        "title": "La boite à slides®, agence PowerPoint et activateur d'impact.",
+        "parts": [
+          {
+            "heading": "Boostez vos présentations stratégiques avec la boite à slides®",
+            "paragraphs": [
+              "La boite à slides® est l'agence PowerPoint activateur d'impact certifiée ISO 9001:2015. Nous sommes experts de l’impact de vos contenus grâce au pouvoir de PowerPoint. Tout ce que vos contenus exigent - tous formats confondus - depuis un seul outil au potentiel créatif illimité, maîtrisé comme personne. Depuis 2002, nous repoussons les limites de ce que le logiciel le plus universel et puissant du monde de l’entreprise peut produire pour vous faire gagner en impact, en performance et en autonomie.",
+              "Seule agence certifiée ISO 9001 entièrement dédiée à PowerPoint, LABAS® a fait de cet outil universel un levier de création globale, capable de rivaliser avec les productions des plus grandes agences de communication et des studios de création."
+            ]
+          },
+          {
+            "heading": "Preuve de notre efficacité : 85% de réachat tous clients confondus",
+            "paragraphs": [
+              "Quoi de mieux pour comprendre notre expertise d’Agence PowerPoint que de vous partager nos références ? 15 années de présentations avec ENGIE, 6 années de messages transmis avec KRYS, 10 années de confiance avec PERRIER, 13 années de collaboration avec UNIBAIL RODAMCO URW et bien plus encore que vous pouvez retrouver sur notre page de réalisations Powerpoint. Vous pouvez également retrouver l’ensemble de nos références clients et nos réalisations ."
+            ]
+          },
+          {
+            "heading": "La boite à slides® délivre +400 PowerPoint par an sans aucun retard",
+            "paragraphs": [
+              "Depuis 2002 , nous transmettons +400 messages par an. Exigez la rigueur de l'ISO 9001 pour vos projets stratégiques, notre agence PowerPoint livre avec 0 retard. Nos présentations PowerPoint sont conçues pour convaincre et transmettre vos messages avec pertinence. Nous vous accompagnons de bout en bout : de la conception de votre contenu stratégique à la mise en forme, l’animation et la diffusion de vos présentations."
+            ]
+          },
+          {
+            "heading": "L'ISO 9001 pour garantir l'efficacité des 3 pôles de notre Agence PowerPoint",
+            "paragraphs": [
+              "Notre agence PowerPoint basée à Paris et partout en France est composée d’une équipe de 12 personnes : 2 dirigeants, 3 chefs de projet, 5 graphistes, 1 office manager, 1 business developer. Notre équipe s'étend à 40 talents chaque année grâce à notre réseau de spécialistes externes tous évalués selon les critères validés par la norme ISO 9001. La boite à slides® est spécialiste PowerPoint, nous n'engageons et ne formons que des spécialistes. Notre organisation se découpe en 3 pôles."
+            ],
+            "listItems": [
+              "On retrouve au sein de notre agence de communication spécialiste PowerPoint, un pôle projet , qui s’occupe de répondre aux attentes clients et d’organiser l’ensemble des projets clients. Le pôle projet est le garant du bon déroulement de l’accompagnement tout au long de la prestation et met un point d’honneur à satisfaire les différentes demandes de nos clients.",
+              "On retrouve ensuite le pôle studio de notre agence PowerPoint qui regroupe l’ensemble des créatifs et créateurs des présentations PowerPoint. Ils n’ont aucun secret pour PowerPoint et PowerPoint n’a plus aucun secret pour eux. Ils ont dans leur manche d’autres outils comme Photoshop, Illustrator, Firefly, pour rendre vos présentations PowerPoint encore plus captivantes !",
+              "Enfin vous retrouverez le pôle direction de notre agence PowerPoint , composé de nos deux dirigeants et de notre office manager. La direction de notre Agence PowerPoint c’est le mélange d’une vision client claire et d’un œil graphique avisé pour satisfaire vos exigences et réaliser tous vos projets."
+            ]
+          },
+          {
+            "heading": "Des présentations PowerPoint pour convaincre en toutes circonstances",
+            "paragraphs": [
+              "Pour nous, chaque message est unique, c’est pourquoi nous vous accompagnons de manière personnalisée tout au long de vos projets. En tant qu’agence PowerPoint nous travaillons vos messages, qu’il s’agissent de présentations stratégiques, d'outils de communication, de supports commerciaux ou encore financiers .",
+              "Le rôle de notre agence de communication PowerPoint spécialisée est aussi de vous accompagner, quel que soit votre public, qu’il s’agisse d’une communication en interne ou en externe ."
+            ]
+          },
+          {
+            "heading": "Vous avez besoin d’une agence PowerPoint pour…",
+            "paragraphs": [
+              "Qu’importe l’objectif, le message ou le public visé, notre agence PowerPoint vous accompagne sur tous vos projets pour vous proposer des présentations convaincantes et impactantes afin que vos messages soient bien transmis !"
+            ],
+            "listItems": [
+              "Pour vos présentations commerciales ? Nous vous accompagnons pour crédibiliser et légitimer votre expertise, vous démarquer de vos concurrents, mettre en avant vos différents savoir-faire et convaincre vos clients et prospects.",
+              "Pour une convention ou un séminaire ? Nous réalisons des présentations PowerPoint qui vous permettent de fédérer et d’intéresser vos collaborateurs pour transmettre vos messages les plus importants !",
+              "Pour travailler vos conférences de presse ? Que ce soit pour annoncer une actualité ou pour convaincre des journalistes, notre accompagnement vise à favoriser l’échange lors de votre présentation pour réussir votre conférence de presse.",
+              "Pour vos présentations financières ? Pour informer vos actionnaires, intéresser vos collaborateurs ou encore annoncer vos objectifs, une présentation PowerPoint professionnelle permet de transmettre le bon message et de capter l’attention.",
+              "Pour tout autre support de communication ? Le pouvoir de PowerPoint n'a pas de limites. Notre expertise pointue nous permet de créer toute sorte de livrable sur PowerPoint : post réseaux sociaux, newsletter, affiche, rapport annuel, carte de visite, etc.",
+              "Pour créer une expérience ? Grâce à des interactions live, de la gamification, de la live cam, des sondages, nous transformons vos slides en terrain de jeu"
+            ]
+          },
+          {
+            "heading": "Nous créons vos templates powerpoint 100% sur-mesure !",
+            "paragraphs": [
+              "Au-delà de la création de vos présentations pour des évènements ponctuels, nous accompagnons également nos clients à la création de modèle ou template pour PowerPoint . Nos créations s’adaptent à vos besoins. L’utilisation d’un template PowerPoint comme vous le savez, permet à la fois de standardiser vos communications, vos supports, mais surtout de vous faire gagner du temps au quotidien. Il est aujourd’hui très courant d’avoir un template PowerPoint charté aux couleurs de son entreprise. Toutefois, un template mal construit ou pas assez complet ne vous permettra pas de gagner en efficacité. On s’aperçoit aujourd’hui que trop de template sont limités ou ne sont pas optimisés pour des mises en page rapides.",
+              "Les compétences de notre agence PowerPoint , au-delà de la création de vos présentations pour des évènements ponctuels, nous permettent d’accompagner également nos clients à la création de modèle ou template pour PowerPoint. Nos créations s’adaptent à tous les types de besoins. L’avantage de faire appel à une Agence PowerPoint pour créer son template ? Avoir un résultat fini qui permet une utilisation rapide et efficace pour gagner du temps au quotidien et faire gagner du temps à vos équipes !",
+              "En tant qu’agence spécialisée en PowerPoint nous proposons à nos clients des templates PowerPoint complets, avec un large choix de mise en page. Bien évidemment nous adaptons toute notre création à votre charte graphique. Notre objectif est de vous remettre un livrable simple d’utilisation qui permettra à vos équipes de gagner du temps tout en respectant votre charte pour transmettre avec efficacité tous les messages en préservant votre identité de marque."
+            ]
+          },
+          {
+            "heading": "Se former à PowerPoint avec l’aide d’une Agence PowerPoint pour progresser rapidement",
+            "paragraphs": [
+              "A la boite à slides, nous avons mis en place des formations PowerPoint que nous proposons à nos clients désireux de progresser dans leur maîtrise de l’outil PowerPoint pour gagner en efficacité au quotidien :",
+              "Pour vous former c’est Ulrich, notre co-dirigeant, qui vous accompagnera. Depuis 2013 il forme chaque nouveau graphiste au logiciel et à la rigueur de notre agence Powerpoint . C’est le formateur idéal pour progresser sur PowerPoint !",
+              "Nos formations c’est 2h pour maîtriser les bases de PowerPoint. Demandez sans tarder nos programmes de formation"
+            ],
+            "listItems": [
+              "Aide à la rédaction de votre présentation PowerPoint",
+              "Aide à la prise en main d'un masque PowerPoint",
+              "Créer des slides claires et captivantes",
+              "Dynamiser vos présentations grâce aux animations"
+            ]
+          },
+          {
+            "heading": "La boite à slides c’est une offre complète autour de PowerPoint",
+            "paragraphs": [
+              "Nous sommes une Agence PowerPoint complète et nous vous proposons un accompagnement tout au long de vos projets. Notre expertise, depuis 2002 maintenant, nous permet de concevoir, designer et produire des contenus qui frappent juste et fort, quel que soit le format (slides, vidéos, prints, contenus interactifs et live, réseaux sociaux…), le contexte et l'enjeu.",
+              "Pour chaque support créé, nous combinons plus de 10 expertises essentielles pour créer des messages percutants :"
+            ],
+            "listItems": [
+              "Les présentations PowerPoint, notre coeur de métier : Présentations commerciales",
+              "Présentations corporates",
+              "Présentations financières",
+              "Présentations évènementielles",
+              "Présentations marketing",
+              "Présentations RH",
+              "Présentation Appel d'offre",
+              "Masque PowerPoint",
+              "Communication 360",
+              "Animatique",
+              "Navigation App Like",
+              "Interactions Live"
+            ]
+          },
+          {
+            "heading": "Vous avez un projet de présentation PowerPoint ? Contactez-nous pour obtenir un devis !",
+            "paragraphs": [
+              "Notre équipe est disponible pour guider dans les choix à faire pour vos projets sur PowerPoint et vous conseiller au plus près de vos besoins. Vous pouvez retrouver notre offre et nos références directement sur notre site. Nous répondons directement par téléphone au 01 75 43 28 30."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n07",
+      "section": "story.tagline",
+      "variant": "default",
+      "content": {
+        "statement": "Notre agence PowerPoint amplifie le retentissement des présentations stratégiques des leaders. On équipe ceux qui veulent faire bouger les lignes, dans tous les secteurs",
+        "body": "Nos clients ont des idées fortes, des stratégies à partager, des messages complexes à faire passer. Avec des contenus interactifs et des expériences captivantes, ils offrent à leur cible ce qu’il y a de plus puissant : l’évidence."
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "lines-slide",
+          "parallax",
+          "fade"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.scd",
+        "textTone": "color.drk1"
+      }
+    },
+    {
+      "id": "n08",
+      "section": "proof.works",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Un seul outil, des",
+          "emphasis": "possibilités infinies"
+        },
+        "cards": [
+          {
+            "client": "Safran Electronics & Defense",
+            "tag": "Corporate",
+            "href": "/realisations/Safran-Electronics-Defense-presentation-corporate",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Safran_0239f5157e.jpg",
+              "alt": "Safran.jpg"
+            }
+          },
+          {
+            "client": "Adidas",
+            "tag": "Masque",
+            "href": "/realisations/adidas-masque-powerpoint",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Adidas_2_20aaceff99.jpg",
+              "alt": "Adidas-2.jpg"
+            }
+          },
+          {
+            "client": "Marriott",
+            "tag": "Commerciale",
+            "href": "/realisations/marriott-presentation-commerciale-interactive",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Touchscreen_Mariott_la_boite_a_slides_agence_powerpoint_0415bcab60.jpg",
+              "alt": "une personne utilisant la présentation Interactive pour Mariott sur table tactile"
+            }
+          },
+          {
+            "client": "LIPTON",
+            "tag": "Évènement",
+            "href": "/realisations/lipton-presentation-evenement-selling-story",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Ekaterra_Tea_Lipton_43f10e2e06.jpg",
+              "alt": "Ekaterra-Tea-Lipton.jpg"
+            }
+          },
+          {
+            "client": "Brasseries Kronenbourg",
+            "tag": "Interactions Live",
+            "href": "/realisations/brasseries-kronenbourg-presentation-evenementielle-gamification",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Brasseries_kronenbourg_sceno_72f519a001.jpg",
+              "alt": "Mise en situation sur scène d'un quiz géant projeté pour une convention Brasseries Kronenbourg"
+            }
+          },
+          {
+            "client": "Nissan",
+            "tag": "Marketing",
+            "href": "/realisations/nissan-presentation-marketing",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Nissan_ef41272a76.jpg",
+              "alt": "Nissan.jpg"
+            }
+          },
+          {
+            "client": "Viridien",
+            "tag": "Finance",
+            "href": "/realisations/viridien-presentation-financiere-resultats-annuels",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Viridien_e87722da36.jpg",
+              "alt": "Photo aérienne pour illustrer le projet Powerpoint Viridien"
+            }
+          },
+          {
+            "client": "Upciti",
+            "tag": "Masque",
+            "href": "/realisations/upciti-masque-powerpoint",
+            "media": {
+              "assetRole": "case.photo",
+              "src": "/sk/uploads/Upciti_82768aec88.jpg",
+              "alt": "Upciti.jpg"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "words-rise",
+          "cards-pop",
+          "cursor-image-follow",
+          "webgl-scroll-scene"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n09",
+      "section": "proof.method",
+      "variant": "default",
+      "content": {
+        "marquee": [
+          "Depuis 2002",
+          "ISO 9001",
+          "5/5 Note Google Avis",
+          "+8 000 projets",
+          "85% de réachat",
+          "MOS PowerPoint"
+        ],
+        "tagline": "Tirer parti des dernières avancées technologiques et intelligences artificielles pour valoriser vos messages les plus importants",
+        "body": "À la boite à slides, on maximise l'engagement de votre public depuis 2002. On repousse les limites de PowerPoint pour vous faire gagner en impact, en performance et en autonomie. Pour votre plus grande satisfaction.",
+        "metrics": [
+          "La seule agence PPT au monde certifiée ISO 9001",
+          "85% de réachat",
+          "5/5 Note Google Avis",
+          "Certifiés Microsoft Office Specialist PowerPoint"
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "marquee-loop",
+          "chars-in",
+          "parallax",
+          "lines-slide",
+          "mask-reveal"
+        ],
+        "reducedMotionFallback": "static-first-frame"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n10",
+      "section": "offer.skills",
+      "variant": "default",
+      "content": {
+        "items": [
+          {
+            "statement": "0 retard sur +8 000 projets. Nous utilisons la rigueur de l'ISO 9001 pour sécuriser vos calendriers.",
+            "badges": [
+              {
+                "assetRole": "credential.badge",
+                "src": "/sk/uploads/Logo_simple_certification_ISO_LABAS_1a3bc958ae.svg",
+                "alt": "Certification ISO9001 LABAS"
+              },
+              {
+                "assetRole": "credential.badge",
+                "src": "/sk/uploads/Badge_simple_MOS_LABAS_d0815bc7cf.svg",
+                "alt": "Badge-simple-MOS-LABAS.svg"
+              },
+              {
+                "assetRole": "credential.badge",
+                "src": "/sk/uploads/Logo_simple_Avis_Google_LABAS_d3f7b5bccc.svg",
+                "alt": "Avis Google"
+              }
+            ]
+          },
+          {
+            "statement": "96% de stabilité de l'enveloppe budgétaire. Notre méthode vise la justesse dès le départ pour respecter votre budget.",
+            "badges": [
+              {
+                "assetRole": "credential.badge",
+                "src": "/sk/uploads/Logo_simple_certification_ISO_LABAS_1a3bc958ae.svg",
+                "alt": "Certification ISO9001 LABAS"
+              },
+              {
+                "assetRole": "credential.badge",
+                "src": "/sk/uploads/Badge_simple_MOS_LABAS_d0815bc7cf.svg",
+                "alt": "Badge-simple-MOS-LABAS.svg"
+              },
+              {
+                "assetRole": "credential.badge",
+                "src": "/sk/uploads/Logo_simple_Avis_Google_LABAS_d3f7b5bccc.svg",
+                "alt": "Avis Google"
+              }
+            ]
+          },
+          {
+            "statement": "La preuve ultime d'un rendu maîtrisé ? Un taux de réachat de 85% auprès des directions marketing, qui nous renouvellent leur confiance au cours de l'année.",
+            "badges": [],
+            "cta": {
+              "label": "Voir nos réalisations",
+              "href": "/realisations"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "lines-slide",
+          "fade",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.trt",
+        "textTone": "color.drk1",
+        "buttonDesign": "button.design.darkGlass"
+      }
+    },
+    {
+      "id": "n11",
+      "section": "offer.expertises",
+      "variant": "default",
+      "content": {
+        "title": "Nos expertises",
+        "routes": [
+          {
+            "label": "Présentations",
+            "href": "/expertises/presentations-powerpoint",
+            "media": {
+              "assetRole": "expertise.photo",
+              "src": "/sk/uploads/large_Presentation_e945d6b799.png",
+              "alt": "Presentation.png"
+            }
+          },
+          {
+            "label": "Communication 360",
+            "href": "/expertises/communication-360",
+            "media": {
+              "assetRole": "expertise.photo",
+              "src": "/sk/uploads/large_Communication_360_7a5ef30bda.png",
+              "alt": "Communication-360.png"
+            }
+          },
+          {
+            "label": "Navigation App Like",
+            "href": "/expertises/navigation-interactive-powerpoint",
+            "media": {
+              "assetRole": "expertise.photo",
+              "src": "/sk/uploads/large_FDH_URW_navigation_interactive_87d42a0822.jpg",
+              "alt": "Un homme cliquant sur la présentation interaction du Forum des halles sur un ipad"
+            }
+          },
+          {
+            "label": "Séminaire VR",
+            "href": "/expertises/seminaire-realite-virtuelle",
+            "media": {
+              "assetRole": "expertise.photo",
+              "src": "/sk/uploads/large_Immersion_VR_e950803a61.png",
+              "alt": "Immersion-VR.png"
+            }
+          },
+          {
+            "label": "Solutions IA",
+            "href": "/expertises/solutions-ia-powerpoint",
+            "media": {
+              "assetRole": "expertise.photo",
+              "src": "/sk/uploads/large_Assistance_IA_LABAS_bot_1963bf7998.jpg",
+              "alt": "Bot Assistance IA La boite à slides"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "parallax",
+          "hover-image-pop"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n12",
+      "section": "story.vr",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Dépassez toutes les",
+          "emphasis": "limites de PowerPoint"
+        },
+        "body": "Une expérience aussi bluffante, vous n’êtes pas prêt de l’oublier. Votre public non plus.",
+        "cta": {
+          "label": "En savoir plus",
+          "href": "/expertises/conferences-interactives"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "words-rise",
+          "fade",
+          "parallax",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.blk",
+        "textTone": "color.gry3",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n13",
+      "section": "offer.spotlight",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Toujours carrés.",
+          "emphasis": "Jamais formatés."
+        },
+        "body": "Une équipe de spécialistes qui réunit sans concession une culture de la réflexion et le goût de l’inattendu. Ça donne la première agence Powerpoint en France.",
+        "cta": {
+          "label": "Nous connaître",
+          "href": "/nous-connaitre"
+        },
+        "media": {
+          "assetRole": "team.photo",
+          "src": "/sk/uploads/large_Labas_20f4ebe642.jpg",
+          "alt": "logo la boite à slides"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "words-rise",
+          "blur-in",
+          "lines-slide",
+          "fade",
+          "parallax",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1",
+        "blockGap": "space.20"
+      }
+    },
+    {
+      "id": "n14",
+      "section": "content.resources",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Nos dernières",
+          "emphasis": "ressources"
+        },
+        "cta": {
+          "label": "Voir toutes nos ressources",
+          "href": "/ressources"
+        },
+        "cards": [
+          {
+            "kind": "article",
+            "tag": "Article",
+            "publishedAt": "2025-01-12",
+            "title": "Gamification et PowerPoint : mettez du jeu dans vos formations !",
+            "href": "/ressources/gamification-et-powerpoint-mettez-du-jeu-dans-vos-formations"
+          },
+          {
+            "kind": "clientCase",
+            "tag": "Cas client",
+            "publishedAt": "2026-03-18",
+            "title": "Ideuzo- Présentation commerciale",
+            "href": "/ressources/ideuzo-presentation-commerciale",
+            "media": {
+              "assetRole": "resource.cover",
+              "src": "/sk/uploads/large_presentation_equipe_0eebf6541e.jpeg",
+              "alt": "équipe qui applaudit"
+            }
+          },
+          {
+            "kind": "whitePaper",
+            "tag": "Livre blanc",
+            "publishedAt": "2026-01-27",
+            "title": "Gagner en autonomie sur PowerPoint",
+            "href": "/ressources/gagner-en-autonomie-sur-powerpoint"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "words-rise",
+          "fade",
+          "cards-pop",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1",
+        "blockGap": "space.20"
+      }
+    },
+    {
+      "id": "n15",
+      "section": "proof.labels",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Engagés pour",
+          "emphasis": "la qualité"
+        },
+        "cards": [
+          {
+            "title": "5 étoiles Google Avis",
+            "tag": "Notation 2026",
+            "media": {
+              "assetRole": "credential.badge",
+              "src": "/sk/uploads/Badge_Google_avis_labas_149fc344c9.png",
+              "alt": "illustration du badge 5 étoiles avis google"
+            },
+            "isPlaceholder": false
+          },
+          {
+            "title": "Certifié ISO 9001:2015 Bureau Veritas",
+            "tag": "Certification 2025",
+            "media": {
+              "assetRole": "credential.badge",
+              "src": "/sk/uploads/Badge_ISO_9001_labas_49c6d38cef.png",
+              "alt": "illustration du badge certification ISO9001 de la boite à slides"
+            },
+            "isPlaceholder": false
+          },
+          {
+            "title": "Microsoft Office Specialist",
+            "tag": "Depuis 2020",
+            "media": {
+              "assetRole": "credential.badge",
+              "src": "/sk/uploads/Badge_MOS_labas_83992cf13f.png",
+              "alt": "illustration du badge Microsoft Office Specialist de la boite à slides"
+            },
+            "isPlaceholder": false
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "sticker-curve-path",
+          "parallax",
+          "lines-slide",
+          "webgl-scroll-scene"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.drk",
+        "textTone": "color.lgh1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n16",
+      "section": "proof.reviews",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Ils nous font",
+          "emphasis": "confiance"
+        },
+        "reviews": [
+          {
+            "person": {
+              "name": "Teddy G.",
+              "role": "Product Consultant",
+              "isFictional": false
+            },
+            "quote": "“Merci beaucoup ! Super boulot de votre part ! Vous pouvez être fiers du travail accompli car le défi était loin d'être facile par rapport aux autres toolkits ! Bravo !”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_logo_Caterpillar_c129772a64.png",
+              "alt": "logo-Caterpillar.png"
+            }
+          },
+          {
+            "person": {
+              "name": "Marion T.",
+              "role": "SVP Performance & Transformation",
+              "isFictional": false
+            },
+            "quote": "“Merci encore pour le travail de grande qualité, tant sur la forme que sur le fond, que vous avez apporté sur nos slides à l'occasion de notre journée transformation digitale chez SED. La journée a été un succès, et le professionnalisme de la présentation a été particulièrement salué. Un grand merci à toute l'équipe chez vous qui a travaillé sur ces slides.”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_logo_safran_2088913497.png",
+              "alt": "logo-safran.png"
+            }
+          },
+          {
+            "person": {
+              "name": "Julie N.",
+              "role": "Directrice de la communication",
+              "isFictional": false
+            },
+            "quote": "“Merci pour la qualité de ce travail (...) félicites les équipes pour le superbe job réalisé. L'enchaînement des animations est encore plus réussi que l'an passé et rend le bilan plus fluide et dynamique. Je suis très contente. Je ne suis jamais déçue avec La boite à slides ! Merci c'est bon de pouvoir compter sur vous !”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_logo_essilor_4f286cb915.png",
+              "alt": "logo-essilor.png"
+            }
+          },
+          {
+            "person": {
+              "name": "Alexandra V",
+              "role": "Global Marketing & Communication Manager",
+              "isFictional": false
+            },
+            "quote": "“Merci beaucoup, c'est top comme d'habitude. L'équipe américaine et l’Europe veulent déjà s'en servir sur d’autres activités ! Le look and feel a servi de base pour tous nos supports. Ca level up vraiment l'ensemble du marketing et de la com sur cette activité. Ce n'est pas uniquement des slides pour une présentation donnée, ça rayonne sur plein d'autres choses, donc merci ! Cela confirme ce que je dis souvent aux personnes qui ne voient que le prix par slide ou à la prestation, c'est qu'on ne paye pas que des slides.”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_logo_bostik_5b01f5c5a7.png",
+              "alt": "logo-bostik.png"
+            }
+          },
+          {
+            "person": {
+              "name": "Andres A.",
+              "role": "Directeur Prévoyance et Assurances de Personnes",
+              "isFictional": false
+            },
+            "quote": "“Suite à notre événement \"feuille de match PAP 2026\", vos slides ont rajouté un bel effet de surprise et des « woooaaahhh trop cool » ! (...) Un immense MERCI pour tout votre travail et votre créativité !”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_logo_vaudoise_8647c5fc66.png",
+              "alt": "logo-vaudoise.png"
+            }
+          },
+          {
+            "person": {
+              "name": "Christian L.",
+              "role": "Head Global Supply Chain Management Disease Control",
+              "isFictional": false
+            },
+            "quote": "“I just wanted to thank you for the excellent job you did on those slides. I really like the design you came up with and the slides worked very well during the webinar yesterday. Great job and very well appreciated from our side.”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_Syngenta_43c016de86.png",
+              "alt": "Syngenta.png"
+            }
+          },
+          {
+            "person": {
+              "name": "Eva M.",
+              "role": "Global Brand Manager SAN PELLEGRINO",
+              "isFictional": false
+            },
+            "quote": "“Je jump pour te remercier pour la prez. C'est canon ! Et les quelques personnes qui l'ont vu nous ont félicité donc bravo à la team”",
+            "media": {
+              "assetRole": "client.logo",
+              "src": "/sk/uploads/thumbnail_Nestle_waters_8a22365e28.jpg",
+              "alt": "Nestle-waters.jpg"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "words-reveal",
+          "cards-pop",
+          "draggable-swiper",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "native-scroll"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n17",
+      "section": "content.faq",
+      "variant": "default",
+      "content": {
+        "overline": "FAQ",
+        "title": {
+          "lead": "Des questions?",
+          "emphasis": "On vous répond"
+        },
+        "items": [
+          {
+            "question": "Comment se déroule une collaboration avec vous ?",
+            "answer": "Pour nous, chaque collaboration est avant tout une relation de confiance. Nous prenons le temps de comprendre vos attentes, nous élaborons une solution sur mesure, puis nous avançons avec vous en toute transparence. Notre équipe reste disponible à chaque étape pour vous accompagner et répondre à vos questions."
+          },
+          {
+            "question": "Que dois-je vous envoyer pour avoir un devis rapidement ?",
+            "answer": "Envoyez-nous en une seule fois un maximum d’informations : Objectif de la présentation, nombre de slides estimé, deadline, niveau de complexité (avec ou sans template existant, mise en page simple ou avancée, etc). Dites-nous si vous avez besoin d’aide pour le contenu, le design, ou les deux ? Des Exemples de style souhaité (si vous en avez). Nous échangeons toujours avec nos clients pour nous assurer que ce qu’ils demandent correspondent à leur besoin. Une de nos chefs de projets vous contacte pour un échange de vive voix. 20 minutes suffisent pour lancer votre projet !"
+          },
+          {
+            "question": "Avec quel type d’entreprises travaillez-vous ?",
+            "answer": "Nous travaillons principalement avec de grandes entreprises nationales et internationales, car notre méthode et notre proposition de valeur sont davantage adaptées à des projets d’envergure ou fort enjeu stratégique."
+          },
+          {
+            "question": "Quels sont vos délais de réalisation ?",
+            "answer": "Le temps nécessaire pour réaliser une présentation dépend de sa complexité et de vos besoins. Après analyse de votre cahier des charges, nous estimons la durée de chaque intervention et vous proposons un planning adapté à vos contraintes"
+          },
+          {
+            "question": "Comment fonctionne votre tarification ?",
+            "answer": "Nos prestations sont facturées au Tarif Journalier Moyen (TJM), modulé selon le type d’intervention. Notre expérience acquise depuis 2002 nous permet d’évaluer précisément le temps nécessaire à chaque réalisation."
+          },
+          {
+            "question": "Comment garantissez-vous la confidentialité de ma présentation ?",
+            "answer": "La confidentialité de vos présentations est une priorité absolue. Sur demande, nous signons des accords de confidentialité (NDA), travaillons sur des serveurs sécurisés, machines cryptées, serveurs VPN, et chacun de nos collaborateurs est tenu par une clause de confidentialité inscrite dans son contrat de travail. Nous pouvons même créer une cellule hermétique avec un accès restreint à un nombre limité de collaborateurs."
+          },
+          {
+            "question": "Pourquoi choisir la boite à slides ?",
+            "answer": "Contrairement à des approches uniquement visuelles ou uniquement narratives, chaque projet est pensé comme un outil de communication complet. Templates, contenus, formation et accompagnement sont conçus pour rendre les équipes autonomes et garantir la cohérence des prises de parole dans la durée. La valeur est dans la capacité à transformer PowerPoint en levier opérationnel, pas en simple support de mise en forme"
+          },
+          {
+            "question": "Êtes-vous capables de gérer des projets de gros événements ?",
+            "answer": "Notre réseau de 40 experts et notre expertise nous permettent de piloter efficacement des missions complexes, avec un haut niveau d’exigence et de qualité."
+          },
+          {
+            "question": "Intervenez-vous sur les contenus ?",
+            "answer": "Nos experts en conception-rédaction anglophones et francophones prennent en charge vos contenus, de la rédaction complète au rewriting léger, selon vos besoins et votre niveau d’accompagnement."
+          },
+          {
+            "question": "Puis-je intervenir sur les contenus et la mise en page générale ?",
+            "answer": "Nous livrons nos présentations au format PowerPoint, vous donnant la liberté d’adapter facilement textes, visuels, design, pictogrammes, etc. selon vos besoins."
+          },
+          {
+            "question": "Utilisez-vous d’autres logiciels que PowerPoint ?",
+            "answer": "Nous sommes résolument centrés sur PowerPoint, nous délivrons également sur Google Slides, et pouvons nous adapter à tout type de solution de présentation comme Canva, ou Prezi. En complément, nous utilisons les logiciels de la suite Office 365 de Microsoft ainsi que ceux de la suite Adobe (Photoshop, Illustrator, Indesign, Premier…). Ajoutez à cela tous les logiciels maîtrisés par notre réseau étendu à 40 spécialistes autour de la présentation. Ces outils sont indispensables pour concevoir et livrer des présentations performantes."
+          },
+          {
+            "question": "Avec qui serais-je en contact pendant le projet ?",
+            "answer": "Vous serez accompagné par une cheffe de projet dédiée, votre interlocutrice principale, qui assurera la coordination, le suivi et la qualité du livrable. Si nécessaire, nos directeurs artistiques et graphistes PowerPoint interviendront pour garantir encore plus de fluidité."
+          },
+          {
+            "question": "Est-ce que je peux avoir ma présentation dans une semaine ?",
+            "answer": "C’est tout à fait possible. En fonction de nos disponibilités, nous pouvons faire appel à notre réseau pour renforcer les équipes de production et travailler + vite. Nous pouvons également étendre nos horaires de travail si nécessaire. Nous sommes cela dit fiers d'annoncer que notre organisation nous permet dans la majeure partie des projets de livrer sans dépasser les heures d'ouverture de l'agence."
+          },
+          {
+            "question": "Faites-vous des A/R illimités ?",
+            "answer": "Notre expérience acquise depuis 2002 nous permet d’évaluer précisément le temps nécessaire pour chaque projet, y compris pour les allers-retours. Cela garantit un projet efficace, sans perte de temps, tout en maintenant la qualité attendue"
+          },
+          {
+            "question": "Je veux ma présentation sous 48h, savez-vous gérer ?",
+            "answer": "Notre réseau de 40 experts nous permet de prendre en compte toutes les demandes urgentes."
+          },
+          {
+            "question": "Proposez-vous des créations gratuites ?",
+            "answer": "Notre temps et notre savoir-faire sont entièrement dédiés aux projets de nos clients. Si le planning le permet, nous pouvons investir de notre temps pour travailler sur des pistes créatives."
+          }
+        ],
+        "pageSize": 6,
+        "moreLabel": "Voir plus de questions"
+      },
+      "motion": {
+        "patterns": [
+          "blur-in",
+          "words-reveal",
+          "mask-reveal",
+          "fade",
+          "accordion",
+          "music-string",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n18",
+      "section": "conversion.closing-cta",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Prêt à transformer votre",
+          "emphasis": "impact?"
+        },
+        "cta": {
+          "label": "Contactez-nous",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "words-reveal",
+          "fade",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm",
+        "textTone": "color.lgh1",
+        "accentColor": "color.drk1",
+        "buttonDesign": "button.design.light"
+      }
+    },
+    {
+      "id": "n19",
+      "section": "chrome.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "src": "inline-svg:Logo",
+          "alt": "Logo - la Boite à Slides"
+        },
+        "languages": [
+          "fr",
+          "en"
+        ],
+        "address": "Paris, Bordeaux, Verdun, Aix-en-Provence, Rennes, Strasbourg",
+        "navGroups": [
+          {
+            "title": "Explorer",
+            "links": [
+              {
+                "label": "Réalisations",
+                "href": "/realisations"
+              },
+              {
+                "label": "Nous connaître",
+                "href": "/nous-connaitre"
+              },
+              {
+                "label": "Notre méthode",
+                "href": "/la-methode-labas"
+              },
+              {
+                "label": "Ressources",
+                "href": "/ressources"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
+              },
+              {
+                "label": "Offres d'emploi",
+                "href": "/nos-offres-d-emploi"
+              }
+            ]
+          },
+          {
+            "title": "Expertises",
+            "links": [
+              {
+                "label": "Communication 360",
+                "href": "/expertises/communication-360"
+              },
+              {
+                "label": "Navigation App Like",
+                "href": "/expertises/navigation-interactive-powerpoint"
+              },
+              {
+                "label": "Animatiques",
+                "href": "/expertises/Animatiques-powerpoint"
+              },
+              {
+                "label": "Conférences Interactives",
+                "href": "/expertises/conferences-interactives"
+              },
+              {
+                "label": "Séminaire VR",
+                "href": "/expertises/seminaire-realite-virtuelle"
+              },
+              {
+                "label": "Solutions IA",
+                "href": "/expertises/solutions-ia-powerpoint"
+              },
+              {
+                "label": "Formations & Coaching",
+                "href": "/expertises/formations-powerpoint-coaching-labas-agence-powerpoint"
+              }
+            ]
+          },
+          {
+            "title": "Présentations",
+            "links": [
+              {
+                "strong": "Présentation",
+                "label": "commerciale",
+                "href": "/expertises/presentations-powerpoint/presentation-commerciale"
+              },
+              {
+                "strong": "Présentation",
+                "label": "corporate",
+                "href": "/expertises/presentations-powerpoint/presentation-corporate"
+              },
+              {
+                "strong": "Présentation",
+                "label": "événementielle",
+                "href": "/expertises/presentations-powerpoint/presentation-evenementielle-labas-agence-powerpoint"
+              },
+              {
+                "strong": "Présentation",
+                "label": "appel d’offre",
+                "href": "/expertises/presentations-powerpoint/presentation-appel-offre"
+              },
+              {
+                "strong": "Présentation",
+                "label": "ressources humaines",
+                "href": "/expertises/presentations-powerpoint/presentation-ressources-humaines"
+              },
+              {
+                "strong": "Masque",
+                "label": "PPT",
+                "href": "/expertises/presentations-powerpoint/masque-ppt-labas-agence-powerpoint"
+              },
+              {
+                "strong": "Présentation",
+                "label": "marketing",
+                "href": "/expertises/presentations-powerpoint/presentation-marketing"
+              },
+              {
+                "strong": "Présentation",
+                "label": "financière",
+                "href": "/expertises/presentations-powerpoint/presentation-financiere"
+              }
+            ]
+          }
+        ],
+        "credentials": [
+          {
+            "title": "Certifié ISO 9001:2015 Bureau Veritas",
+            "media": {
+              "assetRole": "credential.badge",
+              "src": "/sk/uploads/Logo_simple_certification_ISO_LABAS_1a3bc958ae.svg",
+              "alt": "Certification ISO9001 LABAS"
+            },
+            "isPlaceholder": false
+          },
+          {
+            "title": "Microsoft Office Specialist",
+            "media": {
+              "assetRole": "credential.badge",
+              "src": "/sk/uploads/Badge_simple_MOS_LABAS_d0815bc7cf.svg",
+              "alt": "Badge-simple-MOS-LABAS.svg"
+            },
+            "isPlaceholder": false
+          },
+          {
+            "title": "5 étoiles Google Avis",
+            "media": {
+              "assetRole": "credential.badge",
+              "src": "/sk/uploads/Logo_simple_Avis_Google_LABAS_f10bfef852.svg",
+              "alt": "Avis Google LABAS"
+            },
+            "isPlaceholder": false
+          }
+        ],
+        "legalLinks": [
+          {
+            "label": "Mentions légales",
+            "href": "/mentions-legales"
+          },
+          {
+            "label": "Politique de confidentialité",
+            "href": "/politique-de-confidentialite"
+          },
+          {
+            "label": "Cookies",
+            "href": "#"
+          }
+        ],
+        "socials": [
+          {
+            "network": "linkedin",
+            "href": "https://www.linkedin.com/company/laboiteaslides/"
+          },
+          {
+            "network": "vimeo",
+            "href": "https://vimeo.com/laboiteaslides?fl=pp&fe=sh"
+          }
+        ],
+        "showCopyrightYear": true,
+        "seoModalTrigger": true
+      },
+      "motion": {
+        "patterns": [
+          "cursor-glow"
+        ],
+        "reducedMotionFallback": "static-first-frame"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm",
+        "textTone": "color.lgh1",
+        "accentColor": "color.drk1"
+      }
+    }
+  ]
+}

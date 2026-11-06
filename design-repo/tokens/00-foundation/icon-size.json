@@ -1,0 +1,56 @@
+{
+  "$description": "ui-icon heights (width auto).",
+  "version": "1.0.0",
+  "tokens": {
+    "iconSize.s1": {
+      "type": "iconSize",
+      "value": "1.6rem",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.css:11",
+          "needle": ".ui-icon.s1 > *"
+        }
+      ]
+    },
+    "iconSize.s2": {
+      "type": "iconSize",
+      "value": "2rem",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.css:12",
+          "needle": ".ui-icon.s2 > *"
+        }
+      ]
+    },
+    "iconSize.s6": {
+      "type": "iconSize",
+      "value": "6.4rem",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.css:13",
+          "needle": ".ui-icon.s6 > *"
+        }
+      ]
+    },
+    "iconSize.s7": {
+      "type": "iconSize",
+      "value": "13.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.css:14",
+          "needle": ".ui-icon.s7 > *"
+        }
+      ]
+    },
+    "iconSize.s8": {
+      "type": "iconSize",
+      "value": "20rem",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.css:15",
+          "needle": ".ui-icon.s8 > *"
+        }
+      ]
+    }
+  }
+}

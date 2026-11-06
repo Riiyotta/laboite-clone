@@ -1,0 +1,37 @@
+{
+  "id": "primitive.icon",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "ui-icon box: inline SVG at a fixed height step.",
+  "props": {
+    "size": [
+      "s1",
+      "s2",
+      "s6",
+      "s7",
+      "s8"
+    ],
+    "assetRole": [
+      "icon.ui",
+      "icon.generic"
+    ]
+  },
+  "tokens": [
+    "iconSize.s1",
+    "iconSize.s2",
+    "iconSize.s6",
+    "iconSize.s7",
+    "iconSize.s8"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/tagline/sectionMotion.css:10",
+      "needle": ".ui-icon { display: flex"
+    }
+  ],
+  "usedBySections": [
+    "offer.skills",
+    "offer.spotlight",
+    "proof.method"
+  ]
+}

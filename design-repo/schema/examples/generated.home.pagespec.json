@@ -1,0 +1,782 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.home",
+  "route": "/",
+  "locale": "en-GB",
+  "theme": "light",
+  "brand": {
+    "name": "Northlight Decks",
+    "isFictional": true
+  },
+  "fonts": {
+    "display": "font.family.text",
+    "text": "font.family.text"
+  },
+  "nodes": [
+    {
+      "id": "n01",
+      "section": "backdrop.webgl-scene",
+      "variant": "default",
+      "content": {
+        "plugins": [
+          "gradient-layers",
+          "glass-triangles",
+          "title-3d",
+          "rgb-shift"
+        ],
+        "mobileFallback": "static-gradient"
+      },
+      "motion": {
+        "patterns": [
+          "webgl-scroll-scene"
+        ],
+        "reducedMotionFallback": "static-gradient"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n02",
+      "section": "chrome.loader",
+      "variant": "default",
+      "content": {
+        "spinner": "two-triangles"
+      },
+      "motion": {
+        "patterns": [
+          "loader-mask"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n03",
+      "section": "chrome.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Northlight Decks placeholder mark"
+        },
+        "menuLabel": "Menu",
+        "closeLabel": "Close",
+        "cta": {
+          "label": "Plan a deck",
+          "href": "/brief"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "load-intro",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "n04",
+      "section": "chrome.menu-overlay",
+      "variant": "default",
+      "content": {
+        "languages": [
+          "en"
+        ],
+        "widgets": [
+          {
+            "kind": "expertise",
+            "title": "Keynote rehearsal studio",
+            "ctaLabel": "Explore",
+            "href": "/services/rehearsal",
+            "media": {
+              "assetRole": "media.placeholder",
+              "alt": "Placeholder studio image"
+            }
+          }
+        ],
+        "explore": {
+          "title": "Explore",
+          "links": [
+            {
+              "label": "Projects",
+              "href": "/projects"
+            },
+            {
+              "label": "Studio",
+              "href": "/studio"
+            },
+            {
+              "label": "Journal",
+              "href": "/journal"
+            },
+            {
+              "label": "Brief us",
+              "href": "/brief"
+            }
+          ]
+        },
+        "expertises": {
+          "title": "Services",
+          "links": [
+            {
+              "label": "Investor decks",
+              "href": "/services/investor"
+            },
+            {
+              "label": "Sales stories",
+              "href": "/services/sales"
+            },
+            {
+              "label": "Event keynotes",
+              "href": "/services/events"
+            }
+          ]
+        },
+        "address": "Remote-first studio, fictional harbour town",
+        "socials": [
+          {
+            "network": "linkedin",
+            "href": "https://northlight.example/social/linkedin"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "menu-swing-3d",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "id": "n05",
+      "section": "hero.statement",
+      "variant": "default",
+      "content": {
+        "titleLines": [
+          {
+            "lead": "Ideas travel further",
+            "emphasis": "on stage"
+          },
+          {
+            "lead": "When every slide",
+            "emphasis": "lands"
+          }
+        ],
+        "subtitle": "Northlight Decks is a fictional studio that turns dense briefs into calm, confident keynotes for teams who present to big rooms.",
+        "video": {
+          "assetRole": "media.generated-video"
+        },
+        "scrollBadge": true
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "lines-slide",
+          "fade",
+          "load-intro"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm",
+        "textTone": "color.lgh1",
+        "accentColor": "color.drk1"
+      }
+    },
+    {
+      "id": "n06",
+      "section": "story.tagline",
+      "variant": "default",
+      "content": {
+        "statement": "We sit between the strategist and the stage, shaping every argument so the room follows it without effort.",
+        "body": "Our clients arrive with too much to say. We help them say less, show more and leave a single idea behind."
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "lines-slide",
+          "parallax",
+          "fade"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.scd",
+        "textTone": "color.drk1"
+      }
+    },
+    {
+      "id": "n07",
+      "section": "proof.works",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "One canvas,",
+          "emphasis": "many rooms"
+        },
+        "cards": [
+          {
+            "client": "Sample client A",
+            "tag": "Investor",
+            "href": "/projects/sample-a",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Generated cover A"
+            }
+          },
+          {
+            "client": "Sample client B",
+            "tag": "Sales",
+            "href": "/projects/sample-b",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Generated cover B"
+            }
+          },
+          {
+            "client": "Sample client C",
+            "tag": "Event",
+            "href": "/projects/sample-c",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Generated cover C"
+            }
+          },
+          {
+            "client": "Sample client D",
+            "tag": "Training",
+            "href": "/projects/sample-d",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Generated cover D"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "words-rise",
+          "cards-pop",
+          "cursor-image-follow",
+          "webgl-scroll-scene"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n08",
+      "section": "proof.method",
+      "variant": "default",
+      "content": {
+        "marquee": [
+          "Fictional studio",
+          "Sample metric one",
+          "Sample metric two"
+        ],
+        "tagline": "Research, story and design move together from the first call to the final rehearsal.",
+        "body": "Every project starts with the audience and ends with a speaker who knows each slide by heart.",
+        "metrics": [
+          "Placeholder proof point one",
+          "Placeholder proof point two"
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "marquee-loop",
+          "chars-in",
+          "parallax",
+          "lines-slide",
+          "mask-reveal"
+        ],
+        "reducedMotionFallback": "static-first-frame"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n09",
+      "section": "offer.skills",
+      "variant": "default",
+      "content": {
+        "items": [
+          {
+            "statement": "Clear schedules agreed on day one, reviewed every week until delivery.",
+            "badges": [
+              {
+                "assetRole": "credential.placeholder-badge",
+                "alt": "Placeholder credential"
+              }
+            ]
+          },
+          {
+            "statement": "Budgets framed by scope, with every change discussed before it happens.",
+            "badges": []
+          },
+          {
+            "statement": "Most teams come back for their next big moment.",
+            "badges": [],
+            "cta": {
+              "label": "See sample projects",
+              "href": "/projects"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "lines-slide",
+          "fade",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.trt",
+        "textTone": "color.drk1",
+        "buttonDesign": "button.design.darkGlass"
+      }
+    },
+    {
+      "id": "n10",
+      "section": "offer.expertises",
+      "variant": "default",
+      "content": {
+        "title": "What we make",
+        "routes": [
+          {
+            "label": "Investor decks",
+            "href": "/services/investor",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Investor decks"
+            }
+          },
+          {
+            "label": "Sales stories",
+            "href": "/services/sales",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Sales stories"
+            }
+          },
+          {
+            "label": "Event keynotes",
+            "href": "/services/events",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Event keynotes"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "parallax",
+          "hover-image-pop"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n11",
+      "section": "story.vr",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Step inside",
+          "emphasis": "the story"
+        },
+        "body": "An immersive walk-through that lets a room explore the plan before it is built.",
+        "cta": {
+          "label": "Learn more",
+          "href": "/services/immersive"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "webgl-scroll-scene",
+          "words-rise",
+          "fade",
+          "parallax",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.blk",
+        "textTone": "color.gry3",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n12",
+      "section": "offer.spotlight",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Calm process.",
+          "emphasis": "Bold slides."
+        },
+        "body": "A small fictional team of writers and designers who prefer one strong idea to twenty weak ones.",
+        "cta": {
+          "label": "Meet the studio",
+          "href": "/studio"
+        },
+        "media": {
+          "assetRole": "media.generated-image",
+          "alt": "Generated studio illustration"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "words-rise",
+          "blur-in",
+          "lines-slide",
+          "fade",
+          "parallax",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n13",
+      "section": "content.resources",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "From the",
+          "emphasis": "journal"
+        },
+        "cta": {
+          "label": "Read the journal",
+          "href": "/journal"
+        },
+        "cards": [
+          {
+            "kind": "article",
+            "tag": "Article",
+            "publishedAt": "2026-02-01",
+            "title": "Three ways to open a keynote",
+            "href": "/journal/open-a-keynote"
+          },
+          {
+            "kind": "clientCase",
+            "tag": "Case",
+            "publishedAt": "2026-03-01",
+            "title": "Sample client B sales story",
+            "href": "/journal/sample-b",
+            "media": {
+              "assetRole": "media.generated-image",
+              "alt": "Generated case cover"
+            }
+          },
+          {
+            "kind": "whitePaper",
+            "tag": "Guide",
+            "publishedAt": "2026-04-01",
+            "title": "Rehearsal checklist",
+            "href": "/journal/rehearsal-checklist"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "words-rise",
+          "fade",
+          "cards-pop",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n14",
+      "section": "proof.labels",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Held to",
+          "emphasis": "a standard"
+        },
+        "cards": [
+          {
+            "title": "Placeholder credential A",
+            "tag": "Sample year",
+            "media": {
+              "assetRole": "credential.placeholder-badge",
+              "alt": "Placeholder badge"
+            },
+            "isPlaceholder": true
+          },
+          {
+            "title": "Placeholder credential B",
+            "tag": "Sample year",
+            "media": {
+              "assetRole": "credential.placeholder-badge",
+              "alt": "Placeholder badge"
+            },
+            "isPlaceholder": true
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "pinned-scroll-timeline",
+          "sticker-curve-path",
+          "parallax",
+          "lines-slide",
+          "webgl-scroll-scene"
+        ],
+        "reducedMotionFallback": "fit-layout"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.drk",
+        "textTone": "color.lgh1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n15",
+      "section": "proof.reviews",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Kind",
+          "emphasis": "words"
+        },
+        "reviews": [
+          {
+            "person": {
+              "name": "Alex Sample",
+              "role": "Fictional head of sales",
+              "isFictional": true
+            },
+            "quote": "The deck finally sounded like us, only clearer.",
+            "media": {
+              "assetRole": "person.fictional-avatar",
+              "alt": "Illustrated avatar"
+            }
+          },
+          {
+            "person": {
+              "name": "Jordan Example",
+              "role": "Fictional event lead",
+              "isFictional": true
+            },
+            "quote": "Our speakers walked on stage relaxed for the first time.",
+            "media": {
+              "assetRole": "person.fictional-avatar",
+              "alt": "Illustrated avatar"
+            }
+          },
+          {
+            "person": {
+              "name": "Sam Placeholder",
+              "role": "Fictional founder",
+              "isFictional": true
+            },
+            "quote": "Investors asked better questions because the story was easy to follow.",
+            "media": {
+              "assetRole": "person.fictional-avatar",
+              "alt": "Illustrated avatar"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "words-reveal",
+          "cards-pop",
+          "draggable-swiper",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "native-scroll"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n16",
+      "section": "content.faq",
+      "variant": "default",
+      "content": {
+        "overline": "FAQ",
+        "title": {
+          "lead": "Questions?",
+          "emphasis": "Answered"
+        },
+        "items": [
+          {
+            "question": "How does a project start?",
+            "answer": "With a short call about the audience, the date and the one idea the room must remember."
+          },
+          {
+            "question": "Do you write the content?",
+            "answer": "Yes, or we edit yours. Either way the story is agreed before design begins."
+          }
+        ],
+        "pageSize": 6,
+        "moreLabel": "More questions"
+      },
+      "motion": {
+        "patterns": [
+          "blur-in",
+          "words-reveal",
+          "mask-reveal",
+          "fade",
+          "accordion",
+          "music-string",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "instant-toggle"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.lgh",
+        "textTone": "color.drk1",
+        "accentColor": "color.prm1"
+      }
+    },
+    {
+      "id": "n17",
+      "section": "conversion.closing-cta",
+      "variant": "default",
+      "content": {
+        "title": {
+          "lead": "Ready for your",
+          "emphasis": "next stage?"
+        },
+        "cta": {
+          "label": "Start a brief",
+          "href": "/brief"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "words-reveal",
+          "fade",
+          "button-hover-sweep"
+        ],
+        "reducedMotionFallback": "final-state"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm",
+        "textTone": "color.lgh1",
+        "accentColor": "color.drk1",
+        "buttonDesign": "button.design.light"
+      }
+    },
+    {
+      "id": "n18",
+      "section": "chrome.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Northlight Decks placeholder mark"
+        },
+        "languages": [
+          "en"
+        ],
+        "address": "Remote-first studio, fictional harbour town",
+        "navGroups": [
+          {
+            "title": "Explore",
+            "links": [
+              {
+                "label": "Projects",
+                "href": "/projects"
+              },
+              {
+                "label": "Studio",
+                "href": "/studio"
+              },
+              {
+                "label": "Journal",
+                "href": "/journal"
+              }
+            ]
+          }
+        ],
+        "credentials": [
+          {
+            "title": "Placeholder credential A",
+            "media": {
+              "assetRole": "credential.placeholder-badge",
+              "alt": "Placeholder badge"
+            },
+            "isPlaceholder": true
+          }
+        ],
+        "legalLinks": [
+          {
+            "label": "Legal notice",
+            "href": "/legal"
+          },
+          {
+            "label": "Privacy",
+            "href": "/privacy"
+          }
+        ],
+        "socials": [
+          {
+            "network": "linkedin",
+            "href": "https://northlight.example/social/linkedin"
+          }
+        ],
+        "showCopyrightYear": true,
+        "seoModalTrigger": false
+      },
+      "motion": {
+        "patterns": [
+          "cursor-glow"
+        ],
+        "reducedMotionFallback": "static-first-frame"
+      },
+      "tokens": {
+        "surfaceTone": "backdrop.prm",
+        "textTone": "color.lgh1",
+        "accentColor": "color.drk1"
+      }
+    }
+  ]
+}

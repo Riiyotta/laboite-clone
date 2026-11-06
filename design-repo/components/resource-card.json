@@ -1,0 +1,29 @@
+{
+  "id": "component.resource-card",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Resource card in three kinds: article (navy), client case (photo), white paper (sheet mockup).",
+  "props": {
+    "kind": [
+      "article",
+      "clientCase",
+      "whitePaper"
+    ],
+    "tag": "primitive.tag",
+    "publishedAt": "date",
+    "title": "string"
+  },
+  "tokens": [
+    "radius.2xl",
+    "fontSize.title-xl"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/ResourceCards.jsx:45",
+      "needle": "className=\"rc is-article bg-drk\""
+    }
+  ],
+  "usedBySections": [
+    "content.resources"
+  ]
+}

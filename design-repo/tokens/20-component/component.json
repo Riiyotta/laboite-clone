@@ -1,0 +1,116 @@
+{
+  "$description": "Component-scoped tokens: the five button designs (UIActionButton), button shapes, tag.",
+  "version": "1.0.0",
+  "tokens": {
+    "button.design.light": {
+      "type": "buttonDesign",
+      "value": {
+        "background": "color.lgh1",
+        "text": "color.drk1"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:30",
+          "needle": ".btn.d-light {"
+        }
+      ]
+    },
+    "button.design.dark": {
+      "type": "buttonDesign",
+      "value": {
+        "background": "color.drk1",
+        "text": "color.lgh1"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:31",
+          "needle": ".btn.d-dark {"
+        }
+      ]
+    },
+    "button.design.primary": {
+      "type": "buttonDesign",
+      "value": {
+        "background": "color.prm1",
+        "text": "color.lgh1"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:32",
+          "needle": ".btn.d-primary {"
+        }
+      ]
+    },
+    "button.design.lightGlass": {
+      "type": "buttonDesign",
+      "value": {
+        "background": "color.glass.light",
+        "text": "color.lgh1",
+        "backdropBlur": "glassBlur.md"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:33",
+          "needle": ".btn.d-lightGlass {"
+        }
+      ]
+    },
+    "button.design.darkGlass": {
+      "type": "buttonDesign",
+      "value": {
+        "background": "color.glass.dark",
+        "text": "color.drk1",
+        "backdropBlur": "glassBlur.md"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:34",
+          "needle": ".btn.d-darkGlass {"
+        }
+      ]
+    },
+    "button.shape.pill": {
+      "type": "buttonShape",
+      "value": {
+        "height": "5.6rem",
+        "radius": "radius.xl",
+        "paddingInline": "space.3-2",
+        "fontSize": "fontSize.body-sm",
+        "fontWeight": "fontWeight.500"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:28",
+          "needle": ".btn { position: relative"
+        }
+      ]
+    },
+    "button.shape.round": {
+      "type": "buttonShape",
+      "value": {
+        "size": "5.6rem",
+        "radius": "radius.xl"
+      },
+      "evidence": [
+        {
+          "cite": "src/index.css:29",
+          "needle": ".btn.round {"
+        }
+      ]
+    },
+    "tag.default": {
+      "type": "tag",
+      "value": {
+        "height": "4rem",
+        "radius": "radius.md",
+        "paddingInline": "space.1-6"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:42",
+          "needle": ".ui-tag {"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "component.label-card",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Glass credential card: title, badge image, year tag.",
+  "props": {
+    "title": "string",
+    "tag": "primitive.tag",
+    "media": "primitive.media"
+  },
+  "tokens": [
+    "glassBlur.lg",
+    "radius.xl"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/LabelCards.jsx:125",
+      "needle": "<section className=\"lc superGlass glass-lgh\""
+    }
+  ],
+  "usedBySections": [
+    "proof.labels"
+  ]
+}

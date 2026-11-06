@@ -1,0 +1,354 @@
+{
+  "$description": "Foundation colours: the 12-colour palette declared in tailwind.config.js and :root (src/index.css), the two glass tints, and the WebGL background-shader gradient pairs (CLONE_SPEC_A §0.3). Rendered text uses only lgh1/prm1/drk1 at 1440 (extraction/measured-values.json styleHistogram1440).",
+  "version": "1.0.0",
+  "tokens": {
+    "color.lgh1": {
+      "type": "color",
+      "value": "#ffffff",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:7",
+          "needle": "lgh1: '#ffffff'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--lgh1:#fff"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "light / white: inverse text, light buttons, glass tint"
+    },
+    "color.drk1": {
+      "type": "color",
+      "value": "#120042",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:7",
+          "needle": "drk1: '#120042'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--drk1:#120042"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "dark navy: primary text, dark buttons, navy backdrop"
+    },
+    "color.gry1": {
+      "type": "color",
+      "value": "#cecece",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:7",
+          "needle": "gry1: '#cecece'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--gry1:#cecece"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "light grey (declared palette; grey backdrop pair)"
+    },
+    "color.gry2": {
+      "type": "color",
+      "value": "#aca6bd",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:7",
+          "needle": "gry2: '#aca6bd'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--gry2:#aca6bd"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "lavender grey (declared palette)"
+    },
+    "color.gry3": {
+      "type": "color",
+      "value": "#5f5f5f",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:7",
+          "needle": "gry3: '#5f5f5f'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--gry3:#5f5f5f"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "mid grey: VR body copy end colour"
+    },
+    "color.prm1": {
+      "type": "color",
+      "value": "#6630ff",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "prm1: '#6630ff'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--prm1:#6630ff"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "primary violet: emphasis words, marquee, purple backdrop, hover sweep"
+    },
+    "color.scd1": {
+      "type": "color",
+      "value": "#01daf6",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "scd1: '#01daf6'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--scd1:#01daf6"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "secondary cyan (declared palette)"
+    },
+    "color.scd2": {
+      "type": "color",
+      "value": "#ff61f8",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "scd2: '#ff61f8'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--scd2:#ff61f8"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "secondary pink (declared palette)"
+    },
+    "color.scd3": {
+      "type": "color",
+      "value": "#62f740",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "scd3: '#62f740'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--scd3:#62f740"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "secondary green (declared palette; green backdrop pair top)"
+    },
+    "color.trt1": {
+      "type": "color",
+      "value": "#29daff",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "trt1: '#29daff'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--trt1:#29daff"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "tertiary cyan: logo corner triangle, cyan backdrop pair top"
+    },
+    "color.trt3": {
+      "type": "color",
+      "value": "#70f74a",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "trt3: '#70f74a'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--trt3:#70f74a"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "tertiary green: logo corner triangle"
+    },
+    "color.err1": {
+      "type": "color",
+      "value": "#d00000",
+      "evidence": [
+        {
+          "cite": "tailwind.config.js:8",
+          "needle": "err1: '#d00000'"
+        },
+        {
+          "cite": "src/index.css:8",
+          "needle": "--err1:#d00000"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:28-29",
+          "needle": "### 0.3 Colors"
+        }
+      ],
+      "usage": "error red (declared palette)"
+    },
+    "color.glass.light": {
+      "type": "color",
+      "value": "#ffffff1a",
+      "evidence": [
+        {
+          "cite": "src/index.css:22",
+          "needle": ".glass-lgh { background-color: #ffffff1a"
+        }
+      ],
+      "usage": "superGlass @background[lgh] tint (white 10%)"
+    },
+    "color.glass.dark": {
+      "type": "color",
+      "value": "#12004212",
+      "evidence": [
+        {
+          "cite": "src/index.css:23",
+          "needle": ".glass-drk { background-color: #12004212"
+        }
+      ],
+      "usage": "superGlass @background[drk] tint (navy 7%)"
+    },
+    "backdrop.lgh": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#ffffff",
+        "bottom": "#ededed"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "LGH `#FFFFFF/#EDEDED`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    },
+    "backdrop.prm": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#6630ff",
+        "bottom": "#612ef1"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "PRM `#6630FF/#612EF1`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    },
+    "backdrop.scd": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#62f740",
+        "bottom": "#61ed40"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "SCD `#62F740/#61ED40`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    },
+    "backdrop.trt": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#29daff",
+        "bottom": "#27cef1"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "TRT `#29DAFF/#27CEF1`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    },
+    "backdrop.drk": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#120042",
+        "bottom": "#10003d"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "DRK `#120042/#10003D`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    },
+    "backdrop.gry": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#cecece",
+        "bottom": "#cbcbcb"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "GRY `#CECECE/#CBCBCB`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    },
+    "backdrop.blk": {
+      "type": "gradientPair",
+      "value": {
+        "top": "#080808",
+        "bottom": "#080808"
+      },
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:29",
+          "needle": "BLK `#080808/#080808`"
+        }
+      ],
+      "usage": "WebGL background shader layer (top/bottom gradient pair); sections choose one as their surface tone"
+    }
+  }
+}

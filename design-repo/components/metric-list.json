@@ -1,0 +1,22 @@
+{
+  "id": "component.metric-list",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Checkmarked list of short proof points.",
+  "props": {
+    "items": "string[]"
+  },
+  "tokens": [
+    "fontSize.body-sm",
+    "iconSize.s2"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Method.jsx:63",
+      "needle": "className=\"method__metrics ff-inter\""
+    }
+  ],
+  "usedBySections": [
+    "proof.method"
+  ]
+}

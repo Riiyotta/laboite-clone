@@ -1,0 +1,142 @@
+{
+  "id": "proof.works",
+  "version": "1.0.0",
+  "title": "Case-study grid",
+  "description": "Display title over a 2-column grid of 8 case-study cards (client, category tag, photo) with staggered pop-in and cursor-following hover image.",
+  "source": {
+    "id": "Works.jsx section.works",
+    "file": "src/components/Works.jsx",
+    "tag": "data-section=\"works\"",
+    "lines": "61-81",
+    "citation": "src/components/Works.jsx:61-81"
+  },
+  "semantic": {
+    "id": "proof.works",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "cards",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "emphasis",
+          "lead"
+        ],
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 6
+          },
+          "emphasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        }
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "client",
+            "href",
+            "media",
+            "tag"
+          ],
+          "properties": {
+            "client": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^(/|#|https?://|mailto:)"
+            },
+            "media": {
+              "$ref": "#/definitions/media"
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "words-rise",
+      "cards-pop",
+      "cursor-image-follow",
+      "webgl-scroll-scene"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "scroll-toggle",
+      "hover"
+    ],
+    "reducedMotionFallback": "final-state",
+    "reducedMotionFallbackText": "Render the element at its end state immediately (no transform, full opacity, final colour).",
+    "evidence": [
+      {
+        "cite": "src/components/Works.jsx:49",
+        "needle": "wordsRise(tl, title.current"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:345",
+        "needle": "### 5.2 Motion"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "2 columns, gap .8rem",
+    "tablet": "2 columns",
+    "mobile": "1 column, no hover physics",
+    "evidence": [
+      {
+        "cite": "src/components/Works.jsx:71",
+        "needle": "'--gridColumns': whole ? 2 : 1"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "case.photo"
+  ],
+  "generatedAssetRoles": [
+    "media.generated-image",
+    "media.placeholder"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_A.md:320",
+      "needle": "## 5. Works"
+    }
+  ]
+}

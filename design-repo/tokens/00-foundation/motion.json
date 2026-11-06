@@ -1,0 +1,243 @@
+{
+  "$description": "Motion primitives: eases, durations, staggers, scroll smoothing. Scroll-scrubbed tweens have no duration of their own (scrub: true maps them to scroll distance; see motion-patterns.json).",
+  "version": "1.0.0",
+  "tokens": {
+    "easing.custom-out": {
+      "type": "easing",
+      "value": "cubic path M0,0 C.084,.61 .088,.874 .184,.944 .283,1.016 .374,1 1,1",
+      "evidence": [
+        {
+          "cite": "src/lib/motion.js:12",
+          "needle": "CustomEase.create('custom::out',"
+        }
+      ],
+      "usage": "load intros, menu, hover sweeps, chars-in"
+    },
+    "easing.custom-out-back": {
+      "type": "easing",
+      "value": "cubic path M0,0 C.08,.7 .1,1.05 .2,1.12 .35,1.08 .5,1 1,1",
+      "evidence": [
+        {
+          "cite": "src/lib/motion.js:13",
+          "needle": "CustomEase.create('custom::out::back'"
+        }
+      ]
+    },
+    "easing.home-custom-out": {
+      "type": "easing",
+      "value": "cubic path M0,0 C0,1 0,0.903 1,1",
+      "evidence": [
+        {
+          "cite": "src/lib/motion.js:14",
+          "needle": "CustomEase.create('home::custom::out'"
+        }
+      ]
+    },
+    "easing.default": {
+      "type": "easing",
+      "value": "power1.out",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:33",
+          "needle": "GSAP default ease is used wherever none is given"
+        }
+      ],
+      "usage": "every scroll tween without an explicit ease"
+    },
+    "easing.linear": {
+      "type": "easing",
+      "value": "none",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:211",
+          "needle": "maskPosition: '0% 0%', ease: 'none'"
+        }
+      ],
+      "usage": "mask reveals, parallax image"
+    },
+    "easing.image-pop": {
+      "type": "easing",
+      "value": "cubic-bezier(.06, .93, .07, .93)",
+      "evidence": [
+        {
+          "cite": "src/components/expertises/expertises.css:27",
+          "needle": "cubic-bezier(.06, .93, .07, .93)"
+        }
+      ]
+    },
+    "easing.scroll-badge": {
+      "type": "easing",
+      "value": "cubic-bezier(.36,.84,.72,.28)",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:64",
+          "needle": "lbsScrollRotate 2s"
+        }
+      ]
+    },
+    "easing.accordion": {
+      "type": "easing",
+      "value": "ease-out",
+      "evidence": [
+        {
+          "cite": "src/components/faq/faq.css:37",
+          "needle": "max-height .27s ease-out"
+        }
+      ]
+    },
+    "duration.hover-color": {
+      "type": "duration",
+      "value": "0.25s",
+      "evidence": [
+        {
+          "cite": "src/index.css:42",
+          "needle": "transition: color .25s ease-out"
+        }
+      ]
+    },
+    "duration.button-sweep-in": {
+      "type": "duration",
+      "value": "2.5s",
+      "evidence": [
+        {
+          "cite": "src/components/header/Button.jsx:33",
+          "needle": "duration: 2.5, ease: 'custom::out'"
+        }
+      ]
+    },
+    "duration.button-sweep-out": {
+      "type": "duration",
+      "value": "0.4s",
+      "evidence": [
+        {
+          "cite": "src/components/header/Button.jsx:34",
+          "needle": "duration: 0.4"
+        }
+      ]
+    },
+    "duration.cards-pop": {
+      "type": "duration",
+      "value": "0.7s",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reveal.js:39",
+          "needle": "stagger: 0.1, duration: 0.7"
+        }
+      ]
+    },
+    "duration.chars-in": {
+      "type": "duration",
+      "value": "1.7s",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:200",
+          "needle": "stagger: 0.05, duration: 1.7"
+        }
+      ]
+    },
+    "duration.load-intro": {
+      "type": "duration",
+      "value": "7s",
+      "evidence": [
+        {
+          "cite": "src/components/Header.jsx:41",
+          "needle": "x: -7, duration: 7, delay: 0.7"
+        }
+      ]
+    },
+    "duration.marquee-loop": {
+      "type": "duration",
+      "value": "30s",
+      "evidence": [
+        {
+          "cite": "src/components/method/Marquee.jsx:6",
+          "needle": "duration = 30"
+        }
+      ]
+    },
+    "duration.menu-close": {
+      "type": "duration",
+      "value": "0.5s",
+      "evidence": [
+        {
+          "cite": "src/components/header/Menu.jsx:99",
+          "needle": "y: '-100%', scale: 0.95, duration: 0.5"
+        }
+      ]
+    },
+    "duration.loader-hide": {
+      "type": "duration",
+      "value": "1s",
+      "evidence": [
+        {
+          "cite": "src/components/header/Loader.jsx:26",
+          "needle": "duration: fromMenu ? 1.5 : 1"
+        }
+      ]
+    },
+    "duration.accordion": {
+      "type": "duration",
+      "value": "0.27s",
+      "evidence": [
+        {
+          "cite": "src/components/faq/faq.css:37",
+          "needle": "max-height .27s ease-out"
+        }
+      ]
+    },
+    "duration.scroll-badge": {
+      "type": "duration",
+      "value": "2s",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:64",
+          "needle": "lbsScrollRotate 2s"
+        }
+      ]
+    },
+    "stagger.cards": {
+      "type": "stagger",
+      "value": 0.1,
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reveal.js:39",
+          "needle": "stagger: 0.1, duration: 0.7"
+        }
+      ]
+    },
+    "stagger.words": {
+      "type": "stagger",
+      "value": 0.07,
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reveal.js:19",
+          "needle": "scale: 1, stagger: 0.07"
+        }
+      ]
+    },
+    "stagger.chars": {
+      "type": "stagger",
+      "value": 0.05,
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:200",
+          "needle": "stagger: 0.05, duration: 1.7"
+        }
+      ]
+    },
+    "scroll.smoothing": {
+      "type": "scrollSmoothing",
+      "value": "lenis lerp 0.1 (defaults), driven by the GSAP ticker",
+      "evidence": [
+        {
+          "cite": "src/lib/motion.js:28",
+          "needle": "new Lenis({ autoRaf: false })"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:32",
+          "needle": "Lenis 1.3.26 `new Lenis({autoRaf:false})`"
+        }
+      ]
+    }
+  }
+}

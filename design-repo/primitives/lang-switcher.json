@@ -1,0 +1,26 @@
+{
+  "id": "primitive.lang-switcher",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "FR / EN option chips.",
+  "props": {
+    "languages": [
+      "fr",
+      "en"
+    ]
+  },
+  "tokens": [
+    "radius.pill",
+    "fontSize.micro"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Footer.jsx:117",
+      "needle": "<ul className=\"langSwitcher\">"
+    }
+  ],
+  "usedBySections": [
+    "chrome.footer",
+    "chrome.menu-overlay"
+  ]
+}

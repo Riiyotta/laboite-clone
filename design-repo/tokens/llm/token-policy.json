@@ -1,0 +1,196 @@
+{
+  "$description": "What a PageSpec may set, with which tokens. Category names are the catalog's own categories (token-catalog.json counts.byCategory); verify_all checks they resolve.",
+  "version": "1.0.0",
+  "pageLevel": {
+    "fonts.display": {
+      "allowedCategories": [
+        "font"
+      ],
+      "allowed": [
+        "font.family.display",
+        "font.family.text"
+      ]
+    },
+    "fonts.text": {
+      "allowedCategories": [
+        "font"
+      ],
+      "allowed": [
+        "font.family.text"
+      ]
+    }
+  },
+  "nodeSlots": {
+    "surfaceTone": {
+      "allowedCategories": [
+        "backdrop"
+      ],
+      "allowed": [
+        "backdrop.lgh",
+        "backdrop.prm",
+        "backdrop.scd",
+        "backdrop.trt",
+        "backdrop.drk",
+        "backdrop.blk"
+      ],
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_B.md:46",
+          "needle": "### 0.2 Background shader layers"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:242",
+          "needle": "- Home layers (in this order"
+        }
+      ]
+    },
+    "textTone": {
+      "allowedCategories": [
+        "color"
+      ],
+      "allowed": [
+        "color.drk1",
+        "color.lgh1",
+        "color.gry3"
+      ]
+    },
+    "accentColor": {
+      "allowedCategories": [
+        "color"
+      ],
+      "allowed": [
+        "color.prm1",
+        "color.drk1",
+        "color.lgh1"
+      ]
+    },
+    "blockGap": {
+      "allowedCategories": [
+        "space"
+      ],
+      "allowed": [
+        "space.0",
+        "space.0-8",
+        "space.1-6",
+        "space.2-4",
+        "space.3-2",
+        "space.5-6",
+        "space.10-3",
+        "space.20"
+      ]
+    },
+    "buttonDesign": {
+      "allowedCategories": [
+        "button"
+      ],
+      "allowed": [
+        "button.design.light",
+        "button.design.dark",
+        "button.design.primary",
+        "button.design.lightGlass",
+        "button.design.darkGlass"
+      ]
+    }
+  },
+  "themeCombinations": {
+    "$description": "surfaceTone -> allowed textTone / accentColor, from the rendered pages (header light/dark logic CLONE_SPEC_A §1.3, title colours per section).",
+    "backdrop.lgh": {
+      "textTone": [
+        "color.drk1"
+      ],
+      "accentColor": [
+        "color.prm1"
+      ],
+      "evidence": [
+        {
+          "cite": "src/components/Works.jsx:66",
+          "needle": "<strong className=\"text-prm1\">"
+        }
+      ]
+    },
+    "backdrop.prm": {
+      "textTone": [
+        "color.lgh1"
+      ],
+      "accentColor": [
+        "color.drk1"
+      ],
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:10",
+          "needle": ".footer__title strong { color: #120042"
+        }
+      ]
+    },
+    "backdrop.scd": {
+      "textTone": [
+        "color.drk1"
+      ],
+      "accentColor": [
+        "color.prm1"
+      ],
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:284",
+          "needle": "## 4. Tagline sticker"
+        }
+      ]
+    },
+    "backdrop.trt": {
+      "textTone": [
+        "color.drk1"
+      ],
+      "accentColor": [
+        "color.prm1"
+      ],
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:399",
+          "needle": "## 7. Skills sticker"
+        }
+      ]
+    },
+    "backdrop.drk": {
+      "textTone": [
+        "color.lgh1"
+      ],
+      "accentColor": [
+        "color.prm1"
+      ],
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:117",
+          "needle": "Engagés pour <strong className=\"text-prm1\">"
+        }
+      ]
+    },
+    "backdrop.blk": {
+      "textTone": [
+        "color.lgh1",
+        "color.gry3"
+      ],
+      "accentColor": [
+        "color.prm1"
+      ],
+      "evidence": [
+        {
+          "cite": "src/components/vr/vr.css:8",
+          "needle": ".vr__track-title strong { color: var(--prm1)"
+        }
+      ]
+    }
+  },
+  "rawValueRestrictions": {
+    "color": "Raw hex/rgb/hsl colours are rejected (TOKEN_RAW_COLOR); reference a color.* token.",
+    "space": "Raw lengths (px/rem/em/%/vw) are rejected (TOKEN_SPACING_ARBITRARY); reference a space.* token from nodeSlots.blockGap.",
+    "font": "Font names that are not a font.family.* token are rejected (TOKEN_FONT_UNSUPPORTED)."
+  },
+  "licensedTokens": {
+    "font.family.display": {
+      "generatedMode": "blocked",
+      "reason": "commercial typeface without a licence file in the source; generated pages use font.family.text for display titles (uppercase, 700) or a typeface the requester licenses outside this repo",
+      "substitute": "font.family.text"
+    }
+  },
+  "overrides": "Styling is owned by the section contracts; a PageSpec may only choose among the slot values above (per node) and the two page fonts. There is no free-form style field."
+}

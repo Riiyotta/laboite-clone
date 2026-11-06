@@ -1,0 +1,24 @@
+{
+  "id": "component.expertise-route",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Giant display label link with a hover photo.",
+  "props": {
+    "label": "string",
+    "href": "string",
+    "media": "primitive.media"
+  },
+  "tokens": [
+    "fontSize.display-lg",
+    "easing.image-pop"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Expertises.jsx:49",
+      "needle": "className=\"exp__route\""
+    }
+  ],
+  "usedBySections": [
+    "offer.expertises"
+  ]
+}

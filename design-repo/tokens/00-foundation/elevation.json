@@ -1,0 +1,97 @@
+{
+  "$description": "Stacking order and glass blur (the site has no box-shadow elevation; depth comes from the WebGL backdrop behind #MAIN and backdrop-filter glass).",
+  "version": "1.0.0",
+  "tokens": {
+    "zIndex.backdrop": {
+      "type": "zIndex",
+      "value": -1,
+      "evidence": [
+        {
+          "cite": "src/scene/Scene.jsx:7",
+          "needle": "zIndex: -1"
+        }
+      ],
+      "usage": "fixed WebGL canvas behind the page"
+    },
+    "zIndex.loader": {
+      "type": "zIndex",
+      "value": 1,
+      "evidence": [
+        {
+          "cite": "src/components/header/header.css:66",
+          "needle": "#HEADER .loader {"
+        }
+      ]
+    },
+    "zIndex.menu": {
+      "type": "zIndex",
+      "value": 2,
+      "evidence": [
+        {
+          "cite": "src/components/header/header.css:98",
+          "needle": "#HEADER .menu {"
+        }
+      ]
+    },
+    "zIndex.footer": {
+      "type": "zIndex",
+      "value": 5,
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:4",
+          "needle": "#FOOTER {"
+        }
+      ]
+    },
+    "zIndex.header": {
+      "type": "zIndex",
+      "value": 6,
+      "evidence": [
+        {
+          "cite": "src/components/header/header.css:38",
+          "needle": "#HEADER {"
+        }
+      ]
+    },
+    "zIndex.modal": {
+      "type": "zIndex",
+      "value": 6,
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:72",
+          "needle": ".seoModal.\\@stillReadable.\\@show"
+        }
+      ]
+    },
+    "glassBlur.sm": {
+      "type": "glassBlur",
+      "value": "7px",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:24",
+          "needle": "`superGlass`: `@blur[7|24|90]`"
+        }
+      ]
+    },
+    "glassBlur.md": {
+      "type": "glassBlur",
+      "value": "24px",
+      "evidence": [
+        {
+          "cite": "src/index.css:21",
+          "needle": "--glassBlur, 24px"
+        }
+      ]
+    },
+    "glassBlur.lg": {
+      "type": "glassBlur",
+      "value": "90px",
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:125",
+          "needle": "'--glassBlur': '90px'"
+        }
+      ]
+    }
+  }
+}

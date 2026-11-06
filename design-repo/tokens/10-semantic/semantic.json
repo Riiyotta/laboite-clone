@@ -1,0 +1,208 @@
+{
+  "$description": "Semantic roles resolved to foundation token ids (aliases) and composite type roles.",
+  "version": "1.0.0",
+  "tokens": {
+    "text.primary": {
+      "type": "alias",
+      "value": "color.drk1",
+      "evidence": [
+        {
+          "cite": "src/index.css:9",
+          "needle": "color: #120042; font-size: clamp"
+        }
+      ],
+      "usage": "default text on light surfaces"
+    },
+    "text.inverse": {
+      "type": "alias",
+      "value": "color.lgh1",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:39",
+          "needle": ".workCard__title { color: #fff"
+        }
+      ],
+      "usage": "text on purple, navy, black surfaces and image cards"
+    },
+    "text.muted": {
+      "type": "alias",
+      "value": "color.gry3",
+      "evidence": [
+        {
+          "cite": "src/components/vr/vr.css:16",
+          "needle": "color: var(--gry3); font-size: 5.2rem"
+        }
+      ],
+      "usage": "VR body copy end colour"
+    },
+    "text.accent": {
+      "type": "alias",
+      "value": "color.prm1",
+      "evidence": [
+        {
+          "cite": "src/components/Works.jsx:66",
+          "needle": "<strong className=\"text-prm1\">"
+        }
+      ],
+      "usage": "emphasised words in titles"
+    },
+    "surface.page": {
+      "type": "alias",
+      "value": "color.lgh1",
+      "evidence": [
+        {
+          "cite": "src/index.css:9",
+          "needle": "background-color: #fff; -webkit-tap-highlight-color"
+        }
+      ],
+      "usage": "html background"
+    },
+    "surface.glass-light": {
+      "type": "alias",
+      "value": "color.glass.light",
+      "evidence": [
+        {
+          "cite": "src/index.css:22",
+          "needle": ".glass-lgh"
+        }
+      ]
+    },
+    "surface.glass-dark": {
+      "type": "alias",
+      "value": "color.glass.dark",
+      "evidence": [
+        {
+          "cite": "src/index.css:23",
+          "needle": ".glass-drk"
+        }
+      ]
+    },
+    "type.display-xl": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.display",
+        "fontSize": "fontSize.display-xl",
+        "fontWeight": "fontWeight.700",
+        "lineHeight": "lineHeight.tightest",
+        "textTransform": "textTransform.display"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/method/method.css:3",
+          "needle": ".method__marquee-title"
+        }
+      ]
+    },
+    "type.display-lg": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.display",
+        "fontSize": "fontSize.display-lg",
+        "fontWeight": "fontWeight.700",
+        "lineHeight": "lineHeight.tightest",
+        "textTransform": "textTransform.display"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:8",
+          "needle": "font-size: 16.4rem; font-weight: 700; line-height: .75"
+        }
+      ]
+    },
+    "type.display-md": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.display",
+        "fontSize": "fontSize.display-md",
+        "fontWeight": "fontWeight.700",
+        "lineHeight": "lineHeight.tighter",
+        "textTransform": "textTransform.display"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:8",
+          "needle": ".works .works__title"
+        }
+      ]
+    },
+    "type.card-title": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.display",
+        "fontSize": "fontSize.title-md",
+        "fontWeight": "fontWeight.700",
+        "lineHeight": "lineHeight.snug",
+        "textTransform": "textTransform.display"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:16",
+          "needle": ".workCard__title"
+        }
+      ]
+    },
+    "type.statement": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.text",
+        "fontSize": "fontSize.statement",
+        "fontWeight": "fontWeight.600",
+        "lineHeight": "lineHeight.statement",
+        "letterSpacing": "letterSpacing.statement"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/tagline/tagline.css:4",
+          "needle": ".tagline__title"
+        }
+      ]
+    },
+    "type.lead": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.text",
+        "fontSize": "fontSize.lead",
+        "fontWeight": "fontWeight.500",
+        "lineHeight": "lineHeight.lead",
+        "letterSpacing": "letterSpacing.lead"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/method/method.css:23",
+          "needle": ".method__content"
+        }
+      ]
+    },
+    "type.body": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.text",
+        "fontSize": "fontSize.body-sm",
+        "fontWeight": "fontWeight.500",
+        "lineHeight": "lineHeight.body"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/tagline/tagline.css:5",
+          "needle": ".tagline__content"
+        }
+      ]
+    },
+    "type.caption": {
+      "type": "typeRole",
+      "value": {
+        "fontFamily": "font.family.text",
+        "fontSize": "fontSize.caption",
+        "fontWeight": "fontWeight.600",
+        "lineHeight": "lineHeight.caption",
+        "textTransform": "textTransform.display"
+      },
+      "evidence": [
+        {
+          "cite": "src/components/expertises/expertises.css:8",
+          "needle": ".exp .exp__title"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "chrome.header",
+  "version": "1.0.0",
+  "title": "Fixed header bar",
+  "description": "Fixed 12rem bar: wordmark link (left), centred glass 'Menu/Fermer' trigger with clip-path text swap, quote-request CTA (right). Switches light/dark design from the backdrop under it.",
+  "source": {
+    "id": "Header.jsx header#HEADER > .header__A1",
+    "file": "src/components/Header.jsx",
+    "tag": "header__A1",
+    "lines": "65-84",
+    "citation": "src/components/Header.jsx:65-84"
+  },
+  "semantic": {
+    "id": "chrome.header",
+    "category": "CHROME"
+  },
+  "retrievalEligible": true,
+  "positionKind": "fixed",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "brandMark",
+      "closeLabel",
+      "cta",
+      "menuLabel"
+    ],
+    "properties": {
+      "brandMark": {
+        "$ref": "#/definitions/media"
+      },
+      "menuLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "closeLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "href",
+          "label"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4
+          },
+          "href": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^(/|#|https?://|mailto:)"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "load-intro",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "load",
+      "hover"
+    ],
+    "reducedMotionFallback": "final-state",
+    "reducedMotionFallbackText": "Render the element at its end state immediately (no transform, full opacity, final colour).",
+    "evidence": [
+      {
+        "cite": "src/components/Header.jsx:36",
+        "needle": "// Load intro (desktop only)"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:86",
+        "needle": "### 1.3 Header color logic"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "logo / menu trigger / CTA in one row",
+    "tablet": "same",
+    "mobile": "CTA hidden; logo + trigger only",
+    "evidence": [
+      {
+        "cite": "src/components/header/header.css:41",
+        "needle": ".header__A1.\\@mobile .header__cta { display: none"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh",
+    "backdrop.prm",
+    "backdrop.drk",
+    "backdrop.blk"
+  ],
+  "assetRoles": [
+    "brand.wordmark",
+    "icon.ui"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "brand.user-supplied-mark",
+    "icon.generic"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_A.md:59",
+      "needle": "## 1. Fixed `#HEADER`"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "content.faq",
+  "version": "1.0.0",
+  "title": "FAQ accordion",
+  "description": "Overline, centred two-tone display title, an accordion of questions (6 shown, +6 per 'more' click; several may be open) with cursor-bending string dividers.",
+  "source": {
+    "id": "Faq.jsx section.faq",
+    "file": "src/components/Faq.jsx",
+    "tag": "data-section=\"faq\"",
+    "lines": "64-100",
+    "citation": "src/components/Faq.jsx:64-100"
+  },
+  "semantic": {
+    "id": "content.faq",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "items",
+      "moreLabel",
+      "overline",
+      "pageSize",
+      "title"
+    ],
+    "properties": {
+      "overline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "title": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "emphasis",
+          "lead"
+        ],
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2
+          },
+          "emphasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 24,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "answer",
+            "question"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 110
+            }
+          }
+        }
+      },
+      "pageSize": {
+        "type": "integer",
+        "enum": [
+          6
+        ]
+      },
+      "moreLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "blur-in",
+      "words-reveal",
+      "mask-reveal",
+      "fade",
+      "accordion",
+      "music-string",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "click",
+      "hover"
+    ],
+    "reducedMotionFallback": "instant-toggle",
+    "reducedMotionFallbackText": "Switch states instantly (no tween); keep the interaction itself.",
+    "evidence": [
+      {
+        "cite": "src/components/Faq.jsx:53-56",
+        "needle": "blurIn(ontitle.current"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:440",
+        "needle": "### 7.4 Scroll motion"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "centred column in the 12-col grid",
+    "tablet": "same",
+    "mobile": "full width, max 93rem, no string bending",
+    "evidence": [
+      {
+        "cite": "src/components/faq/faq.css:7",
+        "needle": "[data-section=\"faq\"] .faq { grid-column: 1 / 13"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh"
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:386",
+      "needle": "## 7. FAQ"
+    }
+  ]
+}

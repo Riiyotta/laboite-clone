@@ -1,0 +1,23 @@
+{
+  "id": "component.video-widget",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Hero video card with a fullscreen toggle and rotating Scroll badge.",
+  "props": {
+    "media": "primitive.media",
+    "scrollBadge": "boolean"
+  },
+  "tokens": [
+    "radius.sm",
+    "duration.scroll-badge"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/hero/Widgets.jsx:12",
+      "needle": "const Widgets = forwardRef"
+    }
+  ],
+  "usedBySections": [
+    "hero.statement"
+  ]
+}

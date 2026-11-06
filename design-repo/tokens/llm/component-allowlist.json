@@ -1,0 +1,763 @@
+{
+  "$description": "Closed list of what a generator may place and set. Parity with sections/, primitives/, components/ is checked by verify_all.py (no phantom entries, no orphans); settable fields are re-derived from schema/pagespec.schema.json.",
+  "version": "1.0.0",
+  "sections": {
+    "backdrop.webgl-scene": {
+      "settable": {
+        "content": [
+          "mobileFallback",
+          "plugins"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false,
+      "assetRoles": {
+        "reference": [
+          "scene.hdr-environment",
+          "scene.headset-model",
+          "scene.sphere-thumbnail",
+          "scene.title-font-outline"
+        ],
+        "generated": [
+          "font.open-licence-outline",
+          "media.generated-image",
+          "media.placeholder"
+        ]
+      }
+    },
+    "chrome.loader": {
+      "settable": {
+        "content": [
+          "spinner"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false,
+      "assetRoles": {
+        "reference": [],
+        "generated": []
+      }
+    },
+    "chrome.header": {
+      "settable": {
+        "content": [
+          "brandMark",
+          "closeLabel",
+          "cta",
+          "menuLabel"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "brand.wordmark",
+          "icon.ui"
+        ],
+        "generated": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark",
+          "icon.generic"
+        ]
+      }
+    },
+    "chrome.menu-overlay": {
+      "settable": {
+        "content": [
+          "address",
+          "expertises",
+          "explore",
+          "languages",
+          "socials",
+          "widgets"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false,
+      "assetRoles": {
+        "reference": [
+          "icon.ui",
+          "resource.cover"
+        ],
+        "generated": [
+          "icon.generic",
+          "media.generated-image",
+          "media.placeholder",
+          "social.network-icon"
+        ]
+      }
+    },
+    "hero.statement": {
+      "settable": {
+        "content": [
+          "scrollBadge",
+          "subtitle",
+          "titleLines",
+          "video"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "hero.loop-video",
+          "icon.ui"
+        ],
+        "generated": [
+          "icon.generic",
+          "media.generated-video",
+          "media.placeholder"
+        ]
+      }
+    },
+    "chrome.seo-modal": {
+      "settable": {
+        "content": [
+          "parts",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false,
+      "assetRoles": {
+        "reference": [],
+        "generated": []
+      }
+    },
+    "story.tagline": {
+      "settable": {
+        "content": [
+          "body",
+          "statement"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [],
+        "generated": []
+      }
+    },
+    "proof.works": {
+      "settable": {
+        "content": [
+          "cards",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "case.photo"
+        ],
+        "generated": [
+          "media.generated-image",
+          "media.placeholder"
+        ]
+      }
+    },
+    "proof.method": {
+      "settable": {
+        "content": [
+          "body",
+          "marquee",
+          "metrics",
+          "tagline"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "icon.ui"
+        ],
+        "generated": [
+          "icon.generic"
+        ]
+      }
+    },
+    "offer.skills": {
+      "settable": {
+        "content": [
+          "items"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "credential.badge",
+          "icon.ui"
+        ],
+        "generated": [
+          "credential.placeholder-badge",
+          "icon.generic",
+          "rating.placeholder-badge"
+        ]
+      }
+    },
+    "offer.expertises": {
+      "settable": {
+        "content": [
+          "routes",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "expertise.photo"
+        ],
+        "generated": [
+          "media.generated-image",
+          "media.placeholder"
+        ]
+      }
+    },
+    "story.vr": {
+      "settable": {
+        "content": [
+          "body",
+          "cta",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "scene.headset-model",
+          "scene.sphere-thumbnail"
+        ],
+        "generated": [
+          "media.generated-image",
+          "media.placeholder"
+        ]
+      }
+    },
+    "offer.spotlight": {
+      "settable": {
+        "content": [
+          "body",
+          "cta",
+          "media",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "icon.ui",
+          "team.photo"
+        ],
+        "generated": [
+          "icon.generic",
+          "media.generated-image",
+          "media.placeholder"
+        ]
+      }
+    },
+    "content.resources": {
+      "settable": {
+        "content": [
+          "cards",
+          "cta",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "resource.cover"
+        ],
+        "generated": [
+          "media.generated-image",
+          "media.placeholder"
+        ]
+      }
+    },
+    "proof.labels": {
+      "settable": {
+        "content": [
+          "cards",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "credential.badge"
+        ],
+        "generated": [
+          "credential.placeholder-badge",
+          "rating.placeholder-badge"
+        ]
+      }
+    },
+    "proof.reviews": {
+      "settable": {
+        "content": [
+          "reviews",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "client.logo"
+        ],
+        "generated": [
+          "logo.placeholder-client",
+          "person.fictional-avatar"
+        ]
+      }
+    },
+    "content.faq": {
+      "settable": {
+        "content": [
+          "items",
+          "moreLabel",
+          "overline",
+          "pageSize",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [],
+        "generated": []
+      }
+    },
+    "conversion.closing-cta": {
+      "settable": {
+        "content": [
+          "cta",
+          "title"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [],
+        "generated": []
+      }
+    },
+    "chrome.footer": {
+      "settable": {
+        "content": [
+          "address",
+          "brandMark",
+          "credentials",
+          "languages",
+          "legalLinks",
+          "navGroups",
+          "seoModalTrigger",
+          "showCopyrightYear",
+          "socials"
+        ],
+        "motion": [
+          "patterns",
+          "reducedMotionFallback"
+        ],
+        "tokens": [
+          "accentColor",
+          "blockGap",
+          "buttonDesign",
+          "surfaceTone",
+          "textTone"
+        ],
+        "node": [
+          "id",
+          "variant",
+          "retrievalEligible"
+        ]
+      },
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true,
+      "assetRoles": {
+        "reference": [
+          "brand.wordmark",
+          "credential.badge",
+          "icon.ui"
+        ],
+        "generated": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark",
+          "credential.placeholder-badge",
+          "icon.generic",
+          "rating.placeholder-badge",
+          "social.network-icon"
+        ]
+      }
+    }
+  },
+  "primitives": [
+    "primitive.action-cta",
+    "primitive.button",
+    "primitive.emphasis-title",
+    "primitive.glass-surface",
+    "primitive.icon",
+    "primitive.lang-switcher",
+    "primitive.media",
+    "primitive.tag",
+    "primitive.tooltip"
+  ],
+  "components": [
+    "component.credential-marquee",
+    "component.expertise-route",
+    "component.faq-dropdown",
+    "component.label-card",
+    "component.menu-widget",
+    "component.metric-list",
+    "component.nav-group",
+    "component.resource-card",
+    "component.review-card",
+    "component.skill-item",
+    "component.video-widget",
+    "component.white-paper-mockup",
+    "component.work-card"
+  ],
+  "pageLevel": [
+    "pageSpecVersion",
+    "mode",
+    "template",
+    "route",
+    "locale",
+    "theme",
+    "brand",
+    "fonts"
+  ]
+}

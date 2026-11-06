@@ -1,0 +1,23 @@
+{
+  "id": "component.faq-dropdown",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Question button + collapsible answer + bending string divider.",
+  "props": {
+    "question": "string",
+    "answer": "string"
+  },
+  "tokens": [
+    "font.family.system-arial",
+    "duration.accordion"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/faq/Dropdown.jsx:15",
+      "needle": "export default"
+    }
+  ],
+  "usedBySections": [
+    "content.faq"
+  ]
+}

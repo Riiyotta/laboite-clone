@@ -1,0 +1,97 @@
+{
+  "repositoryId": "laboiteaslides-fr-home-design-repo",
+  "repositoryVersion": "1.0.0",
+  "pageSpecVersion": "1.0.0",
+  "allowlistVersion": "1.0.0",
+  "tokenCatalogVersion": "1.0.0",
+  "versionFieldNote": "allowlistVersion and tokenCatalogVersion are machine-checked by extraction/verify_all.py (must equal the files' own version fields); pageSpecVersion is enforced as a const by schema/pagespec.schema.json; repositoryVersion is documentation-only and hand-maintained.",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "sourceProject": {
+    "name": "La boîte à slides FR homepage clone",
+    "origin": "https://laboiteaslides.fr/ (French homepage only)",
+    "location": "parent folder of this design-repo",
+    "commit": "f6c2801",
+    "realCompany": true,
+    "handling": "Real, live agency site: keep private, never publish generated pages that reuse its identity (see assets/asset-roles.json, policy/source-identity.json)."
+  },
+  "sourceStack": {
+    "documentationOnly": true,
+    "detected": "React 18.3 + Vite 5 + Tailwind CSS 3.4; three r181 WebGL canvas; GSAP 3.13 (ScrollTrigger, SplitText, CustomEase); Lenis 1.3",
+    "note": "Recorded for provenance only; no token, section id, schema field or validator rule depends on it."
+  },
+  "category": "agency-marketing-site",
+  "designPolicy": {
+    "policyId": "n0-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "enforcementMode": "hard-and-soft",
+    "domain": "agency-marketing",
+    "contentHash": "sha256:564eb372801efbbee5868cc5f1a877b1847db48ea5f5c9ec94155818ddeb60f1",
+    "file": "policy/design-policy.json",
+    "approval": "defined-pending-architecture-review"
+  },
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light"
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "template": "template.home"
+    }
+  ],
+  "routesNotBuilt": "Every other href in the source points at the original site's routes; the clone serves only '/', so no template exists for them.",
+  "counts": {
+    "tokens": 152,
+    "sections": 19,
+    "primitives": 9,
+    "components": 13,
+    "templates": 1,
+    "routes": 1,
+    "assetRoles": 27,
+    "generationSafeAssetRoles": 14,
+    "retrievalIneligibleSections": 4,
+    "motionPatterns": 23,
+    "graphRules": 9,
+    "examplePageSpecs": 2
+  },
+  "entryPoints": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "pagespecSchema": "schema/pagespec.schema.json",
+    "sectionContractSchema": "schema/section-contract.schema.json",
+    "referenceExample": "schema/example.pagespec.json",
+    "generatedExample": "schema/examples/generated.home.pagespec.json",
+    "semanticValidator": "schema/semantic_validate.py",
+    "adversarialTests": "schema/tests/adversarial_test.py",
+    "templates": "templates/templates.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "componentAllowlist": "tokens/llm/component-allowlist.json",
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
+    "motionPatterns": "tokens/00-foundation/motion-patterns.json",
+    "theme": "tokens/themes/light.json",
+    "assetRoles": "assets/asset-roles.json",
+    "sourceIdentity": "policy/source-identity.json",
+    "designPolicy": "policy/design-policy.json",
+    "measuredValues": "extraction/measured-values.json",
+    "verifyAll": "extraction/verify_all.py",
+    "wrapperGate": "extraction/wrapper_gate.py",
+    "proveDrift": "extraction/prove_drift.py",
+    "policyHash": "extraction/policy_hash.py",
+    "builder": "extraction/build_repo.py",
+    "measureSections": "extraction/measure_sections.mjs",
+    "parityCapture": "extraction/parity/capture.mjs",
+    "parityCompare": "extraction/parity/compare.py"
+  },
+  "approval": {
+    "productionApproved": false,
+    "approvedBy": null,
+    "pendingHumanApproval": [
+      "wrapper gate whitelist: hero.statement 6300px (extraction/measured-values.json wrapperGate.whitelist)",
+      "parity exception: story.vr below 0.80 (extraction/measured-values.json parity.exceptions)",
+      "design-policy classification (policy/design-policy.json approval)"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "chrome.seo-modal",
+  "version": "1.0.0",
+  "title": "SEO modal",
+  "description": "Hidden 'still readable' dialog holding the long-form SEO text (h2 title + h3-bounded parts), toggled from the footer info button.",
+  "source": {
+    "id": "SeoModal.jsx div.seoModal",
+    "file": "src/components/hero/SeoModal.jsx",
+    "tag": "seoModal modal",
+    "lines": "28-47",
+    "citation": "src/components/hero/SeoModal.jsx:28-47"
+  },
+  "semantic": {
+    "id": "chrome.seo-modal",
+    "category": "CHROME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Modal dialog hidden by default (z-index -3 until opened); its prose is SEO filler, not part of the visible page composition.",
+  "positionKind": "fixed",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "parts",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 16
+      },
+      "parts": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 16,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "heading",
+            "paragraphs"
+          ],
+          "properties": {
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 16
+            },
+            "paragraphs": {
+              "type": "array",
+              "minItems": 0,
+              "maxItems": 6,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 120
+              }
+            },
+            "listItems": {
+              "type": "array",
+              "minItems": 0,
+              "maxItems": 12,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 70
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [],
+    "triggers": [
+      "click"
+    ],
+    "reducedMotionFallback": "instant-toggle",
+    "reducedMotionFallbackText": "Switch states instantly (no tween); keep the interaction itself.",
+    "evidence": [
+      {
+        "cite": "CLONE_SPEC_A.md:434",
+        "needle": "## 8. SEO modal"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "8 of 12 columns centred",
+    "tablet": "same",
+    "mobile": "full width, max 93rem",
+    "evidence": [
+      {
+        "cite": "src/components/hero/hero.css:80",
+        "needle": ".seoModal .seoModal__content { grid-column: 1/13"
+      }
+    ]
+  },
+  "surfaceTones": [],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "evidence": [
+    {
+      "cite": "src/components/hero/seoContent.js:2",
+      "needle": "export default"
+    }
+  ],
+  "generationNotes": "Decomposed by its own heading boundaries (title + parts[heading, paragraphs, listItems]); never one opaque body."
+}

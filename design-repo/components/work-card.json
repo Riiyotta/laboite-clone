@@ -1,0 +1,25 @@
+{
+  "id": "component.work-card",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Case-study card: photo, client title, category tag; hover image follows the cursor.",
+  "props": {
+    "client": "string",
+    "tag": "string",
+    "href": "string",
+    "media": "primitive.media"
+  },
+  "tokens": [
+    "radius.2xl",
+    "type.card-title"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/works/WorkCard.jsx:5",
+      "needle": "export default function WorkCard"
+    }
+  ],
+  "usedBySections": [
+    "proof.works"
+  ]
+}

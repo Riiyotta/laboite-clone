@@ -1,0 +1,155 @@
+{
+  "$description": "One template per page shape. The clone serves exactly one route ('/'); every other href in the source (expertises, réalisations, ressources, contact, legal, ...) points at the original site's routes and is NOT built here, so no template is invented for them.",
+  "version": "1.0.0",
+  "templates": {
+    "template.home": {
+      "name": "Homepage (FR)",
+      "routes": [
+        "/"
+      ],
+      "homeRouteOnly": true,
+      "evidence": [
+        {
+          "cite": "src/App.jsx:34-47",
+          "needle": "<section id=\"HOME\">"
+        },
+        {
+          "cite": "ia.json:130",
+          "needle": "\"id\": \"template.home\""
+        }
+      ],
+      "nodes": [
+        {
+          "section": "backdrop.webgl-scene",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.loader",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.header",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.menu-overlay",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.statement",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.seo-modal",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "story.tagline",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.works",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.method",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "offer.skills",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "offer.expertises",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "story.vr",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "offer.spotlight",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.resources",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.labels",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.reviews",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.closing-cta",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "nodeOrderNote": "Order = DOM order of src/App.jsx (Scene, Header{Loader, bar, Menu}, Hero + SeoModal, then #HOME sections, then footer#FOOTER split into conversion.closing-cta + chrome.footer). Optional nodes may be omitted; present nodes must keep this order."
+    }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "template": "template.home"
+    }
+  ],
+  "notBuilt": {
+    "reason": "Links to the original site's other pages; the clone only cloned the FR homepage (README.md, ia.json meta).",
+    "evidence": [
+      {
+        "cite": "README.md:3",
+        "needle": "Only `/` is cloned"
+      }
+    ]
+  }
+}

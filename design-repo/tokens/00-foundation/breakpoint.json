@@ -1,0 +1,51 @@
+{
+  "$description": "Formats. 'whole' (full WebGL + scroll timelines) = NOT mobile; on mobile no scroll timeline or 3D plugin is created.",
+  "version": "1.0.0",
+  "tokens": {
+    "breakpoint.mobile": {
+      "type": "breakpoint",
+      "value": "(max-width: 767.9px), (max-height: 434.9px)",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:17",
+          "needle": "Formats: Desktop `min-width:1440px"
+        },
+        {
+          "cite": "src/components/tagline/sectionMotion.js:14",
+          "needle": "const MOBILE_MQ"
+        }
+      ]
+    },
+    "breakpoint.tablet": {
+      "type": "breakpoint",
+      "value": "(min-width: 768px) and (max-width: 1439.9px)",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:17",
+          "needle": "Formats: Desktop `min-width:1440px"
+        }
+      ]
+    },
+    "breakpoint.desktop": {
+      "type": "breakpoint",
+      "value": "(min-width: 1440px) and (min-height: 435px)",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC_A.md:17",
+          "needle": "Formats: Desktop `min-width:1440px"
+        }
+      ]
+    },
+    "breakpoint.root-font-size": {
+      "type": "fluidRoot",
+      "value": "clamp(7px, .6097560976vw, 10.2777777778px)",
+      "evidence": [
+        {
+          "cite": "src/index.css:9",
+          "needle": "font-size: clamp(7px, .6097560976vw, 10.2777777778px)"
+        }
+      ],
+      "usage": "1rem = 8.78049px at 1440, 7px at <= 1148px"
+    }
+  }
+}

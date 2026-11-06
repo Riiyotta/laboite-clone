@@ -1,0 +1,244 @@
+{
+  "$description": "Closed vocabulary of motion patterns observed in the source, each with its reduced-motion fallback. The source itself implements NO prefers-reduced-motion handling (grep returns nothing); the fallbacks are design-repo requirements grounded in the source's own mobile/fit behaviour (CLONE_SPEC_A §0.1: on mobile no timeline or 3D plugin is created).",
+  "version": "1.0.0",
+  "reducedMotionFallbacks": {
+    "fit-layout": "Collapse the pinned section to fit-content height and render every item at its final state with no scrub (the source's own mobile 'is-fit' layout).",
+    "static-gradient": "Do not create the WebGL scene; paint the static white-to-grey gradient the source uses on mobile.",
+    "final-state": "Render the element at its end state immediately (no transform, full opacity, final colour).",
+    "static-first-frame": "Render one static frame of the loop / interaction and never animate it.",
+    "instant-toggle": "Switch states instantly (no tween); keep the interaction itself.",
+    "native-scroll": "Keep the horizontal track as plain overflow scrolling without momentum or tweened steps."
+  },
+  "patterns": {
+    "pinned-scroll-timeline": {
+      "description": "Sticky track inside a tall section (height N lvh); one scrubbed timeline maps scroll progress to item tweens with overflowStart/overflowEnd = 1 lvh.",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:75-138",
+          "needle": "export function sectionTimeline"
+        }
+      ],
+      "reducedMotionFallback": "fit-layout"
+    },
+    "webgl-scroll-scene": {
+      "description": "The fixed WebGL backdrop reads the section's scroll progress (background layer wipes, glass triangles, 3D titles, VR sphere).",
+      "evidence": [
+        {
+          "cite": "src/scene/engine.js:223",
+          "needle": "// ---- whole / mobile gating"
+        }
+      ],
+      "reducedMotionFallback": "static-gradient"
+    },
+    "lines-slide": {
+      "description": "Text split into lines; each line slides 20px on x or y and fades in (scrubbed).",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:153",
+          "needle": "export function linesSlide"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "words-rise": {
+      "description": "Words rise from 130% inside line masks, scale 1.05 -> 1, colour #6630ff -> computed colour.",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:178",
+          "needle": "export function wordsRise"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "words-reveal": {
+      "description": "Stand-alone scrubbed words-rise (start 0% 90%, end 0% 30%, stagger .07).",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reveal.js:14",
+          "needle": "export function wordsReveal"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "fade": {
+      "description": "autoAlpha 0 -> 1 (or 1 -> 0) on scroll.",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:166",
+          "needle": "export function fade"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "parallax": {
+      "description": "y +n px -> -n px across the scroll range.",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:173",
+          "needle": "export function parallax"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "chars-in": {
+      "description": "Characters slide in from x 100% (stagger .05, 1.7s custom::out) when the trigger enters; reverses on leave-back.",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:188",
+          "needle": "export function charsIn"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "mask-reveal": {
+      "description": "A 200px soft linear-gradient mask sweeps up as the element crosses 90% of the viewport.",
+      "evidence": [
+        {
+          "cite": "src/components/tagline/sectionMotion.js:206",
+          "needle": "export function maskReveal"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "cards-pop": {
+      "description": "Cards y 25% / scale .95 -> 0 / 1, stagger .1, 0.7s, play on enter, reverse on leave-back.",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reveal.js:36",
+          "needle": "export function cardsPop"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "blur-in": {
+      "description": "filter blur(100px) -> blur(0) on scroll.",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reveal.js:30",
+          "needle": "export function blurIn"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "marquee-loop": {
+      "description": "Infinite horizontal loop of the credential line, 30s per cycle.",
+      "evidence": [
+        {
+          "cite": "src/components/method/Marquee.jsx:6",
+          "needle": "export default function Marquee"
+        }
+      ],
+      "reducedMotionFallback": "static-first-frame"
+    },
+    "sticker-curve-path": {
+      "description": "Glass cards travel right-to-left on a cubic Bezier across the pinned range with a small per-card rotation.",
+      "evidence": [
+        {
+          "cite": "src/components/LabelCards.jsx:51",
+          "needle": "// §5.3 Cards: Sticker scroll value"
+        }
+      ],
+      "reducedMotionFallback": "fit-layout"
+    },
+    "hover-image-pop": {
+      "description": "On hover the label lights up and a photo pops at the viewport edge (CSS transform 2s cubic-bezier).",
+      "evidence": [
+        {
+          "cite": "src/components/expertises/expertises.css:27",
+          "needle": "cubic-bezier(.06, .93, .07, .93)"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "cursor-image-follow": {
+      "description": "Case-study card image follows the cursor and the title words swap on hover.",
+      "evidence": [
+        {
+          "cite": "src/components/works/WorkCard.jsx:78",
+          "needle": "duration: 2.5, stagger: 0.045"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "draggable-swiper": {
+      "description": "Horizontal track dragged with momentum and edge resistance; prev/next buttons step one card (0.7s power2.out).",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/useSwiper.js:66",
+          "needle": "duration: 0.7, ease: 'power2.out'"
+        }
+      ],
+      "reducedMotionFallback": "native-scroll"
+    },
+    "accordion": {
+      "description": "Answer region max-height transition .27s ease-out; several answers may stay open.",
+      "evidence": [
+        {
+          "cite": "src/components/faq/faq.css:37",
+          "needle": "max-height .27s ease-out"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "music-string": {
+      "description": "Divider lines bend toward the cursor and spring back (elastic.out(1.5, .3)).",
+      "evidence": [
+        {
+          "cite": "src/components/faq/MusicString.jsx:5",
+          "needle": "elastic.out(1.5, .3)"
+        }
+      ],
+      "reducedMotionFallback": "static-first-frame"
+    },
+    "cursor-glow": {
+      "description": "A glow follows the cursor inside the footer glass panel.",
+      "evidence": [
+        {
+          "cite": "src/components/footer/useGlower.js:9",
+          "needle": "export function useGlower"
+        }
+      ],
+      "reducedMotionFallback": "static-first-frame"
+    },
+    "menu-swing-3d": {
+      "description": "Menu panel and widgets swing in on a 3D Bezier path (2-2.9s custom::out); mobile slides down 0.5s.",
+      "evidence": [
+        {
+          "cite": "src/components/header/Menu.jsx:34",
+          "needle": "const swing = "
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "loader-mask": {
+      "description": "Purple panel with an elliptical three-layer mask lifts on load (1s power2.in) and frames the menu.",
+      "evidence": [
+        {
+          "cite": "src/components/header/Loader.jsx:8",
+          "needle": "export default function Loader"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "button-hover-sweep": {
+      "description": "A violet dome sweeps up through the button on hover (2.5s custom::out in, 0.4s out); text turns white.",
+      "evidence": [
+        {
+          "cite": "src/index.css:35",
+          "needle": ".btn.hover-bottom::before"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "load-intro": {
+      "description": "Header logo / CTA and the hero video ease in over 7s custom::out after load.",
+      "evidence": [
+        {
+          "cite": "src/components/Header.jsx:36",
+          "needle": "// Load intro (desktop only)"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    }
+  }
+}

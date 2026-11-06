@@ -1,0 +1,85 @@
+{
+  "id": "chrome.loader",
+  "version": "1.0.0",
+  "title": "Load curtain",
+  "description": "Purple full-screen panel with a three-layer elliptical mask and a two-triangle spinner; lifts once the page has loaded and reappears as the frame behind the open menu.",
+  "source": {
+    "id": "Loader.jsx div.loader",
+    "file": "src/components/header/Loader.jsx",
+    "tag": "className={`loader",
+    "lines": "43-47",
+    "citation": "src/components/header/Loader.jsx:43-47"
+  },
+  "semantic": {
+    "id": "chrome.loader",
+    "category": "CHROME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Preloader / transition curtain: runtime utility UI shown only while loading or behind the menu, it carries no page content.",
+  "positionKind": "fixed",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "spinner"
+    ],
+    "properties": {
+      "spinner": {
+        "type": "string",
+        "enum": [
+          "two-triangles"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "loader-mask"
+    ],
+    "triggers": [
+      "load",
+      "menu-toggle"
+    ],
+    "reducedMotionFallback": "instant-toggle",
+    "reducedMotionFallbackText": "Switch states instantly (no tween); keep the interaction itself.",
+    "evidence": [
+      {
+        "cite": "CLONE_SPEC_A.md:135",
+        "needle": "## 2. Loader"
+      },
+      {
+        "cite": "src/components/header/Loader.jsx:26",
+        "needle": "duration: fromMenu ? 1.5 : 1"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "mask lift 1s power2.in",
+    "tablet": "same",
+    "mobile": "same",
+    "evidence": [
+      {
+        "cite": "src/components/header/Loader.jsx:6",
+        "needle": "const parked = "
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.prm"
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "evidence": [
+    {
+      "cite": "src/components/header/header.css:66",
+      "needle": "#HEADER .loader {"
+    }
+  ]
+}

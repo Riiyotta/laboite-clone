@@ -1,0 +1,124 @@
+{
+  "id": "conversion.closing-cta",
+  "version": "1.0.0",
+  "title": "Closing call to action",
+  "description": "Opening band of the footer: a giant two-tone display question and a contact CTA on the rising purple backdrop.",
+  "source": {
+    "id": "Footer.jsx footer#FOOTER > .footer__title + .footer__cta",
+    "file": "src/components/Footer.jsx",
+    "tag": "footer__title",
+    "lines": "104-107",
+    "citation": "src/components/Footer.jsx:104-107"
+  },
+  "semantic": {
+    "id": "conversion.closing-cta",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "cta",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "emphasis",
+          "lead"
+        ],
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4
+          },
+          "emphasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2
+          }
+        }
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "href",
+          "label"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          },
+          "href": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^(/|#|https?://|mailto:)"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecede": "chrome.footer"
+  },
+  "motion": {
+    "allowedPatterns": [
+      "words-reveal",
+      "fade",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "hover"
+    ],
+    "reducedMotionFallback": "final-state",
+    "reducedMotionFallbackText": "Render the element at its end state immediately (no transform, full opacity, final colour).",
+    "evidence": [
+      {
+        "cite": "src/components/Footer.jsx:93",
+        "needle": "wordsReveal(title.current, { trigger: root.current"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:503",
+        "needle": "### 8.4 Motion"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "title 16.4rem",
+    "tablet": "same",
+    "mobile": "title 11.2rem, max 93rem",
+    "evidence": [
+      {
+        "cite": "src/components/footer/footer.css:96",
+        "needle": "#FOOTER .footer__title { font-size: 11.2rem"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.prm"
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:453",
+      "needle": "## 8. Footer"
+    }
+  ],
+  "generationNotes": "Split from footer#FOOTER on purpose: it is a conversion block (R6 category honesty), while the panel below is site chrome."
+}

@@ -1,0 +1,382 @@
+{
+ "label": "run2",
+ "metric": {
+  "downsample": 4,
+  "tolerance": 24,
+  "gate": 0.8,
+  "unit": "fraction of pixels whose max channel diff <= tolerance"
+ },
+ "capture": {
+  "live": {
+   "capturedAt": "2026-11-06T12:24:36.279Z",
+   "gl": "gpu",
+   "settleMs": 2200,
+   "documentHeightPx": 35940,
+   "consentOverlaysHidden": 0
+  },
+  "clone": {
+   "capturedAt": "2026-11-06T12:23:04.678Z",
+   "gl": "gpu",
+   "settleMs": 2200,
+   "documentHeightPx": 35940,
+   "consentOverlaysHidden": 0
+  }
+ },
+ "layout": {
+  "hero.statement": {
+   "cloneTopPx": 0,
+   "liveTopPx": 0
+  },
+  "story.tagline": {
+   "cloneTopPx": 6300,
+   "liveTopPx": 6300
+  },
+  "proof.works": {
+   "cloneTopPx": 10800,
+   "liveTopPx": 10800
+  },
+  "proof.method": {
+   "cloneTopPx": 13918.1,
+   "liveTopPx": 13918.1
+  },
+  "offer.skills": {
+   "cloneTopPx": 15260.5,
+   "liveTopPx": 15260.5
+  },
+  "offer.expertises": {
+   "cloneTopPx": 20570.5,
+   "liveTopPx": 20570.5
+  },
+  "story.vr": {
+   "cloneTopPx": 21172.7,
+   "liveTopPx": 21172.7
+  },
+  "offer.spotlight": {
+   "cloneTopPx": 26572.7,
+   "liveTopPx": 26572.7
+  },
+  "content.resources": {
+   "cloneTopPx": 27375.4,
+   "liveTopPx": 27375.4
+  },
+  "proof.labels": {
+   "cloneTopPx": 28290.1,
+   "liveTopPx": 28290.1
+  },
+  "proof.reviews": {
+   "cloneTopPx": 32965.7,
+   "liveTopPx": 32965.7
+  },
+  "content.faq": {
+   "cloneTopPx": 33819.5,
+   "liveTopPx": 33819.5
+  },
+  "conversion.closing-cta": {
+   "cloneTopPx": 34898.9,
+   "liveTopPx": 34898.9
+  },
+  "chrome.footer": {
+   "cloneTopPx": 35491.9,
+   "liveTopPx": 34898.9
+  }
+ },
+ "sections": {
+  "hero.statement": {
+   "shots": 3,
+   "score": 0.9944
+  },
+  "story.tagline": {
+   "shots": 3,
+   "score": 0.9337
+  },
+  "proof.works": {
+   "shots": 3,
+   "score": 0.9997
+  },
+  "proof.method": {
+   "shots": 1,
+   "score": 0.8824
+  },
+  "offer.skills": {
+   "shots": 3,
+   "score": 0.9396
+  },
+  "offer.expertises": {
+   "shots": 1,
+   "score": 1.0
+  },
+  "story.vr": {
+   "shots": 3,
+   "score": 0.7074
+  },
+  "offer.spotlight": {
+   "shots": 1,
+   "score": 1.0
+  },
+  "content.resources": {
+   "shots": 1,
+   "score": 1.0
+  },
+  "proof.labels": {
+   "shots": 3,
+   "score": 0.8643
+  },
+  "proof.reviews": {
+   "shots": 1,
+   "score": 0.9977
+  },
+  "content.faq": {
+   "shots": 1,
+   "score": 0.9905
+  },
+  "conversion.closing-cta": {
+   "shots": 1,
+   "score": 0.9416
+  },
+  "chrome.footer": {
+   "shots": 1,
+   "score": 0.9172
+  }
+ },
+ "average": 0.9406,
+ "sectionsBelowGate": [
+  "story.vr"
+ ],
+ "gatePassed": false,
+ "shots": {
+  "hero.statement__0.png": {
+   "section": "hero.statement",
+   "sample": 0,
+   "scrollY": 1350,
+   "score": 0.9883,
+   "meanAbsDiff": 3.19,
+   "liveSha256": "b8f48f108e71773981aeed11c69c651603522e82e7e74b9eed4094739c287221",
+   "cloneSha256": "7bc44e6c928ef7f8f6d17efa1cdb2cfa1648ea69765f8ceaf8851f8b4574a46a"
+  },
+  "hero.statement__1.png": {
+   "section": "hero.statement",
+   "sample": 1,
+   "scrollY": 2700,
+   "score": 0.998,
+   "meanAbsDiff": 2.18,
+   "liveSha256": "6eea7cd92d86ff88d89589539ba988aa8ba7db5d504ed2ce66a052407be44b14",
+   "cloneSha256": "7ce1090bb6187ea004f8da41eca68ab4b1980c76e99251ca53be76c77f571fcc"
+  },
+  "hero.statement__2.png": {
+   "section": "hero.statement",
+   "sample": 2,
+   "scrollY": 4050,
+   "score": 0.9969,
+   "meanAbsDiff": 1.37,
+   "liveSha256": "05fa888ce396041a510e5bf7c92ddeaa3ca98702c9d221e6d5d716269ad2860c",
+   "cloneSha256": "d016c0cd530b17f228b4ff8123b1a9b389f9354c39a2001bb539b6b4a8f7eaf2"
+  },
+  "story.tagline__0.png": {
+   "section": "story.tagline",
+   "sample": 0,
+   "scrollY": 7200,
+   "score": 0.8399,
+   "meanAbsDiff": 6.62,
+   "liveSha256": "df041a2cfbe73ed8947ee410dfb484e23746c7206266a6f96f5f5b415f018a47",
+   "cloneSha256": "a95ab848d806d8272efc39f4dbed1a9f110867aa2fa4e6f851a7e7f9fd7d6da8"
+  },
+  "story.tagline__1.png": {
+   "section": "story.tagline",
+   "sample": 1,
+   "scrollY": 8100,
+   "score": 0.9771,
+   "meanAbsDiff": 2.53,
+   "liveSha256": "8581227a14c27cf55f0ee632acf76d0ee1a6a203df83060e2882e3dc99d68d27",
+   "cloneSha256": "1ef5251630017716dfd3734b28cb648b01d45d30d1140f566a24510a9166c482"
+  },
+  "story.tagline__2.png": {
+   "section": "story.tagline",
+   "sample": 2,
+   "scrollY": 9000,
+   "score": 0.984,
+   "meanAbsDiff": 4.15,
+   "liveSha256": "35d00b90384bf58d107eede93b8e021934befb14b156891da05e5cd0f9f9321c",
+   "cloneSha256": "64053714b2c9b9866b084a766deaa306c95539a46dca062bc80b260b1e50b4ab"
+  },
+  "proof.works__0.png": {
+   "section": "proof.works",
+   "sample": 0,
+   "scrollY": 11331,
+   "score": 0.9995,
+   "meanAbsDiff": 2.15,
+   "liveSha256": "b683c01428f8557ba025feaf02c86c8c11d758da286c72ad614edb26e4665a93",
+   "cloneSha256": "8f465d7019f771dabdf59a0c5e76d386ef9787f766f9716e39967edf8a05605e"
+  },
+  "proof.works__1.png": {
+   "section": "proof.works",
+   "sample": 1,
+   "scrollY": 11861,
+   "score": 1.0,
+   "meanAbsDiff": 0.89,
+   "liveSha256": "985fdfbaa2031c076d3fe4db912a955d5f7a776af47b0a3b9ab26edb0ffd1e4f",
+   "cloneSha256": "be71fd44777c3d4c319e225b7ea01d5b9cca7bf70e1ef9f50ee5a95f11491691"
+  },
+  "proof.works__2.png": {
+   "section": "proof.works",
+   "sample": 2,
+   "scrollY": 12392,
+   "score": 0.9995,
+   "meanAbsDiff": 1.27,
+   "liveSha256": "432be97228184794ad9bcae9f3a17a4cc7883a1452f1afe77dca7bfa1cf2ea6a",
+   "cloneSha256": "fb5187e4e2814e18523a0fe51662010d221c40bf0dfba9807f88503d11822fec"
+  },
+  "proof.method__0.png": {
+   "section": "proof.method",
+   "sample": 0,
+   "scrollY": 14091,
+   "score": 0.8824,
+   "meanAbsDiff": 18.61,
+   "liveSha256": "0d77e8e293907deedb4f888e6a8d9539a5007d367662e7370165c9e9cc733682",
+   "cloneSha256": "62a6af0f68792145a984c7c079bea1dbf5e1b7d10ce823518f7689e052b1c87b"
+  },
+  "offer.skills__0.png": {
+   "section": "offer.skills",
+   "sample": 0,
+   "scrollY": 16251,
+   "score": 0.9352,
+   "meanAbsDiff": 8.56,
+   "liveSha256": "f72463244173b9977832951d6f2ff56f2d108d53f130313efa590b2e29a0212e",
+   "cloneSha256": "6fa285aa35e63a2ba3bca6c8dfb23be9f64229d136f74c230fd59b5ee78da66d"
+  },
+  "offer.skills__1.png": {
+   "section": "offer.skills",
+   "sample": 1,
+   "scrollY": 17241,
+   "score": 0.9156,
+   "meanAbsDiff": 9.05,
+   "liveSha256": "0a3ebb5f7a86437ac161fae4f3020e60a4f0229312a875e5629f7fa6a7840e1a",
+   "cloneSha256": "ba66c8e64f8f01591a90b0e4fcd36c3ca094bf3b4f57da1a454e861ee7e13256"
+  },
+  "offer.skills__2.png": {
+   "section": "offer.skills",
+   "sample": 2,
+   "scrollY": 18231,
+   "score": 0.968,
+   "meanAbsDiff": 8.04,
+   "liveSha256": "8374fb09b1f38f046143dffd056f7a32f575755411d2e28173fd74b2b692d48d",
+   "cloneSha256": "edd68803357565f4193b50d528ecec1dd956cc45824fd984341daee60742ff82"
+  },
+  "offer.expertises__0.png": {
+   "section": "offer.expertises",
+   "sample": 0,
+   "scrollY": 20422,
+   "score": 1.0,
+   "meanAbsDiff": 4.5,
+   "liveSha256": "94af06f9df23d85b75205818e222d23427c727b7b15e0b8a6839fb74032b184d",
+   "cloneSha256": "c824810cb1e5fcad01cd371256db2c2102498c05188fee94365da7d4d29df690"
+  },
+  "story.vr__0.png": {
+   "section": "story.vr",
+   "sample": 0,
+   "scrollY": 22298,
+   "score": 0.5775,
+   "meanAbsDiff": 49.69,
+   "liveSha256": "36c799b9bba93d13672cb684cf1142c69b97d60e27febaad3266267089c31e74",
+   "cloneSha256": "e9040b09f5d581ab7047bb19732a93357eb9b7daec1d58c44ecada9c9be96074"
+  },
+  "story.vr__1.png": {
+   "section": "story.vr",
+   "sample": 1,
+   "scrollY": 23423,
+   "score": 0.715,
+   "meanAbsDiff": 36.39,
+   "liveSha256": "e8e658b639fde2f503ce803b3ce983079693f1194e0263e8d1b2670cbeb9cfe1",
+   "cloneSha256": "e5a69a4fb912b8ebf0d80180b866e06fdef49f9bffa9f3b2a996689bc63272e7"
+  },
+  "story.vr__2.png": {
+   "section": "story.vr",
+   "sample": 2,
+   "scrollY": 24548,
+   "score": 0.8297,
+   "meanAbsDiff": 11.69,
+   "liveSha256": "3c1295537261f280198158270fc33f85530ff8da18ea58e73862666fbfd627fc",
+   "cloneSha256": "d786039fd3bef917ca724dd7a650f0c8ccb686dae4cd787eb91826ac72380819"
+  },
+  "offer.spotlight__0.png": {
+   "section": "offer.spotlight",
+   "sample": 0,
+   "scrollY": 26436,
+   "score": 1.0,
+   "meanAbsDiff": 3.88,
+   "liveSha256": "5a09615672a5b0b21a9e71bbc80990587d3f9e06ec7a2899563943541a5cfd7c",
+   "cloneSha256": "0f348979efadeae1d7b07bfeb219c6b473c7a964a376291e68153f6ed5de20ae"
+  },
+  "content.resources__0.png": {
+   "section": "content.resources",
+   "sample": 0,
+   "scrollY": 27295,
+   "score": 1.0,
+   "meanAbsDiff": 3.5,
+   "liveSha256": "11e6ef0741633074b1e2b91fdee5116b803462b98fae8f9c3f14fc27ad639a59",
+   "cloneSha256": "4dda2190d09c695b4cc87dd50bd52ab35b95f9e69bbade66e9c40e71e0cae35b"
+  },
+  "proof.labels__0.png": {
+   "section": "proof.labels",
+   "sample": 0,
+   "scrollY": 29190,
+   "score": 0.9599,
+   "meanAbsDiff": 7.73,
+   "liveSha256": "15c4972b9ff5eddf61753d04cfaf73d39eed75b23efd6ebcb6500a2c89a1f5c8",
+   "cloneSha256": "9bc1f1f7bfde8463d962c3913cbec87ab77fa70dadf6c51ac461ba74a841361c"
+  },
+  "proof.labels__1.png": {
+   "section": "proof.labels",
+   "sample": 1,
+   "scrollY": 30090,
+   "score": 0.8061,
+   "meanAbsDiff": 17.81,
+   "liveSha256": "352a04c44fab3822868aa867520709341ef8d1d74ac005318e4a8140b70795d8",
+   "cloneSha256": "2e5150788cc30147aab8af21b31ebd19f3e977b9a6bb9ed9aa448945de20e43a"
+  },
+  "proof.labels__2.png": {
+   "section": "proof.labels",
+   "sample": 2,
+   "scrollY": 30990,
+   "score": 0.827,
+   "meanAbsDiff": 17.59,
+   "liveSha256": "088919da66540f68f17cdfe1cbccf2c061160808f70691a145a07fb710be0523",
+   "cloneSha256": "f9bfa3ed66489f766801fd608c9ad5546a0ec5e1c2a8523c682ef5c2d9a654ac"
+  },
+  "proof.reviews__0.png": {
+   "section": "proof.reviews",
+   "sample": 0,
+   "scrollY": 32855,
+   "score": 0.9977,
+   "meanAbsDiff": 5.01,
+   "liveSha256": "6c689904991ae29cce54762ebd3ea9628fa5ee64b5d10da8898a64ddc09610e1",
+   "cloneSha256": "4317e79acb2f88b244f9917650888749ab6d272e9f3c808b989021df9b6016e2"
+  },
+  "content.faq__0.png": {
+   "section": "content.faq",
+   "sample": 0,
+   "scrollY": 33734,
+   "score": 0.9905,
+   "meanAbsDiff": 5.47,
+   "liveSha256": "473bfb382fb34b0de69c7ffecd4d303586fdf6b804dd310cd76f82548b8cad50",
+   "cloneSha256": "8ffc00278b68fbcc5995686d06c8310fabc92fe447391be30b99c45a9e52e1a6"
+  },
+  "conversion.closing-cta__0.png": {
+   "section": "conversion.closing-cta",
+   "sample": 0,
+   "scrollY": 34745,
+   "score": 0.9416,
+   "meanAbsDiff": 7.56,
+   "liveSha256": "1f57e4fc2f2bf2c6e1775e5f33d2a953ed933f8dc1aa77722551a021c6e803d2",
+   "cloneSha256": "b7b9789243c3979ce22bf4c56d0aa6ee8f1904fca55a54655977e3ef5d76ec83"
+  },
+  "chrome.footer__0.png": {
+   "section": "chrome.footer",
+   "sample": 0,
+   "scrollY": 35040,
+   "score": 0.9172,
+   "meanAbsDiff": 7.34,
+   "liveSha256": "3602b09233e5e497ff6426bbea314f733f30483de05c7e8ad4e77da9e01ec144",
+   "cloneSha256": "5d17209a4e5f22f66366135824bc1132c4e2f7c9567cac18e282ef9b02ffac0d"
+  }
+ }
+}

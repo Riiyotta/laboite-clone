@@ -1,0 +1,94 @@
+{
+  "$description": "Border radii (CSS declarations; rendered px at 1440 in measured-values styleHistogram1440.borderRadius).",
+  "version": "1.0.0",
+  "tokens": {
+    "radius.sm": {
+      "type": "radius",
+      "value": "1.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:57",
+          "needle": "border-radius: 1.2rem"
+        }
+      ],
+      "usage": "hero video"
+    },
+    "radius.md": {
+      "type": "radius",
+      "value": "1.6rem",
+      "evidence": [
+        {
+          "cite": "src/components/header/header.css:172",
+          "needle": ".lbsTag {"
+        }
+      ],
+      "usage": "tags, images, glass badges"
+    },
+    "radius.lg": {
+      "type": "radius",
+      "value": "2rem",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reviewCards.css:69",
+          "needle": "border-radius: 2rem"
+        }
+      ],
+      "usage": "review logo tile"
+    },
+    "radius.xl": {
+      "type": "radius",
+      "value": "2.4rem",
+      "evidence": [
+        {
+          "cite": "src/index.css:28",
+          "needle": "height: 5.6rem; border-radius: 2.4rem"
+        }
+      ],
+      "usage": "buttons, review/label cards, menu widgets"
+    },
+    "radius.2xl": {
+      "type": "radius",
+      "value": "3.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:22",
+          "needle": "border-radius: 3.2rem"
+        }
+      ],
+      "usage": "work cards, panels, resource cards"
+    },
+    "radius.pill": {
+      "type": "radius",
+      "value": "4rem",
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:48",
+          "needle": ".langSwitcher__option.\\@current"
+        }
+      ],
+      "usage": "language switch chip"
+    },
+    "radius.bubble": {
+      "type": "radius",
+      "value": "48px",
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:78",
+          "needle": "border-radius: 48px"
+        }
+      ],
+      "usage": "tooltip bubble"
+    },
+    "radius.paper": {
+      "type": "radius",
+      "value": "2.13%",
+      "evidence": [
+        {
+          "cite": "src/components/resource-cards/resource-cards.css:56",
+          "needle": "border-radius: 2.13%"
+        }
+      ],
+      "usage": "white-paper mockup sheet"
+    }
+  }
+}

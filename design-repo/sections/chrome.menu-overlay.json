@@ -1,0 +1,268 @@
+{
+  "id": "chrome.menu-overlay",
+  "version": "1.0.0",
+  "title": "Menu overlay",
+  "description": "White rounded panel opened from the header trigger with a 3D swing: explore links, expertise links, FR/EN switch, office cities, socials and three promo widgets (expertise, white paper, client case).",
+  "source": {
+    "id": "Menu.jsx section.menu",
+    "file": "src/components/header/Menu.jsx",
+    "tag": "<section className={cls}",
+    "lines": "139-215",
+    "citation": "src/components/header/Menu.jsx:139-215"
+  },
+  "semantic": {
+    "id": "chrome.menu-overlay",
+    "category": "CHROME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Navigation overlay (dialog-like layer toggled by the header trigger); it duplicates site navigation and is not page content.",
+  "positionKind": "fixed",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "expertises",
+      "explore",
+      "languages"
+    ],
+    "properties": {
+      "languages": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "string",
+          "enum": [
+            "fr",
+            "en"
+          ]
+        }
+      },
+      "widgets": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "href",
+            "kind",
+            "title"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "expertise",
+                "whitePaper",
+                "clientCase"
+              ]
+            },
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 10
+            },
+            "ctaLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 2
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^(/|#|https?://|mailto:)"
+            },
+            "media": {
+              "$ref": "#/definitions/media"
+            }
+          }
+        }
+      },
+      "explore": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "links",
+          "title"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2
+          },
+          "links": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "href",
+                "label"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 4
+                },
+                "href": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^(/|#|https?://|mailto:)"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expertises": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "links",
+          "title"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2
+          },
+          "links": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "href",
+                "label"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 4
+                },
+                "href": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^(/|#|https?://|mailto:)"
+                }
+              }
+            }
+          }
+        }
+      },
+      "address": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12
+      },
+      "socials": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "href",
+            "network"
+          ],
+          "properties": {
+            "network": {
+              "type": "string",
+              "enum": [
+                "linkedin",
+                "vimeo"
+              ]
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^(/|#|https?://|mailto:)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "menu-swing-3d",
+      "button-hover-sweep"
+    ],
+    "triggers": [
+      "click"
+    ],
+    "reducedMotionFallback": "instant-toggle",
+    "reducedMotionFallbackText": "Switch states instantly (no tween); keep the interaction itself.",
+    "evidence": [
+      {
+        "cite": "src/components/header/Menu.jsx:88",
+        "needle": "A.W = gsap.timeline"
+      },
+      {
+        "cite": "CLONE_SPEC_A.md:97",
+        "needle": "### 1.5 Menu overlay"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "3-column grid: widgets | explore | expertises, 3D swing",
+    "tablet": "same (crushed variant keeps columns)",
+    "mobile": "single column, slides down 0.5s, scrollable",
+    "evidence": [
+      {
+        "cite": "src/components/header/header.css:125",
+        "needle": "#HEADER .menu.\\@mobile:not(.\\@crushed) .menu__expertises, #HEADER"
+      },
+      {
+        "cite": "src/components/header/Menu.jsx:53",
+        "needle": "A.U = gsap.fromTo(menu"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "icon.ui",
+    "resource.cover"
+  ],
+  "generatedAssetRoles": [
+    "icon.generic",
+    "media.generated-image",
+    "media.placeholder",
+    "social.network-icon"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/header/Menu.jsx:7",
+      "needle": "const EXPLORE = ["
+    }
+  ]
+}

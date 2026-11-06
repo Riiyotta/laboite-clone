@@ -1,0 +1,30 @@
+{
+  "id": "primitive.emphasis-title",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "Display title whose trailing words are wrapped in <strong> and coloured with the accent.",
+  "props": {
+    "lead": "string",
+    "emphasis": "string"
+  },
+  "tokens": [
+    "type.display-md",
+    "text.accent"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Works.jsx:66",
+      "needle": "Un seul outil, des <strong"
+    }
+  ],
+  "usedBySections": [
+    "content.faq",
+    "content.resources",
+    "conversion.closing-cta",
+    "offer.spotlight",
+    "proof.labels",
+    "proof.reviews",
+    "proof.works",
+    "story.vr"
+  ]
+}

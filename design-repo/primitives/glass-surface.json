@@ -1,0 +1,36 @@
+{
+  "id": "primitive.glass-surface",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "superGlass: backdrop-filter blur with a light or dark tint.",
+  "props": {
+    "tint": [
+      "light",
+      "dark"
+    ],
+    "blur": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "tokens": [
+    "color.glass.light",
+    "color.glass.dark",
+    "glassBlur.sm",
+    "glassBlur.md",
+    "glassBlur.lg"
+  ],
+  "evidence": [
+    {
+      "cite": "src/index.css:21",
+      "needle": ".superGlass { backdrop-filter"
+    }
+  ],
+  "usedBySections": [
+    "chrome.footer",
+    "offer.skills",
+    "proof.labels",
+    "proof.reviews"
+  ]
+}

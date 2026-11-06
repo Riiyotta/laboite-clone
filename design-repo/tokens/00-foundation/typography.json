@@ -1,0 +1,414 @@
+{
+  "$description": "Font families, sizes (rem on the fluid root: html font-size clamp(7px, .6097560976vw, 10.2777777778px) = 8.78049px at 1440), weights, line heights, letter spacing. Values are the CSS declarations of the clone (which decodes the original's superFont utilities, CLONE_SPEC_A §0.2).",
+  "version": "1.0.0",
+  "tokens": {
+    "font.family.text": {
+      "type": "fontFamily",
+      "value": "vInter",
+      "evidence": [
+        {
+          "cite": "src/index.css:1",
+          "needle": "font-family: vInter; src: url('/fonts/Inter/Inter.woff2')"
+        },
+        {
+          "cite": "tailwind.config.js:10",
+          "needle": "inter: ['vInter'"
+        }
+      ],
+      "usage": "all running text, buttons, labels (Inter variable 100-900)",
+      "stack": "vInter, sans-serif, arial",
+      "file": "/fonts/Inter/Inter.woff2",
+      "weights": "100 900",
+      "licence": "Inter is published by its author under the SIL Open Font License 1.1 upstream; the clone ships no licence file, so record the OFL text when redistributing."
+    },
+    "font.family.display": {
+      "type": "fontFamily",
+      "value": "FKScreamer",
+      "evidence": [
+        {
+          "cite": "src/index.css:2",
+          "needle": "font-family: FKScreamer; src: url('/fonts/FKScreamer"
+        },
+        {
+          "cite": "CLONE_SPEC_A.md:26",
+          "needle": "only one face — weight 700/900 requested"
+        }
+      ],
+      "usage": "condensed uppercase display titles; one 400 face only, never synthesised bold",
+      "stack": "FKScreamer, sans-serif, arial",
+      "file": "/fonts/FKScreamer/woff2/FKScreamerLegacy-Upright.woff2",
+      "weights": "400",
+      "licence": "commercial typeface (FK Screamer); no licence file in the clone; reference mode only, blocked for generated pages (see tokens/llm/token-policy.json licensedTokens)"
+    },
+    "font.family.system-arial": {
+      "type": "fontFamily",
+      "value": "Arial",
+      "evidence": [
+        {
+          "cite": "src/components/faq/faq.css:33",
+          "needle": "font-family: Arial; font-size: 1.8rem"
+        }
+      ],
+      "usage": "FAQ question buttons (system font, as measured on the live page)",
+      "stack": "Arial"
+    },
+    "fontSize.micro": {
+      "type": "fontSize",
+      "value": "max(1.1rem, 11px)",
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:46",
+          "needle": "font-size: max(1.1rem, 11px)"
+        }
+      ],
+      "usage": "tiny uppercase labels (lang switch, nav titles)"
+    },
+    "fontSize.caption": {
+      "type": "fontSize",
+      "value": "max(1.2rem, 12px)",
+      "evidence": [
+        {
+          "cite": "src/components/expertises/expertises.css:8",
+          "needle": "font-size: max(1.2rem, 12px)"
+        }
+      ],
+      "usage": "uppercase overline captions (NOS EXPERTISES, FAQ, nav group titles)"
+    },
+    "fontSize.body-sm": {
+      "type": "fontSize",
+      "value": "1.5rem",
+      "evidence": [
+        {
+          "cite": "src/index.css:28",
+          "needle": "font-size: 1.5rem; font-weight: 500"
+        }
+      ],
+      "usage": "buttons, small body, card meta, metrics"
+    },
+    "fontSize.body": {
+      "type": "fontSize",
+      "value": "1.6rem",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:79",
+          "needle": "font-size: 1.6rem; font-weight: 400; line-height: 1.6"
+        }
+      ],
+      "usage": "SEO modal prose"
+    },
+    "fontSize.body-lg": {
+      "type": "fontSize",
+      "value": "1.8rem",
+      "evidence": [
+        {
+          "cite": "src/components/review-cards/reviewCards.css:73",
+          "needle": ".reviewCard__content { overflow: hidden; font-size: 1.8rem"
+        }
+      ],
+      "usage": "review quotes, FAQ questions"
+    },
+    "fontSize.lead-sm": {
+      "type": "fontSize",
+      "value": "2rem",
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:105",
+          "needle": ".footerNav__route--expertise { font-size: 2rem"
+        }
+      ],
+      "usage": "mobile footer/menu lists"
+    },
+    "fontSize.lead": {
+      "type": "fontSize",
+      "value": "2.4rem",
+      "evidence": [
+        {
+          "cite": "src/components/method/method.css:23",
+          "needle": ".method__content { font-size: 2.4rem"
+        }
+      ],
+      "usage": "lead paragraphs, footer explore links"
+    },
+    "fontSize.title-xs": {
+      "type": "fontSize",
+      "value": "3rem",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:85",
+          "needle": ".seoContent h3 { font-size: 3rem"
+        }
+      ],
+      "usage": "SEO h3"
+    },
+    "fontSize.title-sm": {
+      "type": "fontSize",
+      "value": "3.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/header/header.css:152",
+          "needle": ".menu__explore-route { font-family: vInter; font-synthesis: none; font-size: 3.2rem"
+        }
+      ],
+      "usage": "menu explore links, white-paper titles"
+    },
+    "fontSize.title-md": {
+      "type": "fontSize",
+      "value": "4rem",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:39",
+          "needle": ".workCard__title { color: #fff; font-size: 4rem"
+        }
+      ],
+      "usage": "card titles; statement size on mobile"
+    },
+    "fontSize.statement": {
+      "type": "fontSize",
+      "value": "5.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:10",
+          "needle": ".hero__subtitle { font-family: vInter; font-synthesis: none; font-size: 5.2rem"
+        }
+      ],
+      "usage": "Inter statements (hero subtitle, tagline, method tagline, skills)"
+    },
+    "fontSize.title-lg": {
+      "type": "fontSize",
+      "value": "6rem",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:84",
+          "needle": ".seoContent h2 { font-family: FKScreamer"
+        }
+      ],
+      "usage": "SEO h2"
+    },
+    "fontSize.title-xl": {
+      "type": "fontSize",
+      "value": "6.4rem",
+      "evidence": [
+        {
+          "cite": "src/components/resource-cards/resource-cards.css:32",
+          "needle": ".rcs.is-whole .rc .rc__title { font-size: 6.4rem"
+        }
+      ],
+      "usage": "resource card titles, menu expertise widget"
+    },
+    "fontSize.display-sm": {
+      "type": "fontSize",
+      "value": "9.6rem",
+      "evidence": [
+        {
+          "cite": "src/components/expertises/expertises.css:11",
+          "needle": ".exp .exp__router { display: flex"
+        }
+      ],
+      "usage": "expertise labels below desktop"
+    },
+    "fontSize.display-md": {
+      "type": "fontSize",
+      "value": "11.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:8",
+          "needle": ".works .works__title { word-break: break-word; font-size: 11.2rem"
+        }
+      ],
+      "usage": "section titles (works, VR, spotlight, resources, reviews, FAQ)"
+    },
+    "fontSize.display-lg": {
+      "type": "fontSize",
+      "value": "16.4rem",
+      "evidence": [
+        {
+          "cite": "src/components/footer/footer.css:8",
+          "needle": "font-size: 16.4rem; font-weight: 700; line-height: .75"
+        }
+      ],
+      "usage": "hero/footer titles, expertise labels"
+    },
+    "fontSize.display-xl": {
+      "type": "fontSize",
+      "value": "25.2rem",
+      "evidence": [
+        {
+          "cite": "src/components/method/method.css:18",
+          "needle": ".method__marquee-title { color: #6630ff; font-size: 25.2rem"
+        }
+      ],
+      "usage": "marquee, label-cards title"
+    },
+    "fontWeight.400": {
+      "type": "fontWeight",
+      "value": 400,
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:79",
+          "needle": "font-size: 1.6rem; font-weight: 400"
+        }
+      ]
+    },
+    "fontWeight.500": {
+      "type": "fontWeight",
+      "value": 500,
+      "evidence": [
+        {
+          "cite": "src/index.css:28",
+          "needle": "font-size: 1.5rem; font-weight: 500"
+        }
+      ]
+    },
+    "fontWeight.600": {
+      "type": "fontWeight",
+      "value": 600,
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:10",
+          "needle": "font-size: 5.2rem; font-weight: 600"
+        }
+      ]
+    },
+    "fontWeight.700": {
+      "type": "fontWeight",
+      "value": 700,
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:8",
+          "needle": "font-size: 11.2rem; font-weight: 700"
+        }
+      ]
+    },
+    "lineHeight.tightest": {
+      "type": "lineHeight",
+      "value": ".75",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:6",
+          "needle": "font-size: 16.4rem; font-weight: 700; line-height: .75"
+        }
+      ]
+    },
+    "lineHeight.tighter": {
+      "type": "lineHeight",
+      "value": ".8",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:8",
+          "needle": "font-weight: 700; line-height: .8"
+        }
+      ]
+    },
+    "lineHeight.tight": {
+      "type": "lineHeight",
+      "value": ".85",
+      "evidence": [
+        {
+          "cite": "src/components/resource-cards/resource-cards.css:31",
+          "needle": "line-height: .85; text-align: center"
+        }
+      ]
+    },
+    "lineHeight.snug": {
+      "type": "lineHeight",
+      "value": ".9",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:39",
+          "needle": "font-weight: 700; line-height: .9"
+        }
+      ]
+    },
+    "lineHeight.statement": {
+      "type": "lineHeight",
+      "value": "1.04",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:10",
+          "needle": "letter-spacing: -.04em; line-height: 1.04"
+        }
+      ]
+    },
+    "lineHeight.lead": {
+      "type": "lineHeight",
+      "value": "1.3",
+      "evidence": [
+        {
+          "cite": "src/components/method/method.css:23",
+          "needle": "letter-spacing: -.02em; line-height: 1.3"
+        }
+      ]
+    },
+    "lineHeight.body": {
+      "type": "lineHeight",
+      "value": "1.4",
+      "evidence": [
+        {
+          "cite": "src/index.css:28",
+          "needle": "font-weight: 500; line-height: 1.4"
+        }
+      ]
+    },
+    "lineHeight.prose": {
+      "type": "lineHeight",
+      "value": "1.6",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:79",
+          "needle": "font-weight: 400; line-height: 1.6"
+        }
+      ]
+    },
+    "lineHeight.caption": {
+      "type": "lineHeight",
+      "value": "1.5rem",
+      "evidence": [
+        {
+          "cite": "src/components/expertises/expertises.css:8",
+          "needle": "font-weight: 600; line-height: 1.5rem"
+        }
+      ]
+    },
+    "letterSpacing.statement": {
+      "type": "letterSpacing",
+      "value": "-.04em",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:10",
+          "needle": "letter-spacing: -.04em"
+        }
+      ]
+    },
+    "letterSpacing.lead": {
+      "type": "letterSpacing",
+      "value": "-.02em",
+      "evidence": [
+        {
+          "cite": "src/components/method/method.css:23",
+          "needle": "letter-spacing: -.02em"
+        }
+      ]
+    },
+    "letterSpacing.prose-h4": {
+      "type": "letterSpacing",
+      "value": ".02em",
+      "evidence": [
+        {
+          "cite": "src/components/hero/hero.css:86",
+          "needle": "letter-spacing: .02em"
+        }
+      ]
+    },
+    "textTransform.display": {
+      "type": "textTransform",
+      "value": "uppercase",
+      "evidence": [
+        {
+          "cite": "src/components/works/works.css:8",
+          "needle": "line-height: .8; text-transform: uppercase"
+        }
+      ],
+      "usage": "every FKScreamer title and caption overline"
+    }
+  }
+}

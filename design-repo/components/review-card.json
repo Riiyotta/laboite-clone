@@ -1,0 +1,25 @@
+{
+  "id": "component.review-card",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Glass testimonial card: logo, name, role, quote.",
+  "props": {
+    "person": "object",
+    "quote": "string",
+    "media": "primitive.media"
+  },
+  "tokens": [
+    "glassBlur.md",
+    "radius.xl",
+    "fontSize.body-lg"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/ReviewCards.jsx:13",
+      "needle": "function ReviewCard"
+    }
+  ],
+  "usedBySections": [
+    "proof.reviews"
+  ]
+}

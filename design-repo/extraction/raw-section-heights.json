@@ -1,0 +1,424 @@
+{
+  "measuredAt": "2026-11-06T12:08:14.288Z",
+  "baseUrl": "http://127.0.0.1:5181/",
+  "tool": "extraction/measure_sections.mjs (headless Chromium)",
+  "viewports": {
+    "1440x900": {
+      "documentHeightPx": 35940,
+      "htmlFontSizePx": 8.78049,
+      "sections": {
+        "backdrop.webgl-scene": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 900
+        },
+        "chrome.loader": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 900
+        },
+        "chrome.header": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "static",
+          "topPx": 0,
+          "heightPx": 105.4
+        },
+        "chrome.menu-overlay": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "absolute",
+          "topPx": 7,
+          "heightPx": 885.9
+        },
+        "hero.statement": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 0,
+          "heightPx": 6300
+        },
+        "chrome.seo-modal": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 900
+        },
+        "story.tagline": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 6300,
+          "heightPx": 4500
+        },
+        "proof.works": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 10800,
+          "heightPx": 3022.4
+        },
+        "proof.method": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 13918.1,
+          "heightPx": 1245.7
+        },
+        "offer.skills": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 15260.5,
+          "heightPx": 4860
+        },
+        "offer.expertises": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 20570.5,
+          "heightPx": 602.3
+        },
+        "story.vr": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 21172.7,
+          "heightPx": 5400
+        },
+        "offer.spotlight": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 26572.7,
+          "heightPx": 627
+        },
+        "content.resources": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 27375.4,
+          "heightPx": 739.1
+        },
+        "proof.labels": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 28290.1,
+          "heightPx": 4500
+        },
+        "proof.reviews": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 32965.7,
+          "heightPx": 678.2
+        },
+        "content.faq": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 33819.5,
+          "heightPx": 728.2
+        },
+        "conversion.closing-cta": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 34898.9,
+          "heightPx": 593
+        },
+        "chrome.footer": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 35491.9,
+          "heightPx": 448.5
+        }
+      }
+    },
+    "768x1024": {
+      "documentHeightPx": 37464,
+      "htmlFontSizePx": 7,
+      "sections": {
+        "backdrop.webgl-scene": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 1024
+        },
+        "chrome.loader": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 1024
+        },
+        "chrome.header": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "static",
+          "topPx": 0,
+          "heightPx": 84
+        },
+        "chrome.menu-overlay": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "absolute",
+          "topPx": 5.6,
+          "heightPx": 1012.8
+        },
+        "hero.statement": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 0,
+          "heightPx": 7168
+        },
+        "chrome.seo-modal": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 1024
+        },
+        "story.tagline": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 7168,
+          "heightPx": 5120
+        },
+        "proof.works": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 12288,
+          "heightPx": 2063.1
+        },
+        "proof.method": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 14427.4,
+          "heightPx": 1239.6
+        },
+        "offer.skills": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 15744,
+          "heightPx": 5529.6
+        },
+        "offer.expertises": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 21785.5,
+          "heightPx": 480.2
+        },
+        "story.vr": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 22265.7,
+          "heightPx": 6144
+        },
+        "offer.spotlight": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 28409.7,
+          "heightPx": 490.7
+        },
+        "content.resources": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 29040.4,
+          "heightPx": 458.7
+        },
+        "proof.labels": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 29639.1,
+          "heightPx": 5120
+        },
+        "proof.reviews": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 34899.1,
+          "heightPx": 540.6
+        },
+        "content.faq": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 35579.8,
+          "heightPx": 580.5
+        },
+        "conversion.closing-cta": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 36440.3,
+          "heightPx": 570.3
+        },
+        "chrome.footer": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 37010.5,
+          "heightPx": 453.7
+        }
+      }
+    },
+    "390x844": {
+      "documentHeightPx": 14253,
+      "htmlFontSizePx": 7,
+      "sections": {
+        "backdrop.webgl-scene": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 844
+        },
+        "chrome.loader": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 844
+        },
+        "chrome.header": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "static",
+          "topPx": 0,
+          "heightPx": 84
+        },
+        "chrome.menu-overlay": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "absolute",
+          "topPx": -806.4,
+          "heightPx": 791.2
+        },
+        "hero.statement": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 0,
+          "heightPx": 1425.3
+        },
+        "chrome.seo-modal": {
+          "found": true,
+          "positionKind": "fixed",
+          "cssPosition": "fixed",
+          "topPx": 0,
+          "heightPx": 844
+        },
+        "story.tagline": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 1425.3,
+          "heightPx": 662.5
+        },
+        "proof.works": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 2227.8,
+          "heightPx": 3087.7
+        },
+        "proof.method": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 5391.8,
+          "heightPx": 734.4
+        },
+        "offer.skills": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 6203.1,
+          "heightPx": 1128.4
+        },
+        "offer.expertises": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 7331.5,
+          "heightPx": 598.4
+        },
+        "story.vr": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 7930,
+          "heightPx": 635
+        },
+        "offer.spotlight": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 8704.9,
+          "heightPx": 411.4
+        },
+        "content.resources": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 9256.3,
+          "heightPx": 662.9
+        },
+        "proof.labels": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 10059.2,
+          "heightPx": 1010.1
+        },
+        "proof.reviews": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 11209.3,
+          "heightPx": 560.8
+        },
+        "content.faq": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "static",
+          "topPx": 11910.1,
+          "heightPx": 572.7
+        },
+        "conversion.closing-cta": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 12762.7,
+          "heightPx": 477.2
+        },
+        "chrome.footer": {
+          "found": true,
+          "positionKind": "in-flow",
+          "cssPosition": "relative",
+          "topPx": 13240,
+          "heightPx": 1012.9
+        }
+      }
+    }
+  }
+}

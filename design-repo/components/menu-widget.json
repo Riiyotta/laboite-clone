@@ -1,0 +1,28 @@
+{
+  "id": "component.menu-widget",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Promo tile in the menu (expertise / white paper / client case).",
+  "props": {
+    "kind": [
+      "expertise",
+      "whitePaper",
+      "clientCase"
+    ],
+    "title": "string",
+    "tag": "string"
+  },
+  "tokens": [
+    "radius.xl",
+    "radius.2xl"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/header/Menu.jsx:148",
+      "needle": "<ul className=\"menu__widgets superGrid\">"
+    }
+  ],
+  "usedBySections": [
+    "chrome.menu-overlay"
+  ]
+}

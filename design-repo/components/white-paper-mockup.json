@@ -1,0 +1,22 @@
+{
+  "id": "component.white-paper-mockup",
+  "kind": "component",
+  "version": "1.0.0",
+  "description": "Rotated cover sheet + white back sheet + drop shadow.",
+  "props": {
+    "title": "string"
+  },
+  "tokens": [
+    "radius.paper"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/resource-cards/WhitePaper.jsx:2",
+      "needle": "export default function WhitePaper"
+    }
+  ],
+  "usedBySections": [
+    "chrome.menu-overlay",
+    "content.resources"
+  ]
+}

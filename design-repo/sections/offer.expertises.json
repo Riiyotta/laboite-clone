@@ -1,0 +1,122 @@
+{
+  "id": "offer.expertises",
+  "version": "1.0.0",
+  "title": "Service index",
+  "description": "Caption overline and a centred list of giant display labels (one per service) at low opacity that light up and pop a photo at the viewport edge on hover.",
+  "source": {
+    "id": "Expertises.jsx section.exp",
+    "file": "src/components/Expertises.jsx",
+    "tag": "data-section=\"expertises\"",
+    "lines": "42-58",
+    "citation": "src/components/Expertises.jsx:42-58"
+  },
+  "semantic": {
+    "id": "offer.expertises",
+    "category": "OFFER"
+  },
+  "retrievalEligible": true,
+  "positionKind": "in-flow",
+  "scrollStage": false,
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "routes",
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3
+      },
+      "routes": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "href",
+            "label",
+            "media"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^(/|#|https?://|mailto:)"
+            },
+            "media": {
+              "$ref": "#/definitions/media"
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "parallax",
+      "hover-image-pop"
+    ],
+    "triggers": [
+      "scroll-scrub",
+      "hover"
+    ],
+    "reducedMotionFallback": "instant-toggle",
+    "reducedMotionFallbackText": "Switch states instantly (no tween); keep the interaction itself.",
+    "evidence": [
+      {
+        "cite": "src/components/Expertises.jsx:32",
+        "needle": "// §1.4 — labels rise 17lvh"
+      },
+      {
+        "cite": "CLONE_SPEC_B.md:105",
+        "needle": "### 1.4 Scroll motion"
+      }
+    ]
+  },
+  "responsive": {
+    "desktop": "labels 16.4rem",
+    "tablet": "labels 16.4rem",
+    "mobile": "labels 9.6rem, no hover photo",
+    "evidence": [
+      {
+        "cite": "src/components/expertises/expertises.css:11",
+        "needle": ".exp .exp__router { display: flex"
+      },
+      {
+        "cite": "src/components/expertises/expertises.css:12",
+        "needle": ".exp.is-whole .exp__router"
+      }
+    ]
+  },
+  "surfaceTones": [
+    "backdrop.lgh"
+  ],
+  "assetRoles": [
+    "expertise.photo"
+  ],
+  "generatedAssetRoles": [
+    "media.generated-image",
+    "media.placeholder"
+  ],
+  "evidence": [
+    {
+      "cite": "CLONE_SPEC_B.md:64",
+      "needle": "## 1. Expertises"
+    }
+  ]
+}

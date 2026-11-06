@@ -1,0 +1,29 @@
+{
+  "id": "primitive.media",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "description": "Image or video reference bound to a closed asset role.",
+  "props": {
+    "assetRole": "closed enum (assets/asset-roles.json)",
+    "src": "string",
+    "alt": "string"
+  },
+  "tokens": [
+    "radius.md"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/resource-cards/useAutoSizes.js:20",
+      "needle": "export const srcSet"
+    }
+  ],
+  "usedBySections": [
+    "content.resources",
+    "hero.statement",
+    "offer.expertises",
+    "offer.spotlight",
+    "proof.labels",
+    "proof.reviews",
+    "proof.works"
+  ]
+}
